@@ -39,13 +39,13 @@ export default function AsogranjaPage() {
       link: "/rutas/corredor-ancestral",
     },
     {
-      title: "Saberes Tradicionales",
+      title: "Ruta Cultura y Memoria",
       description:
-        "Aprende técnicas agrícolas ancestrales, elaboración de productos artesanales y secretos culinarios transmitidos por generaciones.",
+        "Sumérgete en talleres de símbolos indígenas, recorridos rurales y actividades que preservan nuestra memoria colectiva.",
       icon: BookOpen,
-      image: "/traditional-colombian-farming-crafts-rural.jpg",
+      image: "/cultura-memoria-indigenous-symbols.jpg",
       color: "from-orange-500/20 to-red-600/20",
-      link: "/rutas/saberes-tradicionales",
+      link: "/rutas/cultura-y-memoria",
     },
     {
       title: "Ruta del Agua",
@@ -168,16 +168,12 @@ export default function AsogranjaPage() {
               campesina
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Link href="#rutas">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
-                  Explorar Rutas
-                </Button>
-              </Link>
-              <Link href="#nosotros">
-                <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
-                  Conocer Más
-                </Button>
-              </Link>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+                Explorar Rutas
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
+                Conocer Más
+              </Button>
             </div>
           </div>
         </div>

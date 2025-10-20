@@ -22,7 +22,6 @@ import { useEffect, useRef } from "react"
 
 export default function CorredorAncestralPage() {
   const heroRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,35 +37,15 @@ export default function CorredorAncestralPage() {
 
     document.querySelectorAll(".fade-in-section").forEach((el) => observer.observe(el))
 
-    const videoObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            videoRef.current?.play().catch(console.error)
-          } else {
-            videoRef.current?.pause()
-          }
-        })
-      },
-      { threshold: 0.5 },
-    )
-
-    if (videoRef.current) {
-      videoObserver.observe(videoRef.current)
-    }
-
-    return () => {
-      observer.disconnect()
-      videoObserver.disconnect()
-    }
+    return () => observer.disconnect()
   }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100 dark:from-background dark:via-background dark:to-stone-950">
       <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden mt-4">
         <Image
-          src="/corredor-ancestral-musicians-campfire.jpg"
-          alt="Músicos tradicionales alrededor de fogata en Ciudad de la Memoria"
+          src="/corredor-ancestral-hero.jpg"
+          alt="Paisaje ancestral de montañas colombianas al atardecer"
           fill
           className="object-cover object-center"
           priority
@@ -124,7 +103,7 @@ export default function CorredorAncestralPage() {
                   Descubre los caminos ancestrales en la{" "}
                   <strong className="text-stone-900 dark:text-stone-100">Vereda Monquira</strong>, donde la historia, la
                   música tradicional y la memoria cultural cobran vida. Esta experiencia única te conecta con las raíces
-                  Muiscas de nuestro territorio.
+                  muiscas de nuestro territorio.
                 </p>
                 <div className="h-1 w-24 bg-gradient-to-r from-stone-400 to-stone-500 rounded-full"></div>
                 <p className="text-lg leading-relaxed text-stone-600 dark:text-stone-400">
@@ -147,21 +126,24 @@ export default function CorredorAncestralPage() {
                 Video de la Experiencia
               </h2>
             </div>
-
             <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 shadow-lg">
               <CardContent className="p-0">
                 <div className="relative w-full aspect-video bg-stone-100 dark:bg-stone-900">
                   <video
-                    ref={videoRef}
                     controls
-                    muted
-                    loop
                     className="w-full h-full object-cover"
                     poster="/corredor-ancestral-musicians-campfire.jpg"
                   >
-                    <source src="/Ciudad_memoria.mp4" type="video/mp4" />
+                    <source src="/ruta-a-tu-video.mp4" type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
                   </video>
+                  <div className="absolute inset-0 flex items-center justify-center bg-stone-900/50 backdrop-blur-sm">
+                    <div className="text-center text-white p-8">
+                      <Video className="w-16 h-16 mx-auto mb-4 opacity-70" />
+                      <p className="text-xl font-semibold mb-2">Video próximamente</p>
+                      <p className="text-sm opacity-80">Agrega tu video siguiendo las instrucciones en el código</p>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -278,7 +260,7 @@ export default function CorredorAncestralPage() {
                     </div>
                     <p className="text-lg leading-relaxed text-stone-700 dark:text-stone-300">
                       Un lugar mágico donde convergen la historia, la cultura y las tradiciones ancestrales. Aquí podrás
-                      experimentar la autenticidad de nuestras raíces Muiscas a través de actividades culturales, música
+                      experimentar la autenticidad de nuestras raíces muiscas a través de actividades culturales, música
                       tradicional y encuentros comunitarios.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -584,6 +566,62 @@ export default function CorredorAncestralPage() {
           </div>
         </div>
       </div>
+
+      <footer className="bg-stone-800 dark:bg-stone-950 text-white mt-16">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Asogranja Sogamoso
+              </h3>
+              <p className="text-stone-300 text-sm leading-relaxed">
+                Promoviendo el turismo rural comunitario y preservando las tradiciones ancestrales de Sogamoso, Boyacá.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Contacto
+              </h3>
+              <div className="space-y-2 text-stone-300 text-sm">
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  322 881 4258
+                </p>
+                <p className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" />
+                  @CiudadDeLaMemoria
+                </p>
+                <p className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  Sogamoso, Boyacá
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Nuestras Rutas
+              </h3>
+              <div className="space-y-2 text-stone-300 text-sm">
+                <Link href="/rutas/corredor-ancestral" className="block hover:text-white transition-colors">
+                  Corredor Ancestral
+                </Link>
+                <Link href="/rutas/turismo-cultural" className="block hover:text-white transition-colors">
+                  Turismo Cultural
+                </Link>
+                <Link href="/rutas/cultura-y-memoria" className="block hover:text-white transition-colors">
+                  Ruta Cultura y Memoria
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-stone-700 pt-8 text-center text-stone-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} Asogranja Sogamoso. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
 
       <style jsx global>{`
         .fade-in-section {
