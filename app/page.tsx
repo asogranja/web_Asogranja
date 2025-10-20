@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Menu, X, MapPin, Users, Heart, Leaf, Mountain, BookOpen } from "lucide-react"
+import { Menu, X, MapPin, Users, Heart, Leaf, Mountain, BookOpen, MessageCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -100,7 +100,13 @@ export default function AsogranjaPage() {
               <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
                 Contacto
               </a>
-              <Button className="bg-primary hover:bg-primary/90">Reservar</Button>
+              <Button
+                className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
+                onClick={() => window.open('https://wa.me/3105831864?text=Hola,%20quiero%20más%20información', '_blank')}
+              >
+                <MessageCircle size={16} />
+                WhatsApp
+              </Button>
             </div>
 
             <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -139,7 +145,16 @@ export default function AsogranjaPage() {
               >
                 Contacto
               </a>
-              <Button className="w-full bg-primary hover:bg-primary/90">Reservar</Button>
+              <Button
+                className="w-full bg-green-600 hover:bg-green-700 text-white flex items-center gap-2 justify-center"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.open('https://wa.me/3105831864?text=Hola,%20quiero%20más%20información', '_blank');
+                }}
+              >
+                <MessageCircle size={16} />
+                WhatsApp
+              </Button>
             </div>
           )}
         </div>
@@ -168,10 +183,19 @@ export default function AsogranjaPage() {
               campesina
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-lg px-8"
+                onClick={() => document.getElementById('rutas')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Explorar Rutas
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 bg-transparent"
+                onClick={() => document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Conocer Más
               </Button>
             </div>
@@ -402,11 +426,12 @@ export default function AsogranjaPage() {
               Contáctanos para reservar tu experiencia o conocer más sobre nuestras rutas turísticas y productos
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-lg px-8"
+                onClick={() => window.open('https://wa.me/3105831864?text=Hola,%20quiero%20más%20información', '_blank')}
+              >
                 Contactar Ahora
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
-                Ver Disponibilidad
               </Button>
             </div>
           </div>
