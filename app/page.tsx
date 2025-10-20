@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Menu, X, MapPin, Users, Heart, Leaf, Mountain, Droplets, BookOpen } from "lucide-react"
+import { Menu, X, MapPin, Users, Heart, Leaf, Mountain, BookOpen } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -48,13 +48,13 @@ export default function AsogranjaPage() {
       link: "/rutas/cultura-y-memoria",
     },
     {
-      title: "Ruta del Agua",
+      title: "Corredor Cultural y Agroecológico",
       description:
-        "Explora fuentes hídricas, cascadas y ecosistemas acuáticos en un viaje de conservación y respeto por el recurso más vital.",
-      icon: Droplets,
-      image: "/colombian-waterfall-rural-nature-stream.jpg",
-      color: "from-cyan-500/20 to-blue-600/20",
-      link: "/rutas/ruta-del-agua",
+        "Recorre cinco paradas temáticas que celebran la cultura campesina, la gastronomía tradicional y las prácticas agroecológicas sostenibles.",
+      icon: Leaf,
+      image: "/corredor-cultural-hero.jpeg",
+      color: "from-lime-500/20 to-green-600/20",
+      link: "/rutas/corredor-cultural-agroecologico",
     },
   ]
 
