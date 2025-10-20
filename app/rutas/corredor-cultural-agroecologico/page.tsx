@@ -87,13 +87,14 @@ export default function CorredorCulturalPage() {
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/corredor-cultural-hero.jpeg"
+          src="/corredor-cultural-hero.jpg"
           alt="Corredor Cultural y Agroecológico"
           fill
           className="object-cover brightness-90"
           priority
           quality={100}
         />
+        {/* </CHANGE> */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-stone-50/95"></div>
 
         <Link href="/" className="absolute top-6 left-6 z-20">
@@ -259,10 +260,10 @@ export default function CorredorCulturalPage() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-stone-200 hover:border-lime-600 transition-colors">
+            <Card className="border-2 border-stone-200 hover:border-[#E4405F] transition-colors">
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-lime-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#833AB4] via-[#E4405F] to-[#FCAF45] rounded-full flex items-center justify-center">
                     <Instagram className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -276,7 +277,9 @@ export default function CorredorCulturalPage() {
                   rel="noopener noreferrer"
                   className="block w-full"
                 >
-                  <Button className="w-full bg-lime-600 hover:bg-lime-700 text-white">Visitar Instagram</Button>
+                  <Button className="w-full bg-gradient-to-r from-[#833AB4] via-[#E4405F] to-[#FCAF45] hover:opacity-90 text-white transition-opacity">
+                    Visitar Instagram
+                  </Button>
                 </a>
               </CardContent>
             </Card>
