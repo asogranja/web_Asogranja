@@ -97,12 +97,17 @@ export default function AsogranjaPage() {
               <a href="#nosotros" className="text-foreground hover:text-primary transition-colors">
                 Nosotros
               </a>
+              <a href="#produccion-agroecologica" className="text-foreground hover:text-primary transition-colors">
+                Producción Agroecológica
+              </a>
               <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
                 Contacto
               </a>
               <Button
                 className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
-                onClick={() => window.open('https://wa.me/3105831864?text=Hola,%20quiero%20más%20información', '_blank')}
+                onClick={() =>
+                  window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
+                }
               >
                 <MessageCircle size={16} />
                 WhatsApp
@@ -139,6 +144,13 @@ export default function AsogranjaPage() {
                 Nosotros
               </a>
               <a
+                href="#produccion-agroecologica"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Producción Agroecológica
+              </a>
+              <a
                 href="#contacto"
                 className="block text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
@@ -148,8 +160,8 @@ export default function AsogranjaPage() {
               <Button
                 className="w-full bg-green-600 hover:bg-green-700 text-white flex items-center gap-2 justify-center"
                 onClick={() => {
-                  setIsMenuOpen(false);
-                  window.open('https://wa.me/3105831864?text=Hola,%20quiero%20más%20información', '_blank');
+                  setIsMenuOpen(false)
+                  window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
                 }}
               >
                 <MessageCircle size={16} />
@@ -186,7 +198,7 @@ export default function AsogranjaPage() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-lg px-8"
-                onClick={() => document.getElementById('rutas')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById("rutas")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Explorar Rutas
               </Button>
@@ -194,7 +206,7 @@ export default function AsogranjaPage() {
                 size="lg"
                 variant="outline"
                 className="text-lg px-8 bg-transparent"
-                onClick={() => document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Conocer Más
               </Button>
@@ -318,6 +330,91 @@ export default function AsogranjaPage() {
         </div>
       </section>
 
+      {/* Products Section */}
+      <section id="produccion-agroecologica" className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+              Producción Agroecológica
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
+              Conoce nuestros procesos de investigación participativa y el ciclo completo de producción, cosecha y venta
+              de productos agroecológicos
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Investigaciones Participativas */}
+            <Card className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/investigaciones-participativas-card.jpg"
+                  alt="Investigaciones Participativas"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+                  Investigaciones Participativas
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Proyecto Agroecológico Colombo Alemán PACA que promueve la transición agroecológica mediante análisis
+                  de suelos, diálogo de saberes, construcción de plantuladora comunitaria, elaboración de compost
+                  biodinámico, intercambio de experiencias y aplicación de metodologías de aprendizaje campesino a
+                  campesino.
+                </p>
+                <div className="pt-2">
+                  <Link href="/produccion-agroecologica/investigaciones-participativas">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                    >
+                      Conocer Más
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Producción, Cosecha y Venta */}
+            <Card
+              className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
+              style={{ animationDelay: "100ms" }}
+            >
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/produccion-cosecha-venta.jpg"
+                  alt="Producción, Cosecha y Venta"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+                  Producción, Cosecha y Venta
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Ciclo completo de producción agroecológica desde la siembra hasta la comercialización. Cultivamos
+                  productos orgánicos en nuestras huertas comunitarias, realizamos cosechas sostenibles y llevamos
+                  nuestros productos frescos directamente a mercados campesinos y consumidores locales.
+                </p>
+                <div className="pt-2">
+                  <Link href="/produccion-agroecologica/produccion-cosecha-venta">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                    >
+                      Conocer Más
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Mission & Vision */}
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
@@ -347,74 +444,6 @@ export default function AsogranjaPage() {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-              Productos y Servicios
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              Ofrecemos una variedad de productos agrícolas, artesanías y experiencias gastronómicas auténticas
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              {
-                title: "Productos Agrícolas",
-                desc: "Frutas, verduras y productos orgánicos de nuestras fincas",
-                img: "/organic-vegetables-farm-fresh-colombian.jpg",
-              },
-              {
-                title: "Gastronomía Típica",
-                desc: "Platos tradicionales boyacenses preparados con recetas ancestrales",
-                img: "/traditional-colombian-food-boyaca-cuisine.jpg",
-              },
-              {
-                title: "Artesanías",
-                desc: "Productos manufacturados a mano por artesanos locales",
-                img: "/colombian-handmade-crafts-rural-artisan.jpg",
-              },
-              {
-                title: "Camping Rural",
-                desc: "Experiencias de camping en entornos naturales únicos",
-                img: "/rural-camping-colombia-mountains-nature.jpg",
-              },
-              {
-                title: "Caminatas Ecológicas",
-                desc: "Recorridos guiados por senderos naturales y culturales",
-                img: "/ecological-hiking-colombia-rural-trail.jpg",
-              },
-              {
-                title: "Mercados Campesinos",
-                desc: "Espacios de comercialización directa de productos locales",
-                img: "/farmers-market-colombia-local-products.jpg",
-              },
-            ].map((product, index) => (
-              <Card
-                key={index}
-                className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={product.img || "/placeholder.svg"}
-                    alt={product.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
-                <CardContent className="p-6 space-y-2">
-                  <h3 className="text-xl font-bold">{product.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{product.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contacto" className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -429,7 +458,9 @@ export default function AsogranjaPage() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-lg px-8"
-                onClick={() => window.open('https://wa.me/3105831864?text=Hola,%20quiero%20más%20información', '_blank')}
+                onClick={() =>
+                  window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
+                }
               >
                 Contactar Ahora
               </Button>
@@ -475,13 +506,18 @@ export default function AsogranjaPage() {
                   </a>
                 </li>
                 <li>
+                  <a href="#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
+                    Producción Agroecológica
+                  </a>
+                </li>
+                <li>
                   <a href="#contacto" className="hover:opacity-100 transition-opacity">
                     Contacto
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:opacity-100 transition-opacity">
-                    Productos
+                    Producción Agroecológica
                   </a>
                 </li>
               </ul>
