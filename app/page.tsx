@@ -3,7 +3,20 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Menu, X, MapPin, Users, Heart, Leaf, Mountain, BookOpen, MessageCircle } from "lucide-react"
+import {
+  Menu,
+  X,
+  MapPin,
+  Users,
+  Heart,
+  Leaf,
+  Mountain,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  Clock,
+} from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -247,7 +260,7 @@ export default function AsogranjaPage() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className={`absolute inset-0 bg-linear-to-t ${route.color} to-transparent opacity-60`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-t ${route.color} to-transparent opacity-60`}></div>
                   <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
                     <route.icon className="w-6 h-6 text-primary" />
                   </div>
@@ -445,26 +458,179 @@ export default function AsogranjaPage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contacto" className="py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-              Comienza Tu Aventura Rural
-            </h2>
-            <p className="text-lg text-muted-foreground text-balance">
-              Contáctanos para reservar tu experiencia o conocer más sobre nuestras rutas turísticas y productos
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-lg px-8"
-                onClick={() =>
-                  window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
-                }
+      <section id="contacto" className="relative py-32 overflow-hidden">
+        {/* Background with overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/colombian-rural-landscape-mountains-farm-boyaca.jpg"
+            alt="Paisaje rural"
+            fill
+            className="object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background/95 to-background/90"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16 space-y-4 animate-in fade-in slide-in-from-bottom-5">
+              <h2
+                className="text-4xl md:text-6xl font-bold text-balance"
+                style={{ fontFamily: "var(--font-playfair)" }}
               >
-                Contactar Ahora
-              </Button>
+                Comienza Tu Aventura Rural
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance leading-relaxed">
+                Estamos listos para ayudarte a vivir una experiencia auténtica en el corazón de Boyacá
+              </p>
             </div>
+
+            {/* Contact Cards Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {/* WhatsApp Card */}
+              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary animate-in fade-in zoom-in-95">
+                <CardContent className="p-6 text-center space-y-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/10 rounded-full group-hover:bg-green-500/20 transition-colors">
+                    <MessageCircle className="w-8 h-8 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">WhatsApp</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Respuesta inmediata</p>
+                    <Button
+                      size="sm"
+                      className="w-full bg-green-600 hover:bg-green-700"
+                      onClick={() =>
+                        window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
+                      }
+                    >
+                      Chatear Ahora
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Phone Card */}
+              <Card
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary animate-in fade-in zoom-in-95"
+                style={{ animationDelay: "100ms" }}
+              >
+                <CardContent className="p-6 text-center space-y-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
+                    <Phone className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">Teléfono</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Llámanos directamente</p>
+                    <a href="tel:+573105831864" className="block">
+                      <Button size="sm" variant="outline" className="w-full bg-transparent">
+                        310 583 1864
+                      </Button>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Email Card */}
+              <Card
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary animate-in fade-in zoom-in-95"
+                style={{ animationDelay: "200ms" }}
+              >
+                <CardContent className="p-6 text-center space-y-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
+                    <Mail className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">Correo</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Escríbenos un email</p>
+                    <a href="mailto:info@asogranja.com" className="block">
+                      <Button size="sm" variant="outline" className="w-full bg-transparent">
+                        Enviar Email
+                      </Button>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Location Card */}
+              <Card
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary animate-in fade-in zoom-in-95"
+                style={{ animationDelay: "300ms" }}
+              >
+                <CardContent className="p-6 text-center space-y-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
+                    <MapPin className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-2">Ubicación</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Sogamoso, Boyacá</p>
+                    <Button size="sm" variant="outline" className="w-full bg-transparent">
+                      Ver Mapa
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* CTA Section */}
+            <Card
+              className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0 shadow-2xl animate-in fade-in zoom-in-95"
+              style={{ animationDelay: "400ms" }}
+            >
+              <CardContent className="p-12 text-center space-y-6">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-4">
+                  <Heart className="w-10 h-10" />
+                </div>
+                <h3
+                  className="text-3xl md:text-4xl font-bold text-balance"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  ¿Listo para tu experiencia rural?
+                </h3>
+                <p className="text-lg opacity-90 max-w-2xl mx-auto text-balance leading-relaxed">
+                  Reserva tu visita y descubre la auténtica vida campesina de Boyacá. Nuestro equipo está disponible
+                  para diseñar la experiencia perfecta para ti.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                  <Button
+                    size="lg"
+                    className="bg-white text-primary hover:bg-white/90 text-lg px-8 shadow-lg"
+                    onClick={() =>
+                      window.open(
+                        "https://wa.me/3105831864?text=Hola,%20quiero%20reservar%20una%20experiencia",
+                        "_blank",
+                      )
+                    }
+                  >
+                    <MessageCircle className="mr-2" />
+                    Reservar Ahora
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 bg-transparent"
+                    onClick={() => document.getElementById("rutas")?.scrollIntoView({ behavior: "smooth" })}
+                  >
+                    Ver Rutas
+                  </Button>
+                </div>
+
+                {/* Additional Info */}
+                <div className="flex flex-wrap items-center justify-center gap-6 pt-8 text-sm opacity-90">
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-5 h-5" />
+                    <span>Disponible todo el año</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="w-5 h-5" />
+                    <span>Grupos y familias bienvenidos</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Leaf className="w-5 h-5" />
+                    <span>Experiencias sostenibles</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
