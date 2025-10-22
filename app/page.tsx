@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Menu,
   X,
@@ -16,21 +16,23 @@ import {
   Phone,
   Mail,
   Clock,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { EmailModal } from "@/components/email-modal";
 
 export default function AsogranjaPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const routes = [
     {
@@ -69,20 +71,40 @@ export default function AsogranjaPage() {
       color: "from-lime-500/20 to-green-600/20",
       link: "/rutas/corredor-cultural-agroecologico",
     },
-  ]
+  ];
 
   const values = [
-    { icon: Heart, title: "Compromiso", description: "Con nuestras familias campesinas y el territorio" },
-    { icon: Users, title: "Diversidad", description: "Celebramos la riqueza cultural de Boyacá" },
-    { icon: Leaf, title: "Sostenibilidad", description: "Cuidado del medio ambiente y recursos naturales" },
-    { icon: MapPin, title: "Comunidad", description: "Fortalecimiento del desarrollo local y regional" },
-  ]
+    {
+      icon: Heart,
+      title: "Compromiso",
+      description: "Con nuestras familias campesinas y el territorio",
+    },
+    {
+      icon: Users,
+      title: "Diversidad",
+      description: "Celebramos la riqueza cultural de Boyacá",
+    },
+    {
+      icon: Leaf,
+      title: "Sostenibilidad",
+      description: "Cuidado del medio ambiente y recursos naturales",
+    },
+    {
+      icon: MapPin,
+      title: "Comunidad",
+      description: "Fortalecimiento del desarrollo local y regional",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"}`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-background/95 backdrop-blur-md shadow-md"
+            : "bg-transparent"
+        }`}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -101,25 +123,43 @@ export default function AsogranjaPage() {
             </div>
 
             <div className="hidden md:flex items-center gap-6">
-              <a href="#inicio" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#inicio"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Inicio
               </a>
-              <a href="#rutas" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#rutas"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Rutas
               </a>
-              <a href="#nosotros" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#nosotros"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Nosotros
               </a>
-              <a href="#produccion-agroecologica" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#produccion-agroecologica"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Producción Agroecológica
               </a>
-              <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#contacto"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Contacto
               </a>
               <Button
                 className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
                 onClick={() =>
-                  window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
+                  window.open(
+                    "https://wa.me/3105831864?text=Hola,%20quiero%20más%20información",
+                    "_blank"
+                  )
                 }
               >
                 <MessageCircle size={16} />
@@ -127,7 +167,10 @@ export default function AsogranjaPage() {
               </Button>
             </div>
 
-            <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button
+              className="md:hidden text-foreground"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -173,8 +216,11 @@ export default function AsogranjaPage() {
               <Button
                 className="w-full bg-green-600 hover:bg-green-700 text-white flex items-center gap-2 justify-center"
                 onClick={() => {
-                  setIsMenuOpen(false)
-                  window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
+                  setIsMenuOpen(false);
+                  window.open(
+                    "https://wa.me/3105831864?text=Hola,%20quiero%20más%20información",
+                    "_blank"
+                  );
                 }}
               >
                 <MessageCircle size={16} />
@@ -186,7 +232,10 @@ export default function AsogranjaPage() {
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section
+        id="inicio"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      >
         <div className="absolute inset-0 z-0">
           <Image
             src="/colombian-rural-landscape-mountains-farm-boyaca.jpg"
@@ -200,18 +249,26 @@ export default function AsogranjaPage() {
 
         <div className="container mx-auto px-4 z-10 text-center">
           <div className="max-w-4xl mx-auto space-y-6 animate-in fade-in slide-in-from-bottom-10 duration-1000">
-            <h1 className="text-5xl md:text-7xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-              Descubre el Corazón Rural de <span className="text-primary">Boyacá</span>
+            <h1
+              className="text-5xl md:text-7xl font-bold text-balance"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Descubre el Corazón Rural de{" "}
+              <span className="text-primary">Boyacá</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground text-balance leading-relaxed">
-              Experiencias auténticas de turismo rural comunitario que conectan tradición, naturaleza y cultura
-              campesina
+              Experiencias auténticas de turismo rural comunitario que conectan
+              tradición, naturaleza y cultura campesina
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-lg px-8"
-                onClick={() => document.getElementById("rutas")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() =>
+                  document
+                    .getElementById("rutas")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Explorar Rutas
               </Button>
@@ -219,7 +276,11 @@ export default function AsogranjaPage() {
                 size="lg"
                 variant="outline"
                 className="text-lg px-8 bg-transparent"
-                onClick={() => document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() =>
+                  document
+                    .getElementById("nosotros")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Conocer Más
               </Button>
@@ -238,11 +299,15 @@ export default function AsogranjaPage() {
       <section id="rutas" className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-balance"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
               Nuestras Rutas Turísticas
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              Cuatro experiencias únicas que celebran la identidad campesina y la riqueza natural de nuestro territorio
+              Cuatro experiencias únicas que celebran la identidad campesina y
+              la riqueza natural de nuestro territorio
             </p>
           </div>
 
@@ -260,16 +325,23 @@ export default function AsogranjaPage() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${route.color} to-transparent opacity-60`}></div>
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t ${route.color} to-transparent opacity-60`}
+                  ></div>
                   <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
                     <route.icon className="w-6 h-6 text-primary" />
                   </div>
                 </div>
                 <CardContent className="p-6 space-y-3">
-                  <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+                  <h3
+                    className="text-2xl font-bold text-balance"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                  >
                     {route.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">{route.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {route.description}
+                  </p>
                   <Link href={route.link}>
                     <Button
                       variant="outline"
@@ -298,13 +370,16 @@ export default function AsogranjaPage() {
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 Somos una entidad sin ánimo de lucro fundada en el año{" "}
-                <span className="font-bold text-primary">2010</span>, una organización de base campesina comunitaria que
-                busca promover los derechos de lo individual y lo colectivo de sus asociados.
+                <span className="font-bold text-primary">2010</span>, una
+                organización de base campesina comunitaria que busca promover
+                los derechos de lo individual y lo colectivo de sus asociados.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Nos hemos convertido en un núcleo del sector social que brinda apoyo a las familias campesinas en temas
-                de producción y comercialización de productos agrícolas y pecuarios, transformación de alimentos
-                gastronómicos, artesanía, y el desarrollo de mercados campesinos.
+                Nos hemos convertido en un núcleo del sector social que brinda
+                apoyo a las familias campesinas en temas de producción y
+                comercialización de productos agrícolas y pecuarios,
+                transformación de alimentos gastronómicos, artesanía, y el
+                desarrollo de mercados campesinos.
               </p>
               <div className="pt-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
@@ -315,11 +390,18 @@ export default function AsogranjaPage() {
 
             <div className="relative animate-in fade-in slide-in-from-right-10">
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/asogranja-community-team.jpg" alt="Comunidad ASOGRANJA" fill className="object-cover" />
+                <Image
+                  src="/asogranja-community-team.jpg"
+                  alt="Comunidad ASOGRANJA"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-secondary p-6 rounded-xl shadow-xl max-w-xs">
                 <p className="text-4xl font-bold text-primary">14+</p>
-                <p className="text-sm text-muted-foreground">Años promoviendo el turismo rural comunitario</p>
+                <p className="text-sm text-muted-foreground">
+                  Años promoviendo el turismo rural comunitario
+                </p>
               </div>
             </div>
           </div>
@@ -336,7 +418,9 @@ export default function AsogranjaPage() {
                   <value.icon className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {value.description}
+                </p>
               </Card>
             ))}
           </div>
@@ -347,12 +431,16 @@ export default function AsogranjaPage() {
       <section id="produccion-agroecologica" className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-balance"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
               Producción Agroecológica
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              Conoce nuestros procesos de investigación participativa y el ciclo completo de producción, cosecha y venta
-              de productos agroecológicos
+              Conoce nuestros procesos de investigación participativa y el ciclo
+              completo de producción, cosecha y venta de productos
+              agroecológicos
             </p>
           </div>
 
@@ -368,14 +456,19 @@ export default function AsogranjaPage() {
                 />
               </div>
               <CardContent className="p-8 space-y-4">
-                <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+                <h3
+                  className="text-2xl font-bold text-balance"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
                   Investigaciones Participativas
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Proyecto Agroecológico Colombo Alemán PACA que promueve la transición agroecológica mediante análisis
-                  de suelos, diálogo de saberes, construcción de plantuladora comunitaria, elaboración de compost
-                  biodinámico, intercambio de experiencias y aplicación de metodologías de aprendizaje campesino a
-                  campesino.
+                  Proyecto Agroecológico Colombo Alemán PACA que promueve la
+                  transición agroecológica mediante análisis de suelos, diálogo
+                  de saberes, construcción de plantuladora comunitaria,
+                  elaboración de compost biodinámico, intercambio de
+                  experiencias y aplicación de metodologías de aprendizaje
+                  campesino a campesino.
                 </p>
                 <div className="pt-2">
                   <Link href="/produccion-agroecologica/investigaciones-participativas">
@@ -404,13 +497,18 @@ export default function AsogranjaPage() {
                 />
               </div>
               <CardContent className="p-8 space-y-4">
-                <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+                <h3
+                  className="text-2xl font-bold text-balance"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
                   Producción, Cosecha y Venta
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ciclo completo de producción agroecológica desde la siembra hasta la comercialización. Cultivamos
-                  productos orgánicos en nuestras huertas comunitarias, realizamos cosechas sostenibles y llevamos
-                  nuestros productos frescos directamente a mercados campesinos y consumidores locales.
+                  Ciclo completo de producción agroecológica desde la siembra
+                  hasta la comercialización. Cultivamos productos orgánicos en
+                  nuestras huertas comunitarias, realizamos cosechas sostenibles
+                  y llevamos nuestros productos frescos directamente a mercados
+                  campesinos y consumidores locales.
                 </p>
                 <div className="pt-2">
                   <Link href="/produccion-agroecologica/produccion-cosecha-venta">
@@ -433,24 +531,33 @@ export default function AsogranjaPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div className="space-y-4 animate-in fade-in slide-in-from-left-10">
-              <h3 className="text-3xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
+              <h3
+                className="text-3xl font-bold"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
                 Misión
               </h3>
               <p className="leading-relaxed opacity-90">
-                Asogranja está comprometida con el desarrollo y promoción del sector campesino mediante experiencias
-                turísticas, productivas, agro ecológicas y artesanales como parte de la identidad rural para hacerla más
-                atractiva, eficiente y efectiva en la transmisión de saberes y valores sociales y culturales del
+                Asogranja está comprometida con el desarrollo y promoción del
+                sector campesino mediante experiencias turísticas, productivas,
+                agro ecológicas y artesanales como parte de la identidad rural
+                para hacerla más atractiva, eficiente y efectiva en la
+                transmisión de saberes y valores sociales y culturales del
                 territorio boyacense.
               </p>
             </div>
             <div className="space-y-4 animate-in fade-in slide-in-from-right-10">
-              <h3 className="text-3xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
+              <h3
+                className="text-3xl font-bold"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
                 Visión
               </h3>
               <p className="leading-relaxed opacity-90">
-                Potenciar los saberes y experiencia campesinos de sus asociados para elevar el potencial socioeconómico
-                de los mismos, potenciando la gran riqueza ambiental y ancestral de los territorios y los valores de las
-                mujeres campesinas.
+                Potenciar los saberes y experiencia campesinos de sus asociados
+                para elevar el potencial socioeconómico de los mismos,
+                potenciando la gran riqueza ambiental y ancestral de los
+                territorios y los valores de las mujeres campesinas.
               </p>
             </div>
           </div>
@@ -481,7 +588,8 @@ export default function AsogranjaPage() {
                 Comienza Tu Aventura Rural
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance leading-relaxed">
-                Estamos listos para ayudarte a vivir una experiencia auténtica en el corazón de Boyacá
+                Estamos listos para ayudarte a vivir una experiencia auténtica
+                en el corazón de Boyacá
               </p>
             </div>
 
@@ -495,12 +603,17 @@ export default function AsogranjaPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">WhatsApp</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Respuesta inmediata</p>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Respuesta inmediata
+                    </p>
                     <Button
                       size="sm"
                       className="w-full bg-green-600 hover:bg-green-700"
                       onClick={() =>
-                        window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
+                        window.open(
+                          "https://wa.me/3105831864?text=Hola,%20quiero%20más%20información",
+                          "_blank"
+                        )
                       }
                     >
                       Chatear Ahora
@@ -520,9 +633,15 @@ export default function AsogranjaPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">Teléfono</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Llámanos directamente</p>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Llámanos directamente
+                    </p>
                     <a href="tel:+573105831864" className="block">
-                      <Button size="sm" variant="outline" className="w-full bg-transparent">
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="w-full bg-transparent"
+                      >
                         310 583 1864
                       </Button>
                     </a>
@@ -541,12 +660,17 @@ export default function AsogranjaPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">Correo</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Escríbenos un email</p>
-                    <a href="mailto:info@asogranja.com" className="block">
-                      <Button size="sm" variant="outline" className="w-full bg-transparent">
-                        Enviar Email
-                      </Button>
-                    </a>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Escríbenos un email
+                    </p>
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="w-full bg-transparent"
+                      onClick={() => setIsEmailModalOpen(true)}
+                    >
+                      Enviar Email
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -562,10 +686,22 @@ export default function AsogranjaPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-2">Ubicación</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Sogamoso, Boyacá</p>
-                    <Button size="sm" variant="outline" className="w-full bg-transparent">
-                      Ver Mapa
-                    </Button>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Sogamoso, Boyacá
+                    </p>
+                    <a
+                      href="https://maps.app.goo.gl/zQQ37KowRohcKqc39"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="w-full bg-transparent"
+                      >
+                        Ver Mapa
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -587,8 +723,9 @@ export default function AsogranjaPage() {
                   ¿Listo para tu experiencia rural?
                 </h3>
                 <p className="text-lg opacity-90 max-w-2xl mx-auto text-balance leading-relaxed">
-                  Reserva tu visita y descubre la auténtica vida campesina de Boyacá. Nuestro equipo está disponible
-                  para diseñar la experiencia perfecta para ti.
+                  Reserva tu visita y descubre la auténtica vida campesina de
+                  Boyacá. Nuestro equipo está disponible para diseñar la
+                  experiencia perfecta para ti.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <Button
@@ -597,7 +734,7 @@ export default function AsogranjaPage() {
                     onClick={() =>
                       window.open(
                         "https://wa.me/3105831864?text=Hola,%20quiero%20reservar%20una%20experiencia",
-                        "_blank",
+                        "_blank"
                       )
                     }
                   >
@@ -608,7 +745,11 @@ export default function AsogranjaPage() {
                     size="lg"
                     variant="outline"
                     className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 bg-transparent"
-                    onClick={() => document.getElementById("rutas")?.scrollIntoView({ behavior: "smooth" })}
+                    onClick={() =>
+                      document
+                        .getElementById("rutas")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
                   >
                     Ver Rutas
                   </Button>
@@ -654,7 +795,8 @@ export default function AsogranjaPage() {
                 </div>
               </div>
               <p className="text-sm opacity-90 leading-relaxed">
-                Promoviendo el turismo rural comunitario y el desarrollo sostenible desde 2010
+                Promoviendo el turismo rural comunitario y el desarrollo
+                sostenible desde 2010
               </p>
             </div>
 
@@ -662,22 +804,34 @@ export default function AsogranjaPage() {
               <h4 className="font-bold text-lg">Enlaces Rápidos</h4>
               <ul className="space-y-2 text-sm opacity-90">
                 <li>
-                  <a href="#rutas" className="hover:opacity-100 transition-opacity">
+                  <a
+                    href="#rutas"
+                    className="hover:opacity-100 transition-opacity"
+                  >
                     Rutas Turísticas
                   </a>
                 </li>
                 <li>
-                  <a href="#nosotros" className="hover:opacity-100 transition-opacity">
+                  <a
+                    href="#nosotros"
+                    className="hover:opacity-100 transition-opacity"
+                  >
                     Quiénes Somos
                   </a>
                 </li>
                 <li>
-                  <a href="#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
+                  <a
+                    href="#produccion-agroecologica"
+                    className="hover:opacity-100 transition-opacity"
+                  >
                     Producción Agroecológica
                   </a>
                 </li>
                 <li>
-                  <a href="#contacto" className="hover:opacity-100 transition-opacity">
+                  <a
+                    href="#contacto"
+                    className="hover:opacity-100 transition-opacity"
+                  >
                     Contacto
                   </a>
                 </li>
@@ -704,6 +858,12 @@ export default function AsogranjaPage() {
           </div>
         </div>
       </footer>
+
+      {/* Email Modal */}
+      <EmailModal
+        isOpen={isEmailModalOpen}
+        onClose={() => setIsEmailModalOpen(false)}
+      />
     </div>
-  )
+  );
 }

@@ -67,7 +67,7 @@ export default function InvestigacionesParticipativasPage() {
             size="lg"
           >
             <ArrowLeft className="mr-2 h-5 w-5" />
-            <span className="font-semibold">Volver a Producción Agroecológica</span>
+            <span className="font-semibold">Volver </span>
           </Button>
         </Link>
 

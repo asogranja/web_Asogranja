@@ -139,18 +139,9 @@ export default function CulturaYMemoriaPage() {
                     className="w-full h-full object-cover"
                     poster="/cultura-memoria-indigenous-symbols.jpg"
                   >
-                    <source src="/ruta-cultura-memoria-video.mp4" type="video/mp4" />
+                    <source src="/Cultura y memoria.mp4" type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
                   </video>
-                  <div className="absolute inset-0 flex items-center justify-center bg-stone-900/50 backdrop-blur-sm">
-                    <div className="text-center text-white p-8">
-                      <Video className="w-16 h-16 mx-auto mb-4 opacity-70" />
-                      <p className="text-xl font-semibold mb-2">Video próximamente</p>
-                      <p className="text-sm opacity-80">
-                        Para agregar tu video, reemplaza "/ruta-cultura-memoria-video.mp4" con la ruta de tu archivo
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>
