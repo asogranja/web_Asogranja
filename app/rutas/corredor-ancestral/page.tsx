@@ -63,7 +63,7 @@ export default function CorredorAncestralPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100 dark:from-background dark:via-background dark:to-stone-950">
-      <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden mt-4">
+      <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden">
         <Image
           src="/corredor-ancestral-musicians-campfire.jpg"
           alt="Músicos tradicionales alrededor de fogata en Ciudad de la Memoria"

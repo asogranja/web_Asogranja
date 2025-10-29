@@ -181,15 +181,6 @@ export default function AsogranjaPage() {
               <a href="#rutas" className="text-foreground hover:text-primary transition-colors">
                 Rutas
               </a>
-              <Button
-                className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
-                onClick={() =>
-                  window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
-                }
-              >
-                <MessageCircle size={16} />
-                WhatsApp
-              </Button>
             </div>
 
             <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -242,16 +233,6 @@ export default function AsogranjaPage() {
               >
                 Rutas
               </a>
-              <Button
-                className="w-full bg-green-600 hover:bg-green-700 text-white flex items-center gap-2 justify-center"
-                onClick={() => {
-                  setIsMenuOpen(false)
-                  window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
-                }}
-              >
-                <MessageCircle size={16} />
-                WhatsApp
-              </Button>
             </div>
           )}
         </div>
@@ -282,7 +263,7 @@ export default function AsogranjaPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-lg px-8"
+                className="bg-primary hover:bg-primary/90 text-lg px-8 py-3"
                 onClick={() => document.getElementById("productos")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Ver Productos
@@ -290,10 +271,18 @@ export default function AsogranjaPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 bg-transparent"
-                onClick={() => document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })}
+                className="text-lg px-8 py-3 bg-transparent"
+                onClick={() => document.getElementById("rutas")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Conocer Más
+                Rutas
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-3 bg-transparent"
+                onClick={() => document.getElementById("produccion-agroecologica")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Producción Agroecológica
               </Button>
             </div>
           </div>
@@ -321,7 +310,7 @@ export default function AsogranjaPage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Investigaciones Participativas */}
-            <Card className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
+            <Card className="group overflow-hidden border-2 hover:border-green-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/investigaciones-participativas-card.jpg"
@@ -355,7 +344,7 @@ export default function AsogranjaPage() {
 
             {/* Producción, Cosecha y Venta */}
             <Card
-              className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
+              className="group overflow-hidden border-2 hover:border-green-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
               style={{ animationDelay: "100ms" }}
             >
               <div className="relative h-80 overflow-hidden">
@@ -405,7 +394,7 @@ export default function AsogranjaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Turismo Cultural (Corredor Cultural y Agroecológico) */}
-            <Card className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
+            <Card className="group overflow-hidden border-2 hover:border-orange-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/corredor-cultural-hero.jpg"
@@ -438,7 +427,7 @@ export default function AsogranjaPage() {
 
             {/* Corredor Ancestral */}
             <Card
-              className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
+              className="group overflow-hidden border-2 hover:border-orange-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
               style={{ animationDelay: "100ms" }}
             >
               <div className="relative h-80 overflow-hidden">
@@ -473,7 +462,7 @@ export default function AsogranjaPage() {
 
             {/* Cultura y Memoria */}
             <Card
-              className="group overflow-hidden hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
+              className="group overflow-hidden border-2 hover:border-orange-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
               style={{ animationDelay: "200ms" }}
             >
               <div className="relative h-80 overflow-hidden">
@@ -527,7 +516,7 @@ export default function AsogranjaPage() {
             {artisanProducts.map((product, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden border-2 hover:border-primary transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10"
+                className="group overflow-hidden border-2 hover:border-yellow-500 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -870,7 +859,7 @@ export default function AsogranjaPage() {
                     <Mail className="w-8 h-8 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Correo</h3>
+                    <h3 className="font-bold text-lg mb-2"></h3>
                     <p className="text-sm text-muted-foreground mb-3">Escríbenos un email</p>
                     <Button
                       size="sm"
@@ -1039,6 +1028,25 @@ export default function AsogranjaPage() {
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button
+          size="lg"
+          className="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center animate-pulse"
+          onClick={() =>
+            window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
+          }
+        >
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+            width={24}
+            height={24}
+            className="filter invert"
+          />
+        </Button>
+      </div>
 
       {/* Email Modal */}
       <EmailModal isOpen={isEmailModalOpen} onClose={() => setIsEmailModalOpen(false)} />

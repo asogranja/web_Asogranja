@@ -43,7 +43,7 @@ export default function CulturaYMemoriaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100 dark:from-background dark:via-background dark:to-stone-950">
       {/* Hero Section */}
-      <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden mt-4">
+      <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden">
         <Image
           src="/cultura-memoria-indigenous-symbols.jpg"
           alt="Grupo con símbolos indígenas en actividad cultural"
