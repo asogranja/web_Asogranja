@@ -171,20 +171,20 @@ export default function AsogranjaPage() {
               <a href="#inicio" className="text-foreground hover:text-primary transition-colors">
                 Inicio
               </a>
+              <a href="#produccion-agroecologica" className="text-foreground hover:text-primary transition-colors">
+                Producción Agroecológica
+              </a>
+              <a href="#rutas" className="text-foreground hover:text-primary transition-colors">
+                Rutas
+              </a>
               <a href="#productos" className="text-foreground hover:text-primary transition-colors">
                 Productos
               </a>
               <a href="#nosotros" className="text-foreground hover:text-primary transition-colors">
                 Nosotros
               </a>
-              <a href="#produccion-agroecologica" className="text-foreground hover:text-primary transition-colors">
-                Producción Agroecológica
-              </a>
               <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
                 Contacto
-              </a>
-              <a href="#rutas" className="text-foreground hover:text-primary transition-colors">
-                Rutas
               </a>
             </div>
 
@@ -204,6 +204,20 @@ export default function AsogranjaPage() {
                 Inicio
               </a>
               <a
+                href="#produccion-agroecologica"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Producción Agroecológica
+              </a>
+              <a
+                href="#rutas"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Rutas
+              </a>
+              <a
                 href="#productos"
                 className="block text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
@@ -218,25 +232,11 @@ export default function AsogranjaPage() {
                 Nosotros
               </a>
               <a
-                href="#produccion-agroecologica"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Producción Agroecológica
-              </a>
-              <a
                 href="#contacto"
                 className="block text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contacto
-              </a>
-              <a
-                href="#rutas"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Rutas
               </a>
             </div>
           )}
@@ -749,7 +749,6 @@ export default function AsogranjaPage() {
               </CardContent>
             </Card>
           </div>
-
         </div>
       </section>
 
