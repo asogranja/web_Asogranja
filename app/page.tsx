@@ -274,7 +274,7 @@ export default function AsogranjaPage() {
                   document.getElementById("produccion-agroecologica")?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Producción Agroecológica
+                Agroecológia
               </Button>
               <Button
                 size="lg"
@@ -282,14 +282,14 @@ export default function AsogranjaPage() {
                 className="text-lg px-8 py-3 bg-transparent sm:min-w-[240px]"
                 onClick={() => document.getElementById("rutas")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Rutas
+                Turismo Rural
               </Button>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-lg px-8 py-3 sm:min-w-[240px]"
                 onClick={() => document.getElementById("productos")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Ver Productos
+                Productos Artesanales
               </Button>
             </div>
           </div>
