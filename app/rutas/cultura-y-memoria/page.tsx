@@ -24,6 +24,8 @@ export default function CulturaYMemoriaPage() {
   const heroRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

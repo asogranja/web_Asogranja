@@ -268,28 +268,28 @@ export default function AsogranjaPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-lg px-8 py-3"
-                onClick={() => document.getElementById("productos")?.scrollIntoView({ behavior: "smooth" })}
+                variant="outline"
+                className="text-lg px-8 py-3 bg-transparent sm:min-w-[240px]"
+                onClick={() =>
+                  document.getElementById("produccion-agroecologica")?.scrollIntoView({ behavior: "smooth" })
+                }
               >
-                Ver Productos
+                Producción Agroecológica
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-3 bg-transparent"
+                className="text-lg px-8 py-3 bg-transparent sm:min-w-[240px]"
                 onClick={() => document.getElementById("rutas")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Rutas
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="text-lg px-8 py-3 bg-transparent"
-                onClick={() =>
-                  document.getElementById("produccion-agroecologica")?.scrollIntoView({ behavior: "smooth" })
-                }
+                className="bg-primary hover:bg-primary/90 text-lg px-8 py-3 sm:min-w-[240px]"
+                onClick={() => document.getElementById("productos")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Producción Agroecológica
+                Ver Productos
               </Button>
             </div>
           </div>

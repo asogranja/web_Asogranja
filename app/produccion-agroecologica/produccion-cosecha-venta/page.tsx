@@ -5,8 +5,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Sprout, Sun, ShoppingBasket, Leaf, Users, TrendingUp, Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect } from "react"
 
 export default function ProduccionCosechaVentaPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }, [])
+
   const stages = [
     {
       icon: Sprout,
