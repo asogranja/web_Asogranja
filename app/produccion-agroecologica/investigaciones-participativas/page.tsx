@@ -278,9 +278,59 @@ export default function InvestigacionesParticipativasPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-stone-800 text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-stone-400">© 2025 ASOGRANJA Sogamoso. Todos los derechos reservados.</p>
+      <footer className="bg-stone-900 text-stone-300 py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* About Section */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-white">ASOGRANJA Sogamoso</h3>
+              <p className="text-sm leading-relaxed">
+                Asociación de productores agroecológicos comprometidos con la sostenibilidad, la investigación
+                participativa y el turismo rural comunitario en Sogamoso, Boyacá.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-white">Enlaces Rápidos</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/#produccion-agroecologica" className="hover:text-green-400 transition-colors">
+                    Producción Agroecológica
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#rutas" className="hover:text-green-400 transition-colors">
+                    Turismo Rural
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#productos" className="hover:text-green-400 transition-colors">
+                    Productos Artesanales
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#nosotros" className="hover:text-green-400 transition-colors">
+                    Nosotros
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-white">Contacto</h3>
+              <ul className="space-y-2 text-sm">
+                <li>📞 311 463 2044 / 313 219 5939</li>
+                <li>📧 asogranjasogamoso@gmail.com</li>
+                <li>📍 Sogamoso, Boyacá, Colombia</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-stone-700 pt-8 text-center text-sm">
+            <p>© 2025 ASOGRANJA Sogamoso. Todos los derechos reservados.</p>
+          </div>
         </div>
       </footer>
     </div>
