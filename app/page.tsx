@@ -921,11 +921,18 @@ export default function AsogranjaPage() {
                   <div>
                     <h3 className="font-bold text-lg mb-2">Teléfono</h3>
                     <p className="text-sm text-muted-foreground mb-3">Llámanos directamente</p>
-                    <a href="tel:+573105831864" className="block">
-                      <Button size="sm" variant="outline" className="w-full bg-transparent">
-                        310 583 1864
-                      </Button>
-                    </a>
+                    <div className="space-y-2">
+                      <a href="tel:+573114632044" className="block">
+                        <Button size="sm" variant="outline" className="w-full bg-transparent">
+                          311 463 2044
+                        </Button>
+                      </a>
+                      <a href="tel:+573132195939" className="block">
+                        <Button size="sm" variant="outline" className="w-full bg-transparent">
+                          313 219 5939
+                        </Button>
+                      </a>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
