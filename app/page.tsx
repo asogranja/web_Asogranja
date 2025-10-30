@@ -10,7 +10,6 @@ import {
   Users,
   Heart,
   Leaf,
-  MessageCircle,
   Phone,
   Mail,
   Clock,
@@ -20,6 +19,12 @@ import {
   UtensilsCrossed,
   Cake,
   Scissors,
+  Microscope,
+  Sprout,
+  Landmark,
+  Mountain,
+  BookOpen,
+  MessageCircle,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -280,7 +285,9 @@ export default function AsogranjaPage() {
                 size="lg"
                 variant="outline"
                 className="text-lg px-8 py-3 bg-transparent"
-                onClick={() => document.getElementById("produccion-agroecologica")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() =>
+                  document.getElementById("produccion-agroecologica")?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Producción Agroecológica
               </Button>
@@ -318,6 +325,9 @@ export default function AsogranjaPage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
+                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
+                  <Microscope className="w-6 h-6 text-primary" />
+                </div>
               </div>
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -354,6 +364,9 @@ export default function AsogranjaPage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
+                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
+                  <Sprout className="w-6 h-6 text-primary" />
+                </div>
               </div>
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -393,16 +406,19 @@ export default function AsogranjaPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Turismo Cultural (Corredor Cultural y Agroecológico) */}
+            {/* Turismo Cultural (Casa Cultura) */}
             <Card className="group overflow-hidden border-2 hover:border-orange-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/corredor-cultural-hero.jpg"
+                  src="/cultural-center-gathering.jpg"
                   alt="Turismo Cultural"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
+                  <Landmark className="w-6 h-6 text-primary" />
+                </div>
               </div>
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -413,7 +429,7 @@ export default function AsogranjaPage() {
                   artesanías y productos orgánicos en un solo recorrido.
                 </p>
                 <div className="pt-2">
-                  <Link href="/rutas/corredor-cultural-agroecologico">
+                  <Link href="/rutas/turismo-cultural">
                     <Button
                       variant="outline"
                       className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
@@ -438,6 +454,9 @@ export default function AsogranjaPage() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
+                  <Mountain className="w-6 h-6 text-primary" />
+                </div>
               </div>
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -467,12 +486,15 @@ export default function AsogranjaPage() {
             >
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/cultura-memoria-hero.jpg"
+                  src="/cultura-memoria-indigenous-symbols.jpg"
                   alt="Cultura y Memoria"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
+                  <BookOpen className="w-6 h-6 text-primary" />
+                </div>
               </div>
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -546,6 +568,7 @@ export default function AsogranjaPage() {
                       )
                     }
                   >
+                    <MessageCircle className="w-4 h-4 mr-2" />
                     Consultar Disponibilidad
                   </Button>
                 </CardContent>
@@ -567,106 +590,164 @@ export default function AsogranjaPage() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 items-start">
-              {/* Interactive 3D Map */}
-              <Card className="overflow-hidden border-2 shadow-xl">
-                <CardContent className="p-0">
-                  <div className="relative aspect-[16/10] bg-gradient-to-br from-green-50 to-green-100">
-                    <Image
-                      src="/mapa-rutas-3d.png"
-                      alt="Mapa interactivo de productos"
-                      fill
-                      className="object-contain p-4"
-                    />
-                    {/* Interactive Pins */}
-                    {mapLocations.map((location) => (
-                      <button
-                        key={location.id}
-                        className={`absolute w-12 h-12 rounded-full ${location.color} text-white font-bold text-lg shadow-lg hover:scale-125 transition-all duration-300 flex items-center justify-center cursor-pointer z-10 ${
-                          selectedLocation === location.id ? "scale-125 ring-4 ring-white" : ""
-                        }`}
-                        style={{ top: location.position.top, left: location.position.left }}
-                        onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
-                        onMouseEnter={() => setSelectedLocation(location.id)}
-                        onMouseLeave={() => setSelectedLocation(null)}
-                      >
-                        {location.id}
-                      </button>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+            <Card className="overflow-hidden border-2 shadow-2xl bg-gradient-to-br from-green-50/50 to-background">
+              <CardContent className="p-0">
+                <div className="grid lg:grid-cols-5 gap-0">
+                  {/* Left Side - Interactive Map (takes 3 columns) */}
+                  <div className="lg:col-span-3 p-8 bg-gradient-to-br from-green-50 to-green-100/50">
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                          <MapPin className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="text-2xl font-bold">Mapa Interactivo</h4>
+                          <p className="text-sm text-muted-foreground">Haz clic en los pines para más información</p>
+                        </div>
+                      </div>
 
-              {/* Location Details */}
-              <div className="space-y-4">
-                <Card className="border-2 border-primary/20 bg-primary/5">
-                  <CardContent className="p-6">
-                    <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
-                      <MapPin className="w-5 h-5 text-primary" />
-                      Ubicaciones
-                    </h4>
-                    <div className="space-y-3">
-                      {mapLocations.map((location) => (
-                        <button
-                          key={location.id}
-                          className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${
-                            selectedLocation === location.id
-                              ? "bg-primary text-primary-foreground shadow-lg scale-105"
-                              : "bg-background hover:bg-muted"
-                          }`}
-                          onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
-                        >
-                          <div className="flex items-start gap-3">
-                            <div
-                              className={`w-8 h-8 rounded-full ${location.color} text-white font-bold flex items-center justify-center flex-shrink-0`}
-                            >
-                              {location.id}
+                      {/* Interactive 3D Map */}
+                      <div className="relative aspect-[16/10] bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary/20">
+                        <Image
+                          src="/mapa-rutas-3d.png"
+                          alt="Mapa interactivo de productos"
+                          fill
+                          className="object-contain p-4"
+                        />
+                        {/* Interactive Pins */}
+                        {mapLocations.map((location) => (
+                          <button
+                            key={location.id}
+                            className={`absolute w-12 h-12 rounded-full ${location.color} text-white font-bold text-lg shadow-lg hover:scale-125 transition-all duration-300 flex items-center justify-center cursor-pointer z-10 ${
+                              selectedLocation === location.id ? "scale-125 ring-4 ring-white" : ""
+                            }`}
+                            style={{ top: location.position.top, left: location.position.left }}
+                            onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
+                            onMouseEnter={() => setSelectedLocation(location.id)}
+                            onMouseLeave={() => setSelectedLocation(null)}
+                          >
+                            {location.id}
+                          </button>
+                        ))}
+                      </div>
+
+                      {/* Map Legend */}
+                      <div className="bg-white rounded-lg p-4 shadow-md border border-primary/10">
+                        <h5 className="font-bold text-sm mb-3 flex items-center gap-2">
+                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          Leyenda del Mapa
+                        </h5>
+                        <div className="grid grid-cols-2 gap-2 text-xs">
+                          {mapLocations.map((location) => (
+                            <div key={location.id} className="flex items-center gap-2">
+                              <div
+                                className={`w-6 h-6 rounded-full ${location.color} text-white text-xs font-bold flex items-center justify-center`}
+                              >
+                                {location.id}
+                              </div>
+                              <span className="text-muted-foreground">{location.name}</span>
                             </div>
-                            <div className="flex-1">
-                              <h5 className="font-bold text-lg mb-1">{location.name}</h5>
-                              <p className="text-sm opacity-80 mb-1">{location.location}</p>
-                              <p className="text-sm opacity-90">{location.description}</p>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Side - Location Details (takes 2 columns) */}
+                  <div className="lg:col-span-2 p-8 bg-background space-y-6">
+                    <div>
+                      <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
+                        <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                          <MapPin className="w-5 h-5 text-primary" />
+                        </div>
+                        Ubicaciones
+                      </h4>
+                      <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2">
+                        {mapLocations.map((location, index) => (
+                          <button
+                            key={location.id}
+                            className={`w-full text-left p-4 rounded-lg transition-all duration-300 animate-in fade-in slide-in-from-right-5 ${
+                              selectedLocation === location.id
+                                ? "bg-primary text-primary-foreground shadow-lg scale-105"
+                                : "bg-muted/50 hover:bg-muted"
+                            }`}
+                            style={{ animationDelay: `${index * 100}ms` }}
+                            onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
+                          >
+                            <div className="flex items-start gap-3">
+                              <div
+                                className={`w-8 h-8 rounded-full ${location.color} text-white font-bold flex items-center justify-center flex-shrink-0 shadow-md`}
+                              >
+                                {location.id}
+                              </div>
+                              <div className="flex-1">
+                                <h5 className="font-bold text-base mb-1">{location.name}</h5>
+                                <p className="text-xs opacity-80 mb-1 flex items-center gap-1">
+                                  <MapPin className="w-3 h-3" />
+                                  {location.location}
+                                </p>
+                                <p className="text-sm opacity-90">{location.description}</p>
+                              </div>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Contact Information Card */}
+                    <Card className="border-2 border-primary/20 bg-primary/5">
+                      <CardContent className="p-6 space-y-4">
+                        <h4 className="text-lg font-bold flex items-center gap-2">
+                          <Phone className="w-5 h-5 text-primary" />
+                          Información de Contacto
+                        </h4>
+                        <div className="space-y-3 text-sm">
+                          <div className="flex items-center gap-3 p-2 rounded-lg bg-background/50">
+                            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Phone className="w-4 h-4 text-primary" />
+                            </div>
+                            <div>
+                              <p className="text-xs text-muted-foreground">Teléfono</p>
+                              <p className="font-semibold">310 583 1864</p>
                             </div>
                           </div>
-                        </button>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2">
-                  <CardContent className="p-6">
-                    <h4 className="text-lg font-bold mb-3">Información de Contacto</h4>
-                    <div className="space-y-3 text-sm">
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <Phone className="w-4 h-4 text-primary" />
-                        <span>310 583 1864</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <MapPin className="w-4 h-4 text-primary" />
-                        <span>Sogamoso, Boyacá</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <Clock className="w-4 h-4 text-primary" />
-                        <span> Disponible todo el año</span>
-                      </div>
-                    </div>
-                    <Button
-                      className="w-full mt-4 bg-green-600 hover:bg-green-700"
-                      onClick={() =>
-                        window.open(
-                          "https://wa.me/3105831864?text=Hola,%20quiero%20visitar%20las%20ubicaciones%20de%20productos",
-                          "_blank",
-                        )
-                      }
-                    >
-                      <MessageCircle className="mr-2 w-4 h-4" />
-                      Planear Visita
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+                          <div className="flex items-center gap-3 p-2 rounded-lg bg-background/50">
+                            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                              <MapPin className="w-4 h-4 text-primary" />
+                            </div>
+                            <div>
+                              <p className="text-xs text-muted-foreground">Ubicación</p>
+                              <p className="font-semibold">Sogamoso, Boyacá</p>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-3 p-2 rounded-lg bg-background/50">
+                            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                              <Clock className="w-4 h-4 text-primary" />
+                            </div>
+                            <div>
+                              <p className="text-xs text-muted-foreground">Disponibilidad</p>
+                              <p className="font-semibold">Todo el año</p>
+                            </div>
+                          </div>
+                        </div>
+                        <Button
+                          className="w-full bg-green-600 hover:bg-green-700 shadow-md"
+                          onClick={() =>
+                            window.open(
+                              "https://wa.me/3105831864?text=Hola,%20quiero%20visitar%20las%20ubicaciones%20de%20productos",
+                              "_blank",
+                            )
+                          }
+                        >
+                          <MessageCircle className="w-4 h-4 mr-2" />
+                          Planear Visita
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Additional Info Card */}
@@ -925,7 +1006,7 @@ export default function AsogranjaPage() {
                       )
                     }
                   >
-                    <MessageCircle className="mr-2" />
+                    <MessageCircle className="w-5 h-5 mr-2" />
                     Reservar Ahora
                   </Button>
                   <Button
@@ -1034,17 +1115,9 @@ export default function AsogranjaPage() {
         <Button
           size="lg"
           className="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center animate-pulse"
-          onClick={() =>
-            window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
-          }
+          onClick={() => window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")}
         >
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-            alt="WhatsApp"
-            width={24}
-            height={24}
-            className="filter invert"
-          />
+          <MessageCircle className="w-6 h-6" />
         </Button>
       </div>
 

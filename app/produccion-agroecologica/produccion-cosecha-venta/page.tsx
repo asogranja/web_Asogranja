@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, Sprout, Sun, ShoppingBasket, Leaf, Users, TrendingUp } from "lucide-react"
+import { ArrowLeft, Sprout, Sun, ShoppingBasket, Leaf, Users, TrendingUp, Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -312,10 +312,59 @@ export default function ProduccionCosechaVentaPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-stone-800 text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-stone-400">© 2025 ASOGRANJA Sogamoso. Todos los derechos reservados.</p>
+      <footer className="bg-stone-800 dark:bg-stone-950 text-white">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Asogranja Sogamoso
+              </h3>
+              <p className="text-stone-300 text-sm leading-relaxed">
+                Producción agroecológica sostenible y comercio justo. Del campo a tu mesa con productos 100% orgánicos.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Contacto
+              </h3>
+              <div className="space-y-2 text-stone-300 text-sm">
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  310 583 1864
+                </p>
+                <p className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" />
+                  info@asogranja.com
+                </p>
+                <p className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  Sogamoso, Boyacá
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Nuestros Servicios
+              </h3>
+              <div className="space-y-2 text-stone-300 text-sm">
+                <Link href="/#produccion-agroecologica" className="block hover:text-white transition-colors">
+                  Producción Agroecológica
+                </Link>
+                <Link href="/#rutas" className="block hover:text-white transition-colors">
+                  Rutas Turísticas
+                </Link>
+                <Link href="/#nosotros" className="block hover:text-white transition-colors">
+                  Sobre Nosotros
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-stone-700 pt-8 text-center text-stone-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} Asogranja Sogamoso. Todos los derechos reservados.</p>
+          </div>
         </div>
       </footer>
     </div>

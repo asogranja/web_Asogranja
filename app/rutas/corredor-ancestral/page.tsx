@@ -585,6 +585,62 @@ export default function CorredorAncestralPage() {
         </div>
       </div>
 
+      <footer className="bg-stone-800 dark:bg-stone-950 text-white">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Asogranja Sogamoso
+              </h3>
+              <p className="text-stone-300 text-sm leading-relaxed">
+                Promoviendo el turismo rural comunitario y preservando las tradiciones ancestrales de Sogamoso, Boyacá.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Contacto
+              </h3>
+              <div className="space-y-2 text-stone-300 text-sm">
+                <p className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" />
+                  322 881 4258
+                </p>
+                <p className="flex items-center gap-2">
+                  <Mail className="w-4 h-4" />
+                  @CiudadDeLaMemoria
+                </p>
+                <p className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4" />
+                  Vereda Monquira, Sogamoso
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                Nuestras Rutas
+              </h3>
+              <div className="space-y-2 text-stone-300 text-sm">
+                <Link href="/rutas/corredor-ancestral" className="block hover:text-white transition-colors">
+                  Corredor Ancestral
+                </Link>
+                <Link href="/rutas/turismo-cultural" className="block hover:text-white transition-colors">
+                  Turismo Cultural
+                </Link>
+                <Link href="/rutas/cultura-y-memoria" className="block hover:text-white transition-colors">
+                  Ruta Cultura y Memoria
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-stone-700 pt-8 text-center text-stone-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} Asogranja Sogamoso. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
       <style jsx global>{`
         .fade-in-section {
           opacity: 0;

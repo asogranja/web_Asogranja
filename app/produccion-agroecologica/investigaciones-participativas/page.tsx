@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowLeft, Microscope, Users, Sprout, BookOpen, Lightbulb, Globe } from "lucide-react"
@@ -7,6 +8,10 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function InvestigacionesParticipativasPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const activities = [
     {
       icon: Microscope,
