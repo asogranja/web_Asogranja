@@ -254,7 +254,7 @@ export default function CorredorCulturalPage() {
                     <p className="text-sm text-stone-600">Contacto directo</p>
                   </div>
                 </div>
-                <a href="https://wa.me/573112345678" target="_blank" rel="noopener noreferrer" className="block w-full">
+                <a href="https://wa.me/573114632044" target="_blank" rel="noopener noreferrer" className="block w-full">
                   <Button className="w-full bg-lime-600 hover:bg-lime-700 text-white">Escribir por WhatsApp</Button>
                 </a>
               </CardContent>

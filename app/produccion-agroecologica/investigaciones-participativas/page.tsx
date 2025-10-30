@@ -267,7 +267,7 @@ export default function InvestigacionesParticipativasPage() {
             className="bg-green-600 hover:bg-green-700 text-white"
             onClick={() =>
               window.open(
-                "https://wa.me/3105831864?text=Hola,%20quiero%20información%20sobre%20investigaciones%20participativas",
+                "https://wa.me/573114632044?text=Hola,%20quiero%20información%20sobre%20investigaciones%20participativas",
                 "_blank",
               )
             }

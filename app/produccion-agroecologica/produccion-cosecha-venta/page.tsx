@@ -307,7 +307,7 @@ export default function ProduccionCosechaVentaPage() {
             className="bg-green-600 hover:bg-green-700 text-white"
             onClick={() =>
               window.open(
-                "https://wa.me/3105831864?text=Hola,%20quiero%20información%20sobre%20productos%20agroecológicos",
+                "https://wa.me/573114632044?text=Hola,%20quiero%20información%20sobre%20productos%20agroecológicos",
                 "_blank",
               )
             }

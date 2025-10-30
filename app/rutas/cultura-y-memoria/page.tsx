@@ -396,7 +396,7 @@ export default function CulturaYMemoriaPage() {
                       </h3>
 
                       <a
-                        href="https://wa.me/57"
+                        href="https://wa.me/573114632044"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-4 p-4 rounded-lg border-2 border-stone-200 dark:border-stone-800 hover:border-green-500 dark:hover:border-green-500 hover:bg-green-50 dark:hover:bg-green-950/20 transition-all duration-300 group"
