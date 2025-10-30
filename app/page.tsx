@@ -750,23 +750,6 @@ export default function AsogranjaPage() {
             </Card>
           </div>
 
-          {/* Additional Info Card */}
-          <Card className="mt-12 max-w-4xl mx-auto border-2 border-primary/20 bg-primary/5">
-            <CardContent className="p-8 text-center space-y-4">
-              <h3 className="text-2xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
-                Visita Nuestro Corredor Cultural
-              </h3>
-              <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                Conoce de primera mano cómo elaboramos nuestros productos en el Corredor Cultural y Agroecológico. Una
-                experiencia inmersiva que conecta tradición, gastronomía y prácticas sostenibles.
-              </p>
-              <Link href="/rutas/corredor-cultural-agroecologico">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Conocer el Corredor Cultural
-                </Button>
-              </Link>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
@@ -1106,7 +1089,7 @@ export default function AsogranjaPage() {
               <ul className="space-y-2 text-sm opacity-90">
                 <li>Sogamoso, Boyacá, Colombia</li>
                 <li>Disponible todo el año</li>
-                <li>info@asogranja.com</li>
+                <li>asogranjasogamoso@gmail.com</li>
               </ul>
             </div>
           </div>
@@ -1121,7 +1104,7 @@ export default function AsogranjaPage() {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           size="lg"
-          className="bg-transparent hover:bg-green-50 rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center p-0 overflow-hidden border-0"
+          className="bg-transparent hover:bg-green-50 rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center p-0 overflow-hidden border-0 animate-pulse hover:animate-bounce"
           onClick={() => window.open("https://wa.me/573114632044?text=Hola,%20quiero%20más%20información", "_blank")}
         >
           <Image

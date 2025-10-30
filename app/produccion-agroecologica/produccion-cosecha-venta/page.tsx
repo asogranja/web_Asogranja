@@ -340,7 +340,7 @@ export default function ProduccionCosechaVentaPage() {
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  info@asogranja.com
+                  asogranjasogamoso@gmail.com
                 </p>
                 <p className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />

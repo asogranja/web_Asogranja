@@ -22,6 +22,7 @@ export function EmailModal({ isOpen, onClose }: EmailModalProps) {
     email: "",
     subject: "",
     message: "quiero mas información",
+
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");

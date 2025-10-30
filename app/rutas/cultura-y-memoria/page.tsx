@@ -411,7 +411,7 @@ export default function CulturaYMemoriaPage() {
                       </a>
 
                       <a
-                        href="mailto:info@asogranja.com"
+                        href="mailto:asogranjasogamoso@gmail.com"
                         className="flex items-center gap-4 p-4 rounded-lg border-2 border-stone-200 dark:border-stone-800 hover:border-pink-500 dark:hover:border-pink-500 hover:bg-pink-50 dark:hover:bg-pink-950/20 transition-all duration-300 group"
                       >
                         <div className="bg-pink-100 dark:bg-pink-900/30 p-3 rounded-full group-hover:bg-pink-500 transition-colors duration-300">
@@ -419,7 +419,7 @@ export default function CulturaYMemoriaPage() {
                         </div>
                         <div>
                           <p className="text-sm text-stone-600 dark:text-stone-400">Correo</p>
-                          <p className="font-bold text-lg text-stone-800 dark:text-stone-200">info@asogranja.com</p>
+                          <p className="font-bold text-lg text-stone-800 dark:text-stone-200">asogranjasogamoso@gmail.com</p>
                         </div>
                       </a>
 

@@ -57,7 +57,7 @@ export default function TurismoCulturalPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100 dark:from-background dark:via-background dark:to-stone-950">
-      <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden mt-4">
+      <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden">
         <Image
           src="/cultural-center-gathering.jpg"
           alt="Centro Cultural Comunitario - Bienvenida al Turismo Cultural"
@@ -632,7 +632,7 @@ export default function TurismoCulturalPage() {
                 <li>Sogamoso, Boyacá, Colombia</li>
                 <li>Teléfono: 310 583 1864</li>
                 <li>Disponible todo el año</li>
-                <li>info@asogranja.com</li>
+                <li>asogranjasogamoso@gmail.com</li>
               </ul>
             </div>
           </div>
