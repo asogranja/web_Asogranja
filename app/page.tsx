@@ -563,7 +563,7 @@ export default function AsogranjaPage() {
                     className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
                     onClick={() =>
                       window.open(
-                        "https://wa.me/3105831864?text=Hola,%20quiero%20información%20sobre%20" + product.title,
+                        "https://wa.me/3114632044?text=Hola,%20quiero%20información%20sobre%20" + product.title,
                         "_blank",
                       )
                     }
@@ -734,7 +734,7 @@ export default function AsogranjaPage() {
                           className="w-full bg-green-600 hover:bg-green-700 shadow-md"
                           onClick={() =>
                             window.open(
-                              "https://wa.me/3105831864?text=Hola,%20quiero%20visitar%20las%20ubicaciones%20de%20productos",
+                              "https://wa.me/3114632044?text=Hola,%20quiero%20visitar%20las%20ubicaciones%20de%20productos",
                               "_blank",
                             )
                           }
@@ -900,7 +900,7 @@ export default function AsogranjaPage() {
                       size="sm"
                       className="w-full bg-green-600 hover:bg-green-700"
                       onClick={() =>
-                        window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")
+                        window.open("https://wa.me/3114632044?text=Hola,%20quiero%20más%20información", "_blank")
                       }
                     >
                       Chatear Ahora
@@ -1008,7 +1008,7 @@ export default function AsogranjaPage() {
                     className="bg-white text-primary hover:bg-white/90 text-lg px-8 shadow-lg"
                     onClick={() =>
                       window.open(
-                        "https://wa.me/3105831864?text=Hola,%20quiero%20reservar%20una%20experiencia",
+                        "https://wa.me/3114632044?text=Hola,%20quiero%20reservar%20una%20experiencia",
                         "_blank",
                       )
                     }
@@ -1122,7 +1122,7 @@ export default function AsogranjaPage() {
         <Button
           size="lg"
           className="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center animate-pulse"
-          onClick={() => window.open("https://wa.me/3105831864?text=Hola,%20quiero%20más%20información", "_blank")}
+          onClick={() => window.open("https://wa.me/3114632044?text=Hola,%20quiero%20más%20información", "_blank")}
         >
           <MessageCircle className="w-6 h-6" />
         </Button>
