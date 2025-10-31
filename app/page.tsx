@@ -307,7 +307,7 @@ export default function AsogranjaPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-              Producción Agroecológica
+              Agroecología 
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               Conoce nuestros procesos de investigación participativa y el ciclo completo de producción, cosecha y venta

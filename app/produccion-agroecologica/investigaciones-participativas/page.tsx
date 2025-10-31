@@ -81,9 +81,7 @@ export default function InvestigacionesParticipativasPage() {
             <h1 className="text-5xl md:text-7xl font-bold text-balance drop-shadow-2xl leading-tight">
               Investigaciones Participativas
             </h1>
-            <p className="text-xl md:text-2xl text-balance leading-relaxed drop-shadow-lg font-medium">
-              Proyecto Agroecológico Colombo Alemán PACA - Transición hacia la sostenibilidad
-            </p>
+          
             <div className="pt-4">
               <div className="inline-block bg-green-600/90 backdrop-blur-sm px-6 py-3 rounded-full">
                 <p className="text-sm md:text-base font-semibold">ASOGRANJA Sogamoso | Investigación Aplicada</p>

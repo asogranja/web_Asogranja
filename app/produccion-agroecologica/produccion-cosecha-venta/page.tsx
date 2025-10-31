@@ -1,16 +1,27 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, Sprout, Sun, ShoppingBasket, Leaf, Users, TrendingUp, Phone, Mail, MapPin } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useEffect } from "react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  ArrowLeft,
+  Sprout,
+  Sun,
+  ShoppingBasket,
+  Leaf,
+  Users,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
 
 export default function ProduccionCosechaVentaPage() {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }, [])
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const stages = [
     {
@@ -37,7 +48,7 @@ export default function ProduccionCosechaVentaPage() {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/490833031_1839574900228527_8748825509214713402_n-wIx7ftsMjh9N7pTA7G93Z1fGieTckA.jpg",
     },
-  ]
+  ];
 
   const products = [
     "Lechugas orgánicas",
@@ -48,7 +59,7 @@ export default function ProduccionCosechaVentaPage() {
     "Hierbas aromáticas",
     "Frutas de temporada",
     "Productos procesados artesanales",
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -64,7 +75,10 @@ export default function ProduccionCosechaVentaPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-stone-50/95"></div>
 
-        <Link href="/#produccion-agroecologica" className="absolute top-6 left-6 z-20">
+        <Link
+          href="/#produccion-agroecologica"
+          className="absolute top-6 left-6 z-20"
+        >
           <Button
             variant="outline"
             className="bg-white/95 hover:bg-white text-stone-800 border-2 border-stone-200 hover:border-green-600 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105"
@@ -81,11 +95,14 @@ export default function ProduccionCosechaVentaPage() {
               Producción, Cosecha y Venta
             </h1>
             <p className="text-xl md:text-2xl text-balance leading-relaxed drop-shadow-lg font-medium">
-              Del campo a tu mesa: productos agroecológicos frescos y sostenibles
+              Del campo a tu mesa: productos agroecológicos frescos y
+              sostenibles
             </p>
             <div className="pt-4">
               <div className="inline-block bg-green-600/90 backdrop-blur-sm px-6 py-3 rounded-full">
-                <p className="text-sm md:text-base font-semibold">ASOGRANJA Sogamoso | Agricultura Orgánica</p>
+                <p className="text-sm md:text-base font-semibold">
+                  ASOGRANJA Sogamoso | Agricultura Orgánica
+                </p>
               </div>
             </div>
           </div>
@@ -97,16 +114,27 @@ export default function ProduccionCosechaVentaPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <Card className="border-2 border-stone-200 shadow-lg animate-in fade-in slide-in-from-bottom-5">
             <CardContent className="p-8 space-y-4">
-              <h2 className="text-3xl font-bold text-stone-800">Ciclo Completo de Producción</h2>
+              <h2 className="text-3xl font-bold text-stone-800">
+                Ciclo Completo de Producción
+              </h2>
               <p className="text-lg text-stone-600 leading-relaxed">
-                En ASOGRANJA desarrollamos un ciclo completo de producción agroecológica que va desde la siembra hasta
-                la comercialización directa. Nuestras familias campesinas cultivan productos orgánicos de alta calidad
-                utilizando técnicas sostenibles que respetan el medio ambiente y promueven la biodiversidad.
+                ¡Desde la Semilla Hasta Tu Mesa!
+                En ASOGRANJA desarrollamos un
+                ciclo completo de producción agroecológica, Cultivamos nuestros
+                propios plantulajes y acompañamos cada etapa del proceso hasta
+                que el alimento llega a tus manos. Nuestras familias campesinas
+                cultivan productos orgánicos de alta calidad utilizando técnicas
+                sostenibles que respetan el medio ambiente y promueven la
+                biodiversidad. Participamos activamente en mercados campesinos
+                locales donde ofrecemos productos frescos, garantizando así la
+                mejor calidad a nuestros consumidores y precios justos a
+                nuestros productores.
               </p>
               <p className="text-lg text-stone-600 leading-relaxed">
-                Participamos activamente en mercados campesinos locales donde ofrecemos productos frescos, cosechados en
-                el momento óptimo de maduración, garantizando así la mejor calidad para nuestros consumidores y precios
-                justos para nuestros productores.
+                Participamos activamente en mercados campesinos locales donde
+                ofrecemos productos frescos, cosechados en el momento óptimo de
+                maduración, garantizando así la mejor calidad para nuestros
+                consumidores y precios justos para nuestros productores.
               </p>
             </CardContent>
           </Card>
@@ -116,7 +144,9 @@ export default function ProduccionCosechaVentaPage() {
       {/* Production Stages */}
       <section className="py-16 bg-stone-50">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12 text-stone-800">Etapas del Proceso</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-stone-800">
+            Etapas del Proceso
+          </h2>
 
           <div className="space-y-12">
             {stages.map((stage, index) => (
@@ -125,18 +155,35 @@ export default function ProduccionCosechaVentaPage() {
                 className="overflow-hidden border-2 border-stone-200 hover:border-green-600 transition-all duration-300 hover:shadow-xl animate-in fade-in slide-in-from-bottom-5"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className={`grid md:grid-cols-2 gap-6 ${index % 2 === 1 ? "md:grid-flow-dense" : ""}`}>
-                  <div className={`relative h-80 ${index % 2 === 1 ? "md:col-start-2" : ""}`}>
-                    <Image src={stage.image || "/placeholder.svg"} alt={stage.title} fill className="object-cover" />
+                <div
+                  className={`grid md:grid-cols-2 gap-6 ${
+                    index % 2 === 1 ? "md:grid-flow-dense" : ""
+                  }`}
+                >
+                  <div
+                    className={`relative h-80 ${
+                      index % 2 === 1 ? "md:col-start-2" : ""
+                    }`}
+                  >
+                    <Image
+                      src={stage.image || "/placeholder.svg"}
+                      alt={stage.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="p-8 flex flex-col justify-center space-y-4">
                     <div className="flex items-center gap-4">
                       <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                         <stage.icon className="w-7 h-7 text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold text-stone-800">{stage.title}</h3>
+                      <h3 className="text-2xl font-bold text-stone-800">
+                        {stage.title}
+                      </h3>
                     </div>
-                    <p className="text-lg text-stone-600 leading-relaxed">{stage.description}</p>
+                    <p className="text-lg text-stone-600 leading-relaxed">
+                      {stage.description}
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -148,7 +195,9 @@ export default function ProduccionCosechaVentaPage() {
       {/* Products Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-4xl font-bold text-center mb-12 text-stone-800">Nuestros Productos</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-stone-800">
+            Nuestros Productos
+          </h2>
 
           <Card className="border-2 border-stone-200 shadow-lg">
             <CardContent className="p-8">
@@ -171,7 +220,9 @@ export default function ProduccionCosechaVentaPage() {
       {/* Image Gallery */}
       <section className="py-16 bg-stone-50">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12 text-stone-800">Galería de Producción</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-stone-800">
+            Galería de Producción
+          </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
@@ -184,7 +235,9 @@ export default function ProduccionCosechaVentaPage() {
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Huerta orgánica con cultivos diversificados</p>
+                <p className="text-sm text-stone-600">
+                  Huerta orgánica con cultivos diversificados
+                </p>
               </CardContent>
             </Card>
 
@@ -198,7 +251,9 @@ export default function ProduccionCosechaVentaPage() {
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Preparación de semilleros para siembra</p>
+                <p className="text-sm text-stone-600">
+                  Preparación de semilleros para siembra
+                </p>
               </CardContent>
             </Card>
 
@@ -212,7 +267,9 @@ export default function ProduccionCosechaVentaPage() {
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Recorrido educativo por cultivos bajo polisombra</p>
+                <p className="text-sm text-stone-600">
+                  Recorrido educativo por cultivos bajo polisombra
+                </p>
               </CardContent>
             </Card>
 
@@ -226,7 +283,9 @@ export default function ProduccionCosechaVentaPage() {
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Venta directa en mercado campesino</p>
+                <p className="text-sm text-stone-600">
+                  Venta directa en mercado campesino
+                </p>
               </CardContent>
             </Card>
 
@@ -240,7 +299,9 @@ export default function ProduccionCosechaVentaPage() {
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Capacitación en técnicas de compostaje</p>
+                <p className="text-sm text-stone-600">
+                  Capacitación en técnicas de compostaje
+                </p>
               </CardContent>
             </Card>
 
@@ -254,7 +315,9 @@ export default function ProduccionCosechaVentaPage() {
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Proceso de siembra en bandejas germinadoras</p>
+                <p className="text-sm text-stone-600">
+                  Proceso de siembra en bandejas germinadoras
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -264,14 +327,19 @@ export default function ProduccionCosechaVentaPage() {
       {/* Benefits Section */}
       <section className="py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12">Beneficios de Nuestros Productos</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Beneficios de Nuestros Productos
+          </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white">
               <CardContent className="p-6 space-y-4 text-center">
                 <Users className="w-12 h-12 mx-auto" />
                 <h3 className="text-xl font-bold">Comercio Justo</h3>
-                <p className="opacity-90">Precios justos para productores y consumidores, sin intermediarios</p>
+                <p className="opacity-90">
+                  Precios justos para productores y consumidores, sin
+                  intermediarios
+                </p>
               </CardContent>
             </Card>
 
@@ -279,7 +347,10 @@ export default function ProduccionCosechaVentaPage() {
               <CardContent className="p-6 space-y-4 text-center">
                 <Leaf className="w-12 h-12 mx-auto" />
                 <h3 className="text-xl font-bold">100% Orgánico</h3>
-                <p className="opacity-90">Sin químicos sintéticos, pesticidas ni fertilizantes artificiales</p>
+                <p className="opacity-90">
+                  Sin químicos sintéticos, pesticidas ni fertilizantes
+                  artificiales
+                </p>
               </CardContent>
             </Card>
 
@@ -287,7 +358,9 @@ export default function ProduccionCosechaVentaPage() {
               <CardContent className="p-6 space-y-4 text-center">
                 <TrendingUp className="w-12 h-12 mx-auto" />
                 <h3 className="text-xl font-bold">Frescura Garantizada</h3>
-                <p className="opacity-90">Del campo a tu mesa en menos de 24 horas</p>
+                <p className="opacity-90">
+                  Del campo a tu mesa en menos de 24 horas
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -297,10 +370,12 @@ export default function ProduccionCosechaVentaPage() {
       {/* Contact Section */}
       <section className="py-16 bg-stone-50">
         <div className="container mx-auto px-4 max-w-4xl text-center space-y-6">
-          <h2 className="text-3xl font-bold text-stone-800">Compra Nuestros Productos</h2>
+          <h2 className="text-3xl font-bold text-stone-800">
+            Compra Nuestros Productos
+          </h2>
           <p className="text-lg text-stone-600">
-            Visítanos en los mercados campesinos o contáctanos para conocer nuestros puntos de venta y productos
-            disponibles.
+            Visítanos en los mercados campesinos o contáctanos para conocer
+            nuestros puntos de venta y productos disponibles.
           </p>
           <Button
             size="lg"
@@ -308,7 +383,7 @@ export default function ProduccionCosechaVentaPage() {
             onClick={() =>
               window.open(
                 "https://wa.me/573114632044?text=Hola,%20quiero%20información%20sobre%20productos%20agroecológicos",
-                "_blank",
+                "_blank"
               )
             }
           >
@@ -321,16 +396,23 @@ export default function ProduccionCosechaVentaPage() {
         <div className="container mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+              <h3
+                className="text-xl font-bold mb-4"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
                 Asogranja Sogamoso
               </h3>
               <p className="text-stone-300 text-sm leading-relaxed">
-                Producción agroecológica sostenible y comercio justo. Del campo a tu mesa con productos 100% orgánicos.
+                Producción agroecológica sostenible y comercio justo. Del campo
+                a tu mesa con productos 100% orgánicos.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+              <h3
+                className="text-xl font-bold mb-4"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
                 Contacto
               </h3>
               <div className="space-y-2 text-stone-300 text-sm">
@@ -350,17 +432,29 @@ export default function ProduccionCosechaVentaPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+              <h3
+                className="text-xl font-bold mb-4"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
                 Nuestros Servicios
               </h3>
               <div className="space-y-2 text-stone-300 text-sm">
-                <Link href="/#produccion-agroecologica" className="block hover:text-white transition-colors">
+                <Link
+                  href="/#produccion-agroecologica"
+                  className="block hover:text-white transition-colors"
+                >
                   Producción Agroecológica
                 </Link>
-                <Link href="/#rutas" className="block hover:text-white transition-colors">
+                <Link
+                  href="/#rutas"
+                  className="block hover:text-white transition-colors"
+                >
                   Rutas Turísticas
                 </Link>
-                <Link href="/#nosotros" className="block hover:text-white transition-colors">
+                <Link
+                  href="/#nosotros"
+                  className="block hover:text-white transition-colors"
+                >
                   Sobre Nosotros
                 </Link>
               </div>
@@ -368,10 +462,13 @@ export default function ProduccionCosechaVentaPage() {
           </div>
 
           <div className="border-t border-stone-700 pt-8 text-center text-stone-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} Asogranja Sogamoso. Todos los derechos reservados.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Asogranja Sogamoso. Todos los
+              derechos reservados.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
