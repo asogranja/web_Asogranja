@@ -180,9 +180,9 @@ export default function AsogranjaPage() {
               <a href="#productos" className="text-foreground hover:text-primary transition-colors">
                 Productos
               </a>
-              <a href="#nosotros" className="text-foreground hover:text-primary transition-colors">
+              <Link href="/nosotros" className="text-foreground hover:text-primary transition-colors">
                 Nosotros
-              </a>
+              </Link>
               <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
                 Contacto
               </a>
@@ -224,13 +224,13 @@ export default function AsogranjaPage() {
               >
                 Productos
               </a>
-              <a
-                href="#nosotros"
+              <Link
+                href="/nosotros"
                 className="block text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Nosotros
-              </a>
+              </Link>
               <a
                 href="#contacto"
                 className="block text-foreground hover:text-primary transition-colors"
@@ -303,11 +303,11 @@ export default function AsogranjaPage() {
       </section>
 
       {/* Producción Agroecológica Section */}
-      <section id="produccion-agroecologica" className="py-24">
+      <section id="produccion-agroecologica" className="py-24 bg-green-50/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-              Agroecología 
+              Agroecología
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               Conoce nuestros procesos de investigación participativa y el ciclo completo de producción, cosecha y venta
@@ -316,8 +316,46 @@ export default function AsogranjaPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Producción, Cosecha y Venta */}
+            <Card className="group overflow-hidden border-2 hover:border-green-500 hover:border-4 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="/produccion-cosecha-venta.jpg"
+                  alt="Producción, Cosecha y Venta"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
+                  <Sprout className="w-6 h-6 text-green-500" />
+                </div>
+              </div>
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+                  Producción, Cosecha y Venta
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Ciclo completo de producción agroecológica desde la siembra hasta la comercialización. Cultivamos
+                  productos orgánicos en nuestras huertas comunitarias, realizamos cosechas sostenibles y llevamos
+                  nuestros productos frescos directamente a mercados campesinos y consumidores locales.
+                </p>
+                <div className="pt-2">
+                  <Link href="/produccion-agroecologica/produccion-cosecha-venta">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                    >
+                      Conocer Más
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Investigaciones Participativas */}
-            <Card className="group overflow-hidden border-2 hover:border-green-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
+            <Card
+              className="group overflow-hidden border-2 hover:border-green-500 hover:border-4 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
+              style={{ animationDelay: "100ms" }}
+            >
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/investigaciones-participativas-card.jpg"
@@ -326,7 +364,7 @@ export default function AsogranjaPage() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
-                  <Microscope className="w-6 h-6 text-primary" />
+                  <Microscope className="w-6 h-6 text-green-500" />
                 </div>
               </div>
               <CardContent className="p-8 space-y-4">
@@ -351,50 +389,12 @@ export default function AsogranjaPage() {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Producción, Cosecha y Venta */}
-            <Card
-              className="group overflow-hidden border-2 hover:border-green-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
-              style={{ animationDelay: "100ms" }}
-            >
-              <div className="relative h-80 overflow-hidden">
-                <Image
-                  src="/produccion-cosecha-venta.jpg"
-                  alt="Producción, Cosecha y Venta"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
-                  <Sprout className="w-6 h-6 text-primary" />
-                </div>
-              </div>
-              <CardContent className="p-8 space-y-4">
-                <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Producción, Cosecha y Venta
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Ciclo completo de producción agroecológica desde la siembra hasta la comercialización. Cultivamos
-                  productos orgánicos en nuestras huertas comunitarias, realizamos cosechas sostenibles y llevamos
-                  nuestros productos frescos directamente a mercados campesinos y consumidores locales.
-                </p>
-                <div className="pt-2">
-                  <Link href="/produccion-agroecologica/produccion-cosecha-venta">
-                    <Button
-                      variant="outline"
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
-                    >
-                      Conocer Más
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
 
       {/* Turismo Rural Comunitario Section */}
-      <section id="rutas" className="py-24 bg-muted/30">
+      <section id="rutas" className="py-24 bg-orange-50/40">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -407,7 +407,7 @@ export default function AsogranjaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Turismo Cultural (Casa Cultura) */}
-            <Card className="group overflow-hidden border-2 hover:border-orange-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
+            <Card className="group overflow-hidden border-2 hover:border-orange-500 hover:border-4 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/cultural-center-gathering.jpg"
@@ -417,7 +417,7 @@ export default function AsogranjaPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
-                  <Landmark className="w-6 h-6 text-primary" />
+                  <Landmark className="w-6 h-6 text-orange-500" />
                 </div>
               </div>
               <CardContent className="p-8 space-y-4">
@@ -443,19 +443,19 @@ export default function AsogranjaPage() {
 
             {/* Corredor Ancestral */}
             <Card
-              className="group overflow-hidden border-2 hover:border-orange-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
+              className="group overflow-hidden border-2 hover:border-orange-500 hover:border-4 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
               style={{ animationDelay: "100ms" }}
             >
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/corredor-ancestral-musicians-campfire.jpg"
+                  src="/corredor-ancestral-musicians- campfire.jpg"
                   alt="Corredor Ancestral"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
-                  <Mountain className="w-6 h-6 text-primary" />
+                  <Mountain className="w-6 h-6 text-orange-500" />
                 </div>
               </div>
               <CardContent className="p-8 space-y-4">
@@ -481,7 +481,7 @@ export default function AsogranjaPage() {
 
             {/* Cultura y Memoria */}
             <Card
-              className="group overflow-hidden border-2 hover:border-orange-500 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
+              className="group overflow-hidden border-2 hover:border-orange-500 hover:border-4 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
               style={{ animationDelay: "200ms" }}
             >
               <div className="relative h-80 overflow-hidden">
@@ -493,7 +493,7 @@ export default function AsogranjaPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
-                  <BookOpen className="w-6 h-6 text-primary" />
+                  <BookOpen className="w-6 h-6 text-orange-500" />
                 </div>
               </div>
               <CardContent className="p-8 space-y-4">
@@ -520,7 +520,8 @@ export default function AsogranjaPage() {
         </div>
       </section>
 
-      <section id="productos" className="py-24 bg-muted/30">
+      {/* Productos Artesanales Section */}
+      <section id="productos" className="py-24 bg-yellow-50/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
@@ -538,7 +539,7 @@ export default function AsogranjaPage() {
             {artisanProducts.map((product, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden border-2 hover:border-yellow-500 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10"
+                className="group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -550,7 +551,7 @@ export default function AsogranjaPage() {
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${product.color} to-transparent opacity-60`}></div>
                   <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
-                    <product.icon className="w-6 h-6 text-primary" />
+                    <product.icon className="w-6 h-6 text-yellow-500" />
                   </div>
                 </div>
                 <CardContent className="p-6 space-y-3">
@@ -752,95 +753,8 @@ export default function AsogranjaPage() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="nosotros" className="py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div className="space-y-6 animate-in fade-in slide-in-from-left-10">
-              <h2
-                className="text-4xl md:text-5xl font-bold text-balance"
-                style={{ fontFamily: "var(--font-playfair)" }}
-              >
-                Quiénes Somos
-              </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Somos una entidad sin ánimo de lucro fundada en el año{" "}
-                <span className="font-bold text-primary">2010</span>, una organización de base campesina comunitaria que
-                busca promover los derechos de lo individual y lo colectivo de sus asociados.
-              </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Nos hemos convertido en un núcleo del sector social que brinda apoyo a las familias campesinas en temas
-                de producción y comercialización de productos agrícolas y pecuarios, transformación de alimentos
-                gastronómicos, artesanía, y el desarrollo de mercados campesinos.
-              </p>
-              <div className="pt-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Conocer Nuestra Historia
-                </Button>
-              </div>
-            </div>
-
-            <div className="relative animate-in fade-in slide-in-from-right-10">
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/asogranja-community-team.jpg" alt="Comunidad ASOGRANJA" fill className="object-cover" />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-secondary p-6 rounded-xl shadow-xl max-w-xs">
-                <p className="text-4xl font-bold text-primary">14+</p>
-                <p className="text-sm text-muted-foreground">Años promoviendo el turismo rural comunitario</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Values */}
-          <div className="mt-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {values.map((value, index) => (
-              <Card
-                key={index}
-                className="text-center p-6 hover:shadow-lg transition-shadow animate-in fade-in slide-in-from-bottom-5"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                  <value.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-24 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div className="space-y-4 animate-in fade-in slide-in-from-left-10">
-              <h3 className="text-3xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
-                Misión
-              </h3>
-              <p className="leading-relaxed opacity-90">
-                Asogranja está comprometida con el desarrollo y promoción del sector campesino mediante experiencias
-                turísticas, productivas, agro ecológicas y artesanales como parte de la identidad rural para hacerla más
-                atractiva, eficiente y efectiva en la transmisión de saberes y valores sociales y culturales del
-                territorio boyacense.
-              </p>
-            </div>
-            <div className="space-y-4 animate-in fade-in slide-in-from-right-10">
-              <h3 className="text-3xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
-                Visión
-              </h3>
-              <p className="leading-relaxed opacity-90">
-                Potenciar los saberes y experiencia campesinos de sus asociados para elevar el potencial socioeconómico
-                de los mismos, potenciando la gran riqueza ambiental y ancestral de los territorios y los valores de las
-                mujeres campesinas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section id="contacto" className="relative py-32 overflow-hidden">
+      <section id="contacto" className="relative py-32 overflow-hidden bg-muted/70">
         {/* Background with overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -1061,9 +975,9 @@ export default function AsogranjaPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="#nosotros" className="hover:opacity-100 transition-opacity">
+                  <Link href="/nosotros" className="hover:opacity-100 transition-opacity">
                     Quiénes Somos
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
