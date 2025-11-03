@@ -25,6 +25,7 @@ import {
   Mountain,
   BookOpen,
   MessageCircle,
+  Droplets,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -405,7 +406,7 @@ export default function AsogranjaPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Turismo Cultural (Casa Cultura) */}
             <Card className="group overflow-hidden border-2 hover:border-orange-500 hover:border-4 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
               <div className="relative h-80 overflow-hidden">
@@ -516,6 +517,44 @@ export default function AsogranjaPage() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Ruta del Agua */}
+            <Card
+              className="group overflow-hidden border-2 hover:border-orange-500 hover:border-4 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95"
+              style={{ animationDelay: "300ms" }}
+            >
+              <div className="relative h-80 overflow-hidden">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2024-EhU5HkJ6RfxC835aseR0zbaEthBn55.jpg"
+                  alt="Ruta del Agua - Lago de Tota"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm p-3 rounded-full">
+                  <Droplets className="w-6 h-6 text-orange-500" />
+                </div>
+              </div>
+              <CardContent className="p-8 space-y-4">
+                <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
+                  Ruta del Agua
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Recorre el Lago de Tota, el cuerpo de agua más grande de Colombia. Un viaje de seis paradas e
+                  infinitas emociones alrededor del lago más alto de Latinoamérica.
+                </p>
+                <div className="pt-2">
+                  <Link href="/rutas/ruta-del-agua">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                    >
+                      Explorar Ruta
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -603,11 +642,10 @@ export default function AsogranjaPage() {
                         </div>
                         <div>
                           <h4 className="text-2xl font-bold">Mapa Interactivo</h4>
-                          <p className="text-sm text-muted-foreground">Haz clic en los pines para más información</p>
+                          <p className="text-sm text-muted-foreground">Haz clic en las ubicaciones</p>
                         </div>
                       </div>
 
-                      {/* Interactive 3D Map */}
                       <div className="relative aspect-[16/10] bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary/20">
                         <Image
                           src="/mapa-rutas-3d.png"
@@ -615,14 +653,15 @@ export default function AsogranjaPage() {
                           fill
                           className="object-contain p-4"
                         />
-                        {/* Interactive Pins */}
+                        {/* Interactive Buttons positioned above pins */}
                         {mapLocations.map((location) => (
                           <button
                             key={location.id}
-                            className={`absolute w-12 h-12 rounded-full ${location.color} text-white font-bold text-lg shadow-lg hover:scale-125 transition-all duration-300 flex items-center justify-center cursor-pointer z-10 ${
-                              selectedLocation === location.id ? "scale-125 ring-4 ring-white" : ""
-                            }`}
-                            style={{ top: location.position.top, left: location.position.left }}
+                            className={`absolute w-12 h-12 rounded-full ${location.color} text-white font-bold text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10`}
+                            style={{
+                              top: `calc(${location.position.top} - 24px)`,
+                              left: location.position.left,
+                            }}
                             onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
                             onMouseEnter={() => setSelectedLocation(location.id)}
                             onMouseLeave={() => setSelectedLocation(null)}
@@ -632,25 +671,7 @@ export default function AsogranjaPage() {
                         ))}
                       </div>
 
-                      {/* Map Legend */}
-                      <div className="bg-white rounded-lg p-4 shadow-md border border-primary/10">
-                        <h5 className="font-bold text-sm mb-3 flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          Leyenda del Mapa
-                        </h5>
-                        <div className="grid grid-cols-2 gap-2 text-xs">
-                          {mapLocations.map((location) => (
-                            <div key={location.id} className="flex items-center gap-2">
-                              <div
-                                className={`w-6 h-6 rounded-full ${location.color} text-white text-xs font-bold flex items-center justify-center`}
-                              >
-                                {location.id}
-                              </div>
-                              <span className="text-muted-foreground">{location.name}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                      {/* Map Legend removed */}
                     </div>
                   </div>
 
@@ -663,15 +684,15 @@ export default function AsogranjaPage() {
                         </div>
                         Ubicaciones
                       </h4>
-                      <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2">
+                      <div className="space-y-3 max-h-[600px] overflow-y-auto pr-2">
                         {mapLocations.map((location, index) => (
-                          <button
+                          <div
                             key={location.id}
-                            className={`w-full text-left p-4 rounded-lg transition-all duration-300 animate-in fade-in slide-in-from-right-5 ${
+                            className={`w-full p-4 rounded-lg transition-all duration-300 cursor-pointer ${
                               selectedLocation === location.id
-                                ? "bg-primary text-primary-foreground shadow-lg scale-105"
+                                ? "bg-primary/10 border-2 border-primary shadow-md"
                                 : "bg-muted/50 hover:bg-muted"
-                            }`}
+                            } animate-in fade-in slide-in-from-right-5`}
                             style={{ animationDelay: `${index * 100}ms` }}
                             onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
                           >
@@ -683,68 +704,97 @@ export default function AsogranjaPage() {
                               </div>
                               <div className="flex-1">
                                 <h5 className="font-bold text-base mb-1">{location.name}</h5>
-                                <p className="text-xs opacity-80 mb-1 flex items-center gap-1">
+                                <p className="text-xs text-muted-foreground mb-1 flex items-center gap-1">
                                   <MapPin className="w-3 h-3" />
                                   {location.location}
                                 </p>
-                                <p className="text-sm opacity-90">{location.description}</p>
+                                <p className="text-sm text-muted-foreground">{location.description}</p>
                               </div>
                             </div>
-                          </button>
+                          </div>
                         ))}
                       </div>
                     </div>
+                  </div>
 
-                    {/* Contact Information Card */}
-                    <Card className="border-2 border-primary/20 bg-primary/5">
-                      <CardContent className="p-6 space-y-4">
-                        <h4 className="text-lg font-bold flex items-center gap-2">
-                          <Phone className="w-5 h-5 text-primary" />
+                  {/* Contact Information - Full Width Below Map */}
+                  <div className="lg:col-span-5 p-8 bg-background border-t-2 border-primary/10">
+                    <div className="max-w-5xl mx-auto">
+                      <div className="text-center mb-8">
+                        <h4 className="text-2xl font-bold mb-2" style={{ fontFamily: "var(--font-playfair)" }}>
                           Información de Contacto
                         </h4>
-                        <div className="space-y-3 text-sm">
-                          <div className="flex items-center gap-3 p-2 rounded-lg bg-background/50">
-                            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                              <Phone className="w-4 h-4 text-primary" />
+                        <p className="text-muted-foreground">Estamos listos para ayudarte a planear tu visita</p>
+                      </div>
+
+                      <div className="grid md:grid-cols-3 gap-6 mb-6">
+                        {/* Phone Card */}
+                        <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300">
+                          <CardContent className="p-6 text-center space-y-3">
+                            <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-full">
+                              <Phone className="w-7 h-7 text-primary" />
                             </div>
                             <div>
-                              <p className="text-xs text-muted-foreground">Teléfono</p>
-                              <p className="font-semibold">310 583 1864</p>
+                              <h5 className="font-bold text-lg mb-1">Teléfono</h5>
+                              <p className="text-sm text-muted-foreground mb-2">Llámanos directamente</p>
+                              <p className="font-semibold text-primary">311 463 2044</p>
+                              <p className="font-semibold text-primary">313 219 5939</p>
                             </div>
-                          </div>
-                          <div className="flex items-center gap-3 p-2 rounded-lg bg-background/50">
-                            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                              <MapPin className="w-4 h-4 text-primary" />
-                            </div>
-                            <div>
-                              <p className="text-xs text-muted-foreground">Ubicación</p>
-                              <p className="font-semibold">Sogamoso, Boyacá</p>
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-3 p-2 rounded-lg bg-background/50">
-                            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                              <Clock className="w-4 h-4 text-primary" />
+                          </CardContent>
+                        </Card>
+
+                        {/* Location Card */}
+                        <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300">
+                          <CardContent className="p-6 text-center space-y-3">
+                            <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-full">
+                              <MapPin className="w-7 h-7 text-primary" />
                             </div>
                             <div>
-                              <p className="text-xs text-muted-foreground">Disponibilidad</p>
-                              <p className="font-semibold">Todo el año</p>
+                              <h5 className="font-bold text-lg mb-1">Ubicación</h5>
+                              <p className="text-sm text-muted-foreground mb-2">Visítanos en</p>
+                              <p className="font-semibold text-primary">Sogamoso</p>
+                              <p className="text-sm text-muted-foreground">Boyacá, Colombia</p>
                             </div>
-                          </div>
-                        </div>
-                        <Button
-                          className="w-full bg-green-600 hover:bg-green-700 shadow-md"
-                          onClick={() =>
-                            window.open(
-                              "https://wa.me/573114632044?text=Hola,%20quiero%20visitar%20las%20ubicaciones%20de%20productos",
-                              "_blank",
-                            )
-                          }
-                        >
-                          <MessageCircle className="w-4 h-4 mr-2" />
-                          Planear Visita
-                        </Button>
-                      </CardContent>
-                    </Card>
+                          </CardContent>
+                        </Card>
+
+                        {/* Availability Card */}
+                        <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300">
+                          <CardContent className="p-6 text-center space-y-3">
+                            <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-full">
+                              <Clock className="w-7 h-7 text-primary" />
+                            </div>
+                            <div>
+                              <h5 className="font-bold text-lg mb-1">Disponibilidad</h5>
+                              <p className="text-sm text-muted-foreground mb-2">Abierto</p>
+                              <p className="font-semibold text-primary">Todo el año</p>
+                              <p className="text-sm text-muted-foreground">Visitas programadas</p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+
+                      {/* WhatsApp Button */}
+                      <Card className="border-2 border-green-500/20 bg-green-50/30">
+                        <CardContent className="p-6">
+                          <Button
+                            className="w-full bg-green-600 hover:bg-green-700 text-lg py-6"
+                            onClick={() =>
+                              window.open(
+                                "https://wa.me/573114632044?text=Hola,%20quiero%20visitar%20las%20ubicaciones%20de%20productos",
+                                "_blank",
+                              )
+                            }
+                          >
+                            <MessageCircle className="w-5 h-5 mr-2" />
+                            Planear Visita por WhatsApp
+                          </Button>
+                          <p className="text-center text-sm text-muted-foreground mt-3">
+                            Respuesta inmediata • Atención personalizada
+                          </p>
+                        </CardContent>
+                      </Card>
+                    </div>
                   </div>
                 </div>
               </CardContent>

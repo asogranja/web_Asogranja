@@ -2,237 +2,319 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Clock, Users, Phone, Mail, Droplets } from "lucide-react"
+import { ArrowLeft, MapPin, Phone, Instagram, Clock, Users, Droplets } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function RutaDelAguaPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-primary text-primary-foreground py-6 sticky top-0 z-50 shadow-lg">
-        <div className="container mx-auto px-4">
-          <Link href="/#rutas">
-            <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 mb-4">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Volver a Rutas
-            </Button>
-          </Link>
-          <h1 className="text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
-            Ruta del Agua
-          </h1>
-        </div>
-      </header>
-
-      {/* Hero Image */}
-      <div className="relative h-[400px] md:h-[500px]">
+    <div className="min-h-screen bg-stone-50">
+      {/* Hero Section */}
+      <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/colombian-waterfall-rural-nature-stream.jpg"
-          alt="Ruta del Agua"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2024-EhU5HkJ6RfxC835aseR0zbaEthBn55.jpg"
+          alt="Lago de Tota - Vista aérea"
           fill
-          className="object-cover"
+          className="object-cover brightness-90"
           priority
+          quality={100}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent"></div>
-      </div>
+        {/* </CHANGE> */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-stone-50/95"></div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-8">
-          {/* Description */}
-          <Card>
+        <Link href="/" className="absolute top-6 left-6 z-20">
+          <Button
+            variant="outline"
+            className="bg-white/95 hover:bg-white text-stone-800 border-2 border-stone-200 hover:border-cyan-600 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105"
+            size="lg"
+          >
+            <ArrowLeft className="mr-2 h-5 w-5" />
+            <span className="font-semibold">Volver al Inicio</span>
+          </Button>
+        </Link>
+
+        <div className="absolute bottom-6 right-6 z-20 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg">
+          <p className="text-xs text-white">Foto por: RCN Radio</p>
+        </div>
+        {/* </CHANGE> */}
+
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="text-center text-white space-y-6 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-10 duration-1000">
+            <h1 className="text-5xl md:text-7xl font-bold text-balance drop-shadow-2xl leading-tight">Ruta del Agua</h1>
+            <p className="text-xl md:text-2xl text-balance leading-relaxed drop-shadow-lg font-medium">
+              Recorre con nosotros el cuerpo de agua más grande de Colombia sobre los 3.015 m.s.n.m
+            </p>
+            <div className="pt-4">
+              <div className="inline-block bg-cyan-600/90 backdrop-blur-sm px-8 py-4 rounded-full">
+                <p className="text-lg md:text-xl font-bold italic">
+                  "Un viaje, seis paradas, infinitas emociones: dale la vuelta al Lago de Tota."
+                </p>
+              </div>
+            </div>
+            {/* </CHANGE> */}
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Card className="border-2 border-stone-200 shadow-lg animate-in fade-in slide-in-from-bottom-5">
             <CardContent className="p-8 space-y-4">
-              <h2 className="text-3xl font-bold text-primary" style={{ fontFamily: "var(--font-playfair)" }}>
-                Descripción de la Ruta
-              </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Explora fuentes hídricas, cascadas y ecosistemas acuáticos en un viaje de conservación y respeto por el
-                recurso más vital. Un recorrido que combina la belleza natural con la conciencia ambiental.
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-cyan-600 rounded-full flex items-center justify-center">
+                  <Droplets className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-stone-800">Experiencia en el Lago de Tota</h2>
+              </div>
+              <p className="text-lg text-stone-600 leading-relaxed">
+                Descubre el Lago de Tota, el cuerpo de agua más grande de Colombia y uno de los lagos de alta montaña
+                más impresionantes de Latinoamérica. Ubicado a 3.015 metros sobre el nivel del mar en la Provincia de
+                Sugamuxí, este majestuoso lago te invita a recorrer sus orillas, conocer sus pueblos pintorescos y
+                conectar con la naturaleza en su máxima expresión.
               </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Recorrido por nacimientos de agua, quebradas cristalinas y cascadas escondidas. Aprende sobre la
-                importancia de la conservación del agua, participa en actividades de reforestación de cuencas y conoce
-                proyectos comunitarios de gestión hídrica sostenible que están marcando la diferencia en nuestro
-                territorio.
+              <p className="text-lg text-stone-600 leading-relaxed">
+                Un viaje completo alrededor del lago que combina paisajes espectaculares, cultura local, gastronomía
+                tradicional y la oportunidad de vivir experiencias únicas en cada una de las seis paradas que componen
+                esta ruta inolvidable.
               </p>
+              {/* </CHANGE> */}
             </CardContent>
           </Card>
+        </div>
+      </section>
 
-          {/* Details */}
+      {/* Details Section */}
+      <section className="py-16 bg-stone-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-4xl font-bold text-center mb-12 text-stone-800">Detalles de la Ruta</h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <Card className="border-2 border-stone-200 hover:border-cyan-600 transition-colors">
+              <CardContent className="p-6 text-center space-y-3">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-cyan-600/10 rounded-full">
+                  <Clock className="w-7 h-7 text-cyan-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Duración</h3>
+                  <p className="text-stone-600">Jornada completa</p>
+                  <p className="text-sm text-stone-500">8 horas de actividades</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-stone-200 hover:border-cyan-600 transition-colors">
+              <CardContent className="p-6 text-center space-y-3">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-cyan-600/10 rounded-full">
+                  <Users className="w-7 h-7 text-cyan-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Grupo</h3>
+                  <p className="text-stone-600">Mínimo 5 personas</p>
+                  <p className="text-sm text-stone-500">Máximo 20 personas</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-stone-200 hover:border-cyan-600 transition-colors">
+              <CardContent className="p-6 text-center space-y-3">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-cyan-600/10 rounded-full">
+                  <MapPin className="w-7 h-7 text-cyan-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Ubicación</h3>
+                  <p className="text-stone-600">Provincia Sugamuxí</p>
+                  <p className="text-sm text-stone-500">Lago de Tota</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-stone-200 hover:border-cyan-600 transition-colors">
+              <CardContent className="p-6 text-center space-y-3">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-cyan-600/10 rounded-full">
+                  <Droplets className="w-7 h-7 text-cyan-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1">Experiencia</h3>
+                  <p className="text-stone-600">Lago más alto</p>
+                  <p className="text-sm text-stone-500">de Latinoamérica</p>
+                </div>
+              </CardContent>
+            </Card>
+            {/* </CHANGE> */}
+          </div>
+
+          {/* What's Included */}
+          <Card className="border-2 border-stone-200 shadow-lg">
+            <CardContent className="p-8 space-y-6">
+              <h3 className="text-2xl font-bold text-stone-800 text-center">La Ruta Incluye</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3 p-4 bg-cyan-50 rounded-lg">
+                  <span className="text-cyan-600 text-xl mt-1">✓</span>
+                  <div>
+                    <h4 className="font-bold text-stone-800">Recorrido guiado</h4>
+                    <p className="text-sm text-stone-600">Guía experto durante toda la jornada</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-cyan-50 rounded-lg">
+                  <span className="text-cyan-600 text-xl mt-1">✓</span>
+                  <div>
+                    <h4 className="font-bold text-stone-800">Experiencia natural por todo lo alto</h4>
+                    <p className="text-sm text-stone-600">Descubre paisajes únicos a 3.015 m.s.n.m</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-cyan-50 rounded-lg">
+                  <span className="text-cyan-600 text-xl mt-1">✓</span>
+                  <div>
+                    <h4 className="font-bold text-stone-800">Pueblitos más lindos</h4>
+                    <p className="text-sm text-stone-600">Conoce los encantadores pueblos de Sugamuxi</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-cyan-50 rounded-lg">
+                  <span className="text-cyan-600 text-xl mt-1">✓</span>
+                  <div>
+                    <h4 className="font-bold text-stone-800">Transporte</h4>
+                    <p className="text-sm text-stone-600">Ida y vuelta desde punto de encuentro</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-cyan-50 rounded-lg">
+                  <span className="text-cyan-600 text-xl mt-1">✓</span>
+                  <div>
+                    <h4 className="font-bold text-stone-800">Refrigerio</h4>
+                    <p className="text-sm text-stone-600">Snacks y bebidas durante el recorrido</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-4 bg-cyan-50 rounded-lg">
+                  <span className="text-cyan-600 text-xl mt-1">✓</span>
+                  <div>
+                    <h4 className="font-bold text-stone-800">Almuerzo</h4>
+                    <p className="text-sm text-stone-600">Comida típica con productos locales</p>
+                  </div>
+                </div>
+              </div>
+              {/* </CHANGE> */}
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Highlights Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Card className="border-2 border-cyan-600/20 bg-gradient-to-br from-cyan-50 to-blue-50">
+            <CardContent className="p-8 space-y-6">
+              <div className="text-center">
+                <h3 className="text-3xl font-bold text-stone-800 mb-4">Seis Paradas, Infinitas Emociones</h3>
+                <p className="text-lg text-stone-600 leading-relaxed">
+                  Cada parada en el recorrido del Lago de Tota ofrece una experiencia única: desde miradores con vistas
+                  panorámicas hasta pueblos con encanto colonial, pasando por playas de arena blanca y espacios para
+                  conectar con la naturaleza. Descubre la riqueza cultural, gastronómica y natural que rodea al cuerpo
+                  de agua más grande de Colombia.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-stone-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-8 text-stone-800">Reserva Tu Experiencia</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Card>
+            <Card className="border-2 border-stone-200 hover:border-cyan-600 transition-colors">
               <CardContent className="p-6 space-y-4">
-                <div className="flex items-start gap-3">
-                  <Clock className="w-6 h-6 text-primary mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-cyan-600 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Duración</h3>
-                    <p className="text-muted-foreground">Jornada completa (6-7 horas)</p>
-                    <p className="text-sm text-muted-foreground mt-1">Incluye almuerzo campestre</p>
+                    <h3 className="font-bold text-stone-800">WhatsApp</h3>
+                    <p className="text-sm text-stone-600">Contacto directo</p>
                   </div>
                 </div>
+                <a href="https://wa.me/573114632044" target="_blank" rel="noopener noreferrer" className="block w-full">
+                  <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">Escribir por WhatsApp</Button>
+                </a>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-2 border-stone-200 hover:border-[#E4405F] transition-colors">
               <CardContent className="p-6 space-y-4">
-                <div className="flex items-start gap-3">
-                  <Users className="w-6 h-6 text-primary mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#833AB4] via-[#E4405F] to-[#FCAF45] rounded-full flex items-center justify-center">
+                    <Instagram className="w-6 h-6 text-white" />
+                  </div>
                   <div>
-                    <h3 className="font-bold text-lg mb-2">Grupo</h3>
-                    <p className="text-muted-foreground">Mínimo 5 personas</p>
-                    <p className="text-sm text-muted-foreground mt-1">Máximo 15 personas por grupo</p>
+                    <h3 className="font-bold text-stone-800">Instagram</h3>
+                    <p className="text-sm text-stone-600">Síguenos</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Dificultad</h3>
-                    <p className="text-muted-foreground">Moderada</p>
-                    <p className="text-sm text-muted-foreground mt-1">Requiere condición física básica</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <div className="flex items-start gap-3">
-                  <Droplets className="w-6 h-6 text-primary mt-1" />
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Temporada</h3>
-                    <p className="text-muted-foreground">Todo el año</p>
-                    <p className="text-sm text-muted-foreground mt-1">Mejor en época seca</p>
-                  </div>
-                </div>
+                <a
+                  href="https://instagram.com/asogranja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <Button className="w-full bg-gradient-to-r from-[#833AB4] via-[#E4405F] to-[#FCAF45] hover:opacity-90 text-white transition-opacity">
+                    Visitar Instagram
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           </div>
-
-          {/* Activities */}
-          <Card>
-            <CardContent className="p-8 space-y-4">
-              <h2 className="text-3xl font-bold text-primary" style={{ fontFamily: "var(--font-playfair)" }}>
-                Actividades de Conservación
-              </h2>
-              <div className="space-y-4">
-                <div className="p-4 bg-cyan-50 dark:bg-cyan-950/20 rounded-lg border border-cyan-200 dark:border-cyan-800">
-                  <h3 className="font-bold text-lg mb-2 text-cyan-900 dark:text-cyan-100">Reforestación de Cuencas</h3>
-                  <p className="text-sm text-cyan-800 dark:text-cyan-200">
-                    Participa en la siembra de árboles nativos en zonas estratégicas para la protección de fuentes
-                    hídricas
-                  </p>
-                </div>
-                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                  <h3 className="font-bold text-lg mb-2 text-blue-900 dark:text-blue-100">Monitoreo de Calidad</h3>
-                  <p className="text-sm text-blue-800 dark:text-blue-200">
-                    Aprende técnicas básicas de análisis de calidad del agua y su importancia para el ecosistema
-                  </p>
-                </div>
-                <div className="p-4 bg-teal-50 dark:bg-teal-950/20 rounded-lg border border-teal-200 dark:border-teal-800">
-                  <h3 className="font-bold text-lg mb-2 text-teal-900 dark:text-teal-100">Proyectos Comunitarios</h3>
-                  <p className="text-sm text-teal-800 dark:text-teal-200">
-                    Conoce iniciativas locales de gestión sostenible del recurso hídrico y su impacto en la comunidad
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* What's Included */}
-          <Card>
-            <CardContent className="p-8 space-y-4">
-              <h2 className="text-3xl font-bold text-primary" style={{ fontFamily: "var(--font-playfair)" }}>
-                Qué Incluye
-              </h2>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Guía ambiental especializado</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Transporte desde y hacia Sogamoso</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Visita a nacimientos de agua y cascadas</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Actividad de reforestación (incluye árbol para plantar)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Taller de conservación del agua</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Almuerzo campestre con productos locales</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Refrigerios e hidratación durante el recorrido</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Material educativo sobre ecosistemas acuáticos</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Seguro de accidentes</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          {/* Recommendations */}
-          <Card className="bg-muted">
-            <CardContent className="p-8 space-y-4">
-              <h2 className="text-2xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
-                Recomendaciones
-              </h2>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Ropa cómoda para caminata y que pueda mojarse</li>
-                <li>• Calzado antideslizante (botas de montaña recomendadas)</li>
-                <li>• Protector solar y repelente de insectos</li>
-                <li>• Gorra o sombrero</li>
-                <li>• Botella de agua reutilizable</li>
-                <li>• Cámara fotográfica (en bolsa impermeable)</li>
-                <li>• Muda de ropa adicional</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          {/* Contact CTA */}
-          <Card className="bg-primary text-primary-foreground">
-            <CardContent className="p-8 text-center space-y-6">
-              <h2 className="text-3xl font-bold" style={{ fontFamily: "var(--font-playfair)" }}>
-                Conecta con la Naturaleza
-              </h2>
-              <p className="text-lg opacity-90">Reserva tu lugar en la Ruta del Agua y contribuye a la conservación</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" className="text-lg">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Llamar Ahora
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
-                >
-                  <Mail className="mr-2 h-5 w-5" />
-                  Enviar Mensaje
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
-      </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-stone-800 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="space-y-3">
+              <h3 className="text-xl font-bold">ASOGRANJA</h3>
+              <p className="text-sm text-stone-300 leading-relaxed">
+                Promoviendo el turismo rural comunitario y el desarrollo sostenible en Sogamoso, Boyacá.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <h4 className="font-bold">Otras Rutas</h4>
+              <ul className="space-y-2 text-sm text-stone-300">
+                <li>
+                  <Link href="/rutas/corredor-cultural-agroecologico" className="hover:text-cyan-400 transition-colors">
+                    Corredor Cultural y Agroecológico
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rutas/corredor-ancestral" className="hover:text-cyan-400 transition-colors">
+                    Corredor Ancestral
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rutas/cultura-y-memoria" className="hover:text-cyan-400 transition-colors">
+                    Ruta Cultura y Memoria
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-3">
+              <h4 className="font-bold">Contacto</h4>
+              <ul className="space-y-2 text-sm text-stone-300">
+                <li className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                  <span>Sogamoso, Boyacá, Colombia</span>
+                </li>
+                <li>Disponible todo el año</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-stone-700 mt-8 pt-8 text-center text-sm text-stone-400">
+            <p>© 2025 ASOGRANJA Sogamoso. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
