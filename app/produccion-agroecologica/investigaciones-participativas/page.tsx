@@ -63,7 +63,7 @@ export default function InvestigacionesParticipativasPage() {
           priority
           quality={100}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-stone-50/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-stone-50/90"></div>
 
         <Link href="/#produccion-agroecologica" className="absolute top-6 left-6 z-20">
           <Button
@@ -81,7 +81,7 @@ export default function InvestigacionesParticipativasPage() {
             <h1 className="text-5xl md:text-7xl font-bold text-balance drop-shadow-2xl leading-tight">
               Investigaciones Participativas
             </h1>
-          
+
             <div className="pt-4">
               <div className="inline-block bg-green-600/90 backdrop-blur-sm px-6 py-3 rounded-full">
                 <p className="text-sm md:text-base font-semibold">ASOGRANJA Sogamoso | Investigación Aplicada</p>

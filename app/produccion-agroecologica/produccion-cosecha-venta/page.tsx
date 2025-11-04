@@ -66,7 +66,7 @@ export default function ProduccionCosechaVentaPage() {
           priority
           quality={100}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-stone-50/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-stone-50/90"></div>
 
         <Link href="/#produccion-agroecologica" className="absolute top-6 left-6 z-20">
           <Button
@@ -103,12 +103,12 @@ export default function ProduccionCosechaVentaPage() {
             <CardContent className="p-8 space-y-4">
               <h2 className="text-3xl font-bold text-stone-800">¡Desde la Semilla Hasta Tu Mesa!</h2>
               <p className="text-lg text-stone-600 leading-relaxed">
-                En ASOGRANJA desarrollamos un ciclo completo de producción
-                agroecológica, Cultivamos nuestros propios plantulajes y acompañamos cada etapa del proceso hasta que el
-                alimento llega a tus manos. Nuestras familias campesinas cultivan productos orgánicos de alta calidad
-                utilizando técnicas sostenibles que respetan el medio ambiente y promueven la biodiversidad.
-                Participamos activamente en mercados campesinos locales donde ofrecemos productos frescos, garantizando
-                así la mejor calidad a nuestros consumidores y precios justos a nuestros productores.
+                En ASOGRANJA desarrollamos un ciclo completo de producción agroecológica, Cultivamos nuestros propios
+                plantulajes y acompañamos cada etapa del proceso hasta que el alimento llega a tus manos. Nuestras
+                familias campesinas cultivan productos orgánicos de alta calidad utilizando técnicas sostenibles que
+                respetan el medio ambiente y promueven la biodiversidad. Participamos activamente en mercados campesinos
+                locales donde ofrecemos productos frescos, garantizando así la mejor calidad a nuestros consumidores y
+                precios justos a nuestros productores.
               </p>
               <p className="text-lg text-stone-600 leading-relaxed">
                 Participamos activamente en mercados campesinos locales donde ofrecemos productos frescos, cosechados en
