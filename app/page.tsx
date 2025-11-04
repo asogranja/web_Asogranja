@@ -460,7 +460,7 @@ export default function AsogranjaPage() {
             >
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/corredor-ancestral-musicians- campfire.jpg"
+                  src="/corredor-ancestral-musicians-campfire.jpg"
                   alt="Corredor Ancestral"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
