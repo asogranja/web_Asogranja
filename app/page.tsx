@@ -109,34 +109,34 @@ export default function AsogranjaPage() {
       description: "Postres artesanales y dulces tradicionales",
       color: "bg-amber-500", // Color naranja/amarillo distintivo
       // ⬇️ AJUSTAR BOTÓN A AQUÍ ⬇️
-      position: { top: "18%", left: "22%" },
+      position: { top: "26.5%", left: "21.5%" },
     },
     {
       id: "B",
       name: "Rincón de la Huerta",
       location: "Vereda Monquirá",
       description: "Hortalizas orgánicas y productos frescos",
-      color: "bg-green-600", // Color verde distintivo
-      // ⬇️ AJUSTAR BOTÓN B AQUÍ ⬇️
-      position: { top: "48%", left: "37%" },
+      color: "bg-green-600",
+      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón B
+      position: { top: "44%", left: "34.7%" }, // Ajustado para alinearse con el marcador
     },
     {
       id: "C",
       name: "Casona las Delicias",
       location: "Centro Poblado de Marca",
       description: "Gastronomía tradicional boyacense",
-      color: "bg-green-700", // Color verde oscuro distintivo
-      // ⬇️ AJUSTAR BOTÓN C AQUÍ ⬇️
-      position: { top: "23%", left: "62%" },
+      color: "bg-green-700",
+      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón C
+      position: { top: "27%", left: "53.7%" }, // Ajustado para alinearse con el marcador
     },
     {
       id: "D",
       name: "Rincón de las Labores",
       location: "Vereda Mortiñal",
       description: "Artesanías y labores campesinas",
-      color: "bg-slate-800", // Color azul oscuro/negro distintivo
-      // ⬇️ AJUSTAR BOTÓN D AQUÍ ⬇️
-      position: { top: "33%", left: "82%" },
+      color: "bg-slate-800",
+      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón D
+      position: { top: "33.5%", left: "72.5%" }, // Ajustado para alinearse con el marcador
     },
   ]
 
@@ -680,11 +680,11 @@ export default function AsogranjaPage() {
                         {mapLocations.map((location) => (
                           <button
                             key={location.id}
-                            className={`absolute w-14 h-14 rounded-full ${location.color} text-white font-bold text-xl shadow-xl flex items-center justify-center hover:scale-110 transition-all duration-200 cursor-pointer z-10 border-3 border-white hover:shadow-2xl`}
+                            className={`absolute w-14 h-14 rounded-full ${location.color} text-white font-bold text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10 border-2 border-white`}
                             style={{
                               top: location.position.top,
                               left: location.position.left,
-                              transform: "translate(-50%, -50%)",
+                              transform: "translate(-20%, -50%)", // Centra el botón en las coordenadas exactas
                             }}
                             onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
                             onMouseEnter={() => setSelectedLocation(location.id)}
