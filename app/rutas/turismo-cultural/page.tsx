@@ -170,71 +170,103 @@ export default function TurismoCulturalPage() {
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
                   <Image
-                    src="/turismo-rural-comunitario-sign.jpg"
-                    alt="Punto de Información Turística"
+                    src="/tamales-tradicionales.jpg"
+                    alt="Tamales tradicionales"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">
-                    Punto de Información Turística
-                  </h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Tamales Tradicionales</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Centro de bienvenida donde comienza tu experiencia cultural en el territorio.
+                    Descubre el arte ancestral de preparar tamales envueltos en hojas de plátano.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
                   <Image
-                    src="/cultural-activities-community.jpg"
-                    alt="Actividades culturales comunitarias"
+                    src="/postres-artesanales.jpg"
+                    alt="Postres artesanales"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Actividades Culturales</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Postres Artesanales</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Participa en talleres de danza, música y actividades recreativas tradicionales.
+                    Degusta deliciosos postres tradicionales preparados con recetas de generación en generación.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
                   <Image
-                    src="/cultural-center-gathering.jpg"
-                    alt="Centro cultural comunitario"
+                    src="/chicha-tradicional.jpg"
+                    alt="Chicha tradicional"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Centro Cultural</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Chicha Tradicional</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Espacio de encuentro donde la comunidad comparte sus tradiciones y saberes.
+                    Prueba la bebida ancestral preparada artesanalmente según tradiciones milenarias.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
                   <Image
-                    src="/traditional-food-vendor.jpg"
-                    alt="Gastronomía tradicional"
+                    src="/productos-lacteos.jpg"
+                    alt="Productos lácteos artesanales"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Gastronomía Tradicional</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Productos Lácteos</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Degusta los sabores auténticos de la cocina boyacense preparada con recetas ancestrales.
+                    Disfruta de quesos y productos lácteos frescos elaborados de forma artesanal.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
+                <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
+                  <Image
+                    src="/actividades-recreativas.jpg"
+                    alt="Actividades recreativas"
+                    fill
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Actividades Recreativas</h3>
+                  <p className="text-stone-600 dark:text-stone-400">
+                    Participa en juegos tradicionales y actividades culturales llenas de alegría.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
+                <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
+                  <Image
+                    src="/musica-cultura.jpg"
+                    alt="Música y cultura"
+                    fill
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Música y Cultura</h3>
+                  <p className="text-stone-600 dark:text-stone-400">
+                    Vive la experiencia de la música tradicional y las expresiones culturales campesinas.
                   </p>
                 </CardContent>
               </Card>

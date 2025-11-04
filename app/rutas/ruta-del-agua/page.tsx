@@ -15,14 +15,13 @@ export default function RutaDelAguaPage() {
           src="/images/design-mode/Anexo%2024.jpg"
           alt="Lago de Tota - Vista aérea"
           fill
-          className="object-cover brightness-90"
+          className="object-cover brightness-95"
           priority
           quality={100}
         />
-        {/* </CHANGE> */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-stone-50/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-stone-50/90"></div>
 
-        <Link href="/" className="absolute top-6 left-6 z-20">
+        <Link href="/#rutas" className="absolute top-6 left-6 z-20">
           <Button
             variant="outline"
             className="bg-white/95 hover:bg-white text-stone-800 border-2 border-stone-200 hover:border-cyan-600 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105"
