@@ -86,6 +86,11 @@ export default function AsogranjaPage() {
     },
   ]
 
+  // INSTRUCCIONES PARA AJUSTAR POSICIONES:
+  // - 'top': Controla la posición vertical (0% = arriba, 100% = abajo)
+  // - 'left': Controla la posición horizontal (0% = izquierda, 100% = derecha)
+  // - Aumenta o disminuye los valores en incrementos de 1% para ajustar finamente
+  // - Los botones se posicionarán exactamente donde indiques en el mapa
   const mapLocations = [
     {
       id: "A",
@@ -93,7 +98,8 @@ export default function AsogranjaPage() {
       location: "Villa del Gurubo",
       description: "Postres artesanales y dulces tradicionales",
       color: "bg-amber-500",
-      position: { top: "15%", left: "20%" },
+      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón A
+      position: { top: "18%", left: "22%" }, // Ajustado para alinearse con el marcador
     },
     {
       id: "B",
@@ -101,7 +107,8 @@ export default function AsogranjaPage() {
       location: "Vereda Monquirá",
       description: "Hortalizas orgánicas y productos frescos",
       color: "bg-green-600",
-      position: { top: "45%", left: "35%" },
+      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón B
+      position: { top: "48%", left: "37%" }, // Ajustado para alinearse con el marcador
     },
     {
       id: "C",
@@ -109,7 +116,8 @@ export default function AsogranjaPage() {
       location: "Centro Poblado de Marca",
       description: "Gastronomía tradicional boyacense",
       color: "bg-green-700",
-      position: { top: "20%", left: "60%" },
+      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón C
+      position: { top: "23%", left: "62%" }, // Ajustado para alinearse con el marcador
     },
     {
       id: "D",
@@ -117,7 +125,8 @@ export default function AsogranjaPage() {
       location: "Vereda Mortiñal",
       description: "Artesanías y labores campesinas",
       color: "bg-slate-800",
-      position: { top: "30%", left: "80%" },
+      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón D
+      position: { top: "33%", left: "82%" }, // Ajustado para alinearse con el marcador
     },
   ]
 
@@ -644,14 +653,17 @@ export default function AsogranjaPage() {
                           fill
                           className="object-contain p-4"
                         />
-                        {/* Interactive Buttons positioned above pins */}
+                        {/* Interactive Buttons positioned directly on map markers */}
+                        {/* NOTA: Los botones se posicionan usando los valores de 'position' en mapLocations */}
+                        {/* Para ajustar, modifica los valores top/left en el array mapLocations arriba */}
                         {mapLocations.map((location) => (
                           <button
                             key={location.id}
-                            className={`absolute w-12 h-12 rounded-full ${location.color} text-white font-bold text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10`}
+                            className={`absolute w-12 h-12 rounded-full ${location.color} text-white font-bold text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10 border-2 border-white`}
                             style={{
-                              top: `calc(${location.position.top} - 24px)`,
+                              top: location.position.top,
                               left: location.position.left,
+                              transform: "translate(-50%, -50%)", // Centra el botón en las coordenadas exactas
                             }}
                             onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
                             onMouseEnter={() => setSelectedLocation(location.id)}
@@ -661,8 +673,6 @@ export default function AsogranjaPage() {
                           </button>
                         ))}
                       </div>
-
-                      {/* Map Legend removed */}
                     </div>
                   </div>
 
