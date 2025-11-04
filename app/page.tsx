@@ -596,13 +596,11 @@ export default function AsogranjaPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
             {artisanProducts.map((product, index) => (
               <Card
                 key={index}
-                className={`group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10 ${
-                  index === 3 ? "lg:col-start-2" : ""
-                }`}
+                className="group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10 w-full max-w-md"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-64 overflow-hidden">
