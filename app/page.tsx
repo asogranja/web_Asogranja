@@ -172,15 +172,6 @@ export default function AsogranjaPage() {
               <a href="#inicio" className="text-foreground hover:text-primary transition-colors">
                 Inicio
               </a>
-              <a href="#produccion-agroecologica" className="text-foreground hover:text-primary transition-colors">
-                Producción Agroecológica
-              </a>
-              <a href="#rutas" className="text-foreground hover:text-primary transition-colors">
-                Rutas
-              </a>
-              <a href="#productos" className="text-foreground hover:text-primary transition-colors">
-                Productos
-              </a>
               <Link href="/nosotros" className="text-foreground hover:text-primary transition-colors">
                 Nosotros
               </Link>
