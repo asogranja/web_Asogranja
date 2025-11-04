@@ -62,7 +62,7 @@ export default function ProduccionCosechaVentaPage() {
           src="/produccion-cosecha-venta.jpg"
           alt="Producción, Cosecha y Venta"
           fill
-          className="object-cover brightness-75"
+          className="object-cover brightness-90"
           priority
           quality={100}
         />

@@ -59,7 +59,7 @@ export default function InvestigacionesParticipativasPage() {
           src="/investigaciones-hero.jpg"
           alt="Investigaciones Participativas - Visita AGROSAVIA"
           fill
-          className="object-cover brightness-75"
+          className="object-cover brightness-90"
           priority
           quality={100}
         />

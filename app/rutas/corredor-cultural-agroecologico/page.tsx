@@ -117,14 +117,14 @@ export default function CorredorCulturalPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-stone-50/95"></div>
 
-        <Link href="/" className="absolute top-6 left-6 z-20">
+        <Link href="/#rutas" className="absolute top-6 left-6 z-20">
           <Button
             variant="outline"
             className="bg-white/95 hover:bg-white text-stone-800 border-2 border-stone-200 hover:border-lime-600 backdrop-blur-md shadow-lg transition-all duration-300 hover:scale-105"
             size="lg"
           >
             <ArrowLeft className="mr-2 h-5 w-5" />
-            <span className="font-semibold">Volver al Inicio</span>
+            <span className="font-semibold">Volver a Rutas</span>
           </Button>
         </Link>
 
