@@ -280,7 +280,7 @@ export default function AsogranjaPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-3 bg-transparent sm:min-w-[240px]"
+                className="text-lg px-8 py-3 bg-transparent border-2 hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors sm:min-w-[240px]"
                 onClick={() =>
                   document.getElementById("produccion-agroecologica")?.scrollIntoView({ behavior: "smooth" })
                 }
@@ -290,14 +290,15 @@ export default function AsogranjaPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-3 bg-transparent sm:min-w-[240px]"
+                className="text-lg px-8 py-3 bg-transparent border-2 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors sm:min-w-[240px]"
                 onClick={() => document.getElementById("rutas")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Turismo Rural
               </Button>
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-lg px-8 py-3 sm:min-w-[240px]"
+                variant="outline"
+                className="text-lg px-8 py-3 bg-transparent border-2 hover:bg-amber-500 hover:text-white hover:border-amber-500 transition-colors sm:min-w-[240px]"
                 onClick={() => document.getElementById("productos")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Productos Artesanales
@@ -353,7 +354,7 @@ export default function AsogranjaPage() {
                   <Link href="/produccion-agroecologica/produccion-cosecha-venta">
                     <Button
                       variant="outline"
-                      className="w-full border-2 group-hover:border-green-500 group-hover:text-green-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
+                      className="w-full border-2 bg-transparent hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
                     >
                       Conocer Más
                     </Button>
@@ -392,7 +393,7 @@ export default function AsogranjaPage() {
                   <Link href="/produccion-agroecologica/investigaciones-participativas">
                     <Button
                       variant="outline"
-                      className="w-full border-2 group-hover:border-green-500 group-hover:text-green-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
+                      className="w-full border-2 bg-transparent hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
                     >
                       Conocer Más
                     </Button>
@@ -443,7 +444,7 @@ export default function AsogranjaPage() {
                   <Link href="/rutas/turismo-cultural">
                     <Button
                       variant="outline"
-                      className="w-full border-2 group-hover:border-orange-500 group-hover:text-orange-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
+                      className="w-full border-2 bg-transparent hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
                     >
                       Explorar Ruta
                     </Button>
@@ -481,7 +482,7 @@ export default function AsogranjaPage() {
                   <Link href="/rutas/corredor-ancestral">
                     <Button
                       variant="outline"
-                      className="w-full border-2 group-hover:border-orange-500 group-hover:text-orange-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
+                      className="w-full border-2 bg-transparent hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
                     >
                       Explorar Ruta
                     </Button>
@@ -519,7 +520,7 @@ export default function AsogranjaPage() {
                   <Link href="/rutas/cultura-y-memoria">
                     <Button
                       variant="outline"
-                      className="w-full border-2 group-hover:border-orange-500 group-hover:text-orange-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
+                      className="w-full border-2 bg-transparent hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
                     >
                       Explorar Ruta
                     </Button>
@@ -557,7 +558,7 @@ export default function AsogranjaPage() {
                   <Link href="/rutas/ruta-del-agua">
                     <Button
                       variant="outline"
-                      className="w-full border-2 group-hover:border-orange-500 group-hover:text-orange-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
+                      className="w-full border-2 bg-transparent hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
                     >
                       Explorar Ruta
                     </Button>
@@ -623,7 +624,7 @@ export default function AsogranjaPage() {
                   <p className="text-muted-foreground leading-relaxed">{product.description}</p>
                   <Button
                     variant="outline"
-                    className="w-full border-2 group-hover:border-yellow-500 group-hover:text-yellow-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 active:scale-95"
+                    className="w-full border-2 bg-transparent hover:bg-amber-500 hover:text-white hover:border-amber-500 transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 active:scale-95"
                     onClick={() =>
                       window.open(
                         "https://wa.me/573114632044?text=Hola,%20quiero%20información%20sobre%20" + product.title,
