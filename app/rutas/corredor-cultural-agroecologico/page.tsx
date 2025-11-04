@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Phone, Instagram, ChevronDown, ChevronUp } from "lucide-react"
+import { ArrowLeft, MapPin, Phone, Instagram, ChevronDown, ChevronUp, Users, Clock } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -19,66 +19,87 @@ export default function CorredorCulturalPage() {
       id: "kiosko-maiz",
       title: "Kiosko del Maíz",
       description:
-        "Descubre la importancia del maíz en nuestra cultura campesina. Aprende sobre las diferentes variedades de maíz nativo, su cultivo tradicional y su papel fundamental en la gastronomía boyacense.",
+        "Amasijos, productos tradicionales y vivencias en torno al maíz. Descubre la importancia del maíz en nuestra cultura campesina y disfruta de productos tradicionales como la chicha.",
       highlights: [
-        "Variedades de maíz nativo colombiano",
-        "Proceso de cultivo tradicional",
+        "Amasijos tradicionales",
         "Productos derivados del maíz",
-        "Degustación de arepas y chicha",
+        "Chicha artesanal",
+        "Vivencias culturales campesinas",
       ],
-      image: "/kiosko-maiz-real.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%208-riK8GH5gVXAfWpGTuPZuceTXTYFhgi.jpg",
     },
     {
       id: "rincon-huerta",
       title: "Rincón de la Huerta",
       description:
-        "Sumérgete en el mundo de la agricultura orgánica y sostenible. Conoce las técnicas agroecológicas que utilizamos para cultivar alimentos saludables respetando la tierra.",
+        "Talleres prácticos, biopreparados y saberes agroecológicos. Sumérgete en el mundo de la agricultura orgánica y aprende técnicas sostenibles para cultivar alimentos saludables.",
       highlights: [
-        "Huerta orgánica diversificada",
-        "Técnicas de compostaje y abonos naturales",
-        "Control biológico de plagas",
-        "Cosecha y preparación de productos frescos",
+        "Talleres prácticos de agricultura",
+        "Elaboración de biopreparados",
+        "Técnicas agroecológicas",
+        "Saberes tradicionales campesinos",
       ],
-      image: "/rincon-huerta-real.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%209-npAmSqakH65g9tEGjb6a9FdUQoVwPa.jpg",
+    },
+    {
+      id: "casa-cultura",
+      title: "Casa Cultura",
+      description:
+        "Arte, historia, tertulias y siembras compartidas. Un espacio para conectar con la cultura local, el arte y las tradiciones a través de actividades comunitarias.",
+      highlights: [
+        "Actividades artísticas y culturales",
+        "Tertulias comunitarias",
+        "Historia local",
+        "Siembras compartidas",
+      ],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2010-yO7kXgDAM87BMbHXNo7x4rLKfJWvCr.jpg",
     },
     {
       id: "casona-delicias",
-      title: "Casona las Delicias del Sabor",
+      title: "Casona Las Delicias del Sabor",
       description:
-        "Disfruta de la auténtica gastronomía boyacense en nuestra casona tradicional. Platos preparados con recetas ancestrales y productos locales que cuentan la historia de nuestra región.",
+        "Papas nativas, hallacas, tamales y más delicias locales. Disfruta de la auténtica gastronomía boyacense preparada con recetas ancestrales y productos locales.",
       highlights: [
-        "Cocina tradicional boyacense",
-        "Ingredientes 100% locales y orgánicos",
-        "Recetas transmitidas por generaciones",
-        "Experiencia gastronómica inmersiva",
+        "Papas nativas de la región",
+        "Hallacas tradicionales",
+        "Tamales artesanales",
+        "Gastronomía boyacense auténtica",
       ],
-      image: "/casona-delicias-real.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2011-sivILQGaL3p5kqTDJcieVU9GSgKohs.jpg",
     },
     {
       id: "postres-mariposas",
       title: "Postres las Mariposas",
       description:
-        "Endulza tu experiencia con postres artesanales elaborados con frutas de la región. Cada dulce es una obra de arte que combina tradición y creatividad.",
-      highlights: [
-        "Postres artesanales con frutas locales",
-        "Dulces tradicionales boyacenses",
-        "Técnicas de conservación ancestrales",
-        "Degustación de arequipe y bocadillos",
-      ],
-      image: "/postres-mariposas-real.jpg",
+        "Endulza tu paladar con productos propios de nuestra tierrita. Postres artesanales elaborados con frutas de la región que combinan tradición y sabor.",
+      highlights: ["Postres artesanales", "Frutas locales", "Dulces tradicionales", "Productos de la región"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2012-BPpLX7RPRFW6FWicIiQNZSbBn4mtQt.jpg",
     },
     {
-      id: "labores-campesinas",
-      title: "Rincón de las Labores Campesinas",
+      id: "rincon-labores",
+      title: "Rincón de las Labores y las Tradiciones",
       description:
-        "Vive la experiencia del trabajo campesino tradicional. Participa en actividades agrícolas, aprende sobre herramientas ancestrales y conecta con la tierra de manera auténtica.",
+        "Taller de Ordeño, Elaboración de Queso y Cuajada. Vive la experiencia del trabajo campesino tradicional y aprende sobre la producción artesanal de lácteos.",
       highlights: [
-        "Actividades agrícolas tradicionales",
-        "Herramientas y técnicas ancestrales",
-        "Ordeño y cuidado de animales",
-        "Elaboración de productos artesanales",
+        "Taller de ordeño tradicional",
+        "Elaboración de queso artesanal",
+        "Preparación de cuajada",
+        "Técnicas campesinas ancestrales",
       ],
-      image: "/labores-campesinas-real.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2013-PoxjwkCufNpXvRFHP1uO0gF0FNX1h4.jpg",
+    },
+    {
+      id: "juega-crece",
+      title: "Juega y Crece con Nidia",
+      description:
+        "Finaliza tu experiencia con alegría en un espacio recreativo con juegos, actividades al aire libre y creatividad para grandes y chicos.",
+      highlights: [
+        "Juegos recreativos",
+        "Actividades al aire libre",
+        "Espacios creativos",
+        "Diversión para toda la familia",
+      ],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2014-OVdkb7YUtys3cW0Ix8zmhHjBOQj9Zz.jpg",
     },
   ]
 
@@ -87,14 +108,13 @@ export default function CorredorCulturalPage() {
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/corredor-cultural-hero.jpg"
-          alt="Corredor Cultural y Agroecológico"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%207-7WAw6wrwKbqZn74O06kaonreVekv91.jpg"
+          alt="Ruta Experiencial Cultural y Agroecológica"
           fill
           className="object-cover brightness-90"
           priority
           quality={100}
         />
-        {/* </CHANGE> */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-stone-50/95"></div>
 
         <Link href="/" className="absolute top-6 left-6 z-20">
@@ -111,14 +131,17 @@ export default function CorredorCulturalPage() {
         <div className="relative z-10 container mx-auto px-4">
           <div className="text-center text-white space-y-6 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-10 duration-1000">
             <h1 className="text-5xl md:text-7xl font-bold text-balance drop-shadow-2xl leading-tight">
-              Corredor Cultural y Agroecológico
+              Ruta Experiencial Cultural y Agroecológica
             </h1>
             <p className="text-xl md:text-2xl text-balance leading-relaxed drop-shadow-lg font-medium">
-              Una experiencia inmersiva en la cultura campesina y las prácticas agroecológicas de Sogamoso
+              ¡Vive una aventura única que conecta la cultura, la tierra y el emprendimiento local!
             </p>
             <div className="pt-4">
               <div className="inline-block bg-lime-600/90 backdrop-blur-sm px-6 py-3 rounded-full">
-                <p className="text-sm md:text-base font-semibold">Sogamoso - Boyacá | Turismo Rural Comunitario</p>
+                <p className="text-sm md:text-base font-semibold">
+                  Proyecto: Fortalecimiento de los Saberes Tradicionales en el Turismo Cultural y Comunitario de
+                  Sogamoso
+                </p>
               </div>
             </div>
           </div>
@@ -129,18 +152,48 @@ export default function CorredorCulturalPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <Card className="border-2 border-stone-200 shadow-lg animate-in fade-in slide-in-from-bottom-5">
-            <CardContent className="p-8 space-y-4">
-              <h2 className="text-3xl font-bold text-stone-800">Ruta Experiencial</h2>
+            <CardContent className="p-8 space-y-6">
+              <h2 className="text-3xl font-bold text-stone-800">Un viaje, seis paradas, infinitas emociones</h2>
               <p className="text-lg text-stone-600 leading-relaxed">
-                El Corredor Cultural y Agroecológico es un recorrido único que te conecta con las tradiciones
-                campesinas, la producción sostenible de alimentos y la riqueza gastronómica de nuestra región. A través
-                de cinco paradas temáticas, vivirás experiencias auténticas que fortalecen los saberes tradicionales y
-                promueven el turismo cultural comunitario.
+                Inicia tu recorrido en el encantador Parque de la Villa, continúa por La Pilita de la Unión y descubre
+                el fascinante mundo de los abonos orgánicos.
               </p>
               <p className="text-lg text-stone-600 leading-relaxed">
-                Este proyecto forma parte del fortalecimiento de los saberes tradicionales en el turismo cultural y
-                comunitario de Sogamoso, Boyacá.
+                Aquí comenzará el viaje en el Corredor Experiencial Milagro y Playita, donde lo urbano se transforma en
+                rural. Una experiencia de sabores, saberes y tradiciones.
               </p>
+
+              <div className="grid md:grid-cols-3 gap-6 pt-6 border-t border-stone-200">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-lime-700" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-stone-800">Duración</h3>
+                    <p className="text-sm text-stone-600">Jornada 6 horas de actividades</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Users className="w-5 h-5 text-lime-700" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-stone-800">Grupo</h3>
+                    <p className="text-sm text-stone-600">Mínimo 5, máximo 20 personas</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 bg-lime-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-lime-700" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-stone-800">Ubicación</h3>
+                    <p className="text-sm text-stone-600">Vereda Segunda chorrera sector Playita y sector Azufre</p>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -209,28 +262,33 @@ export default function CorredorCulturalPage() {
         </div>
       </section>
 
-      {/* Video Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <Card className="border-2 border-stone-200 shadow-lg">
             <CardContent className="p-8 space-y-6">
-              <h2 className="text-3xl font-bold text-center text-stone-800">Conoce Nuestra Experiencia</h2>
-              <div className="relative aspect-video bg-stone-200 rounded-lg overflow-hidden flex items-center justify-center">
-                <div className="text-center space-y-4 p-8">
-                  <div className="w-20 h-20 mx-auto bg-lime-600 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-10 h-10 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-stone-600 font-medium">Video próximamente</p>
-                  <p className="text-sm text-stone-500">
-                    Aquí podrás ver un recorrido completo por el Corredor Cultural y Agroecológico
+              <h2 className="text-3xl font-bold text-center text-stone-800">La Experiencia Incluye</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-lime-600 text-xl">✓</span>
+                  <p className="text-stone-600">Recorrido guiado</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-lime-600 text-xl">✓</span>
+                  <p className="text-stone-600">Charla sobre abonos orgánicos y taller de germinación</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-lime-600 text-xl">✓</span>
+                  <p className="text-stone-600">Juegos, actividades al aire libre y creatividad</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-lime-600 text-xl">✓</span>
+                  <p className="text-stone-600">
+                    Descubre una experiencia de sabores, saberes y tradiciones campesinas
                   </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-lime-600 text-xl">✓</span>
+                  <p className="text-stone-600">Refrigerio y bebida tradicional</p>
                 </div>
               </div>
             </CardContent>
@@ -302,8 +360,8 @@ export default function CorredorCulturalPage() {
               <h4 className="font-bold">Otras Rutas</h4>
               <ul className="space-y-2 text-sm text-stone-300">
                 <li>
-                  <Link href="/rutas/turismo-cultural" className="hover:text-lime-400 transition-colors">
-                    Turismo Cultural
+                  <Link href="/rutas/ruta-del-agua" className="hover:text-lime-400 transition-colors">
+                    Ruta del Agua
                   </Link>
                 </li>
                 <li>

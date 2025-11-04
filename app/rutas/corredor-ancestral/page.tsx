@@ -2,27 +2,14 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  ArrowLeft,
-  MapPin,
-  Clock,
-  Users,
-  Phone,
-  Mail,
-  Music,
-  Sparkles,
-  Mountain,
-  Heart,
-  Camera,
-  Video,
-} from "lucide-react"
+import { ArrowLeft, MapPin, Clock, Users, Phone, Mail, Sparkles, Mountain, Heart, Camera, Droplets } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef } from "react"
 
 export default function CorredorAncestralPage() {
   const heroRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null) // videoRef is no longer used but kept for now
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -59,7 +46,7 @@ export default function CorredorAncestralPage() {
 
     return () => {
       observer.disconnect()
-      videoObserver.disconnect()
+      videoObserver.disconnect() // videoObserver is no longer used but kept for now
     }
   }, [])
 
@@ -68,7 +55,7 @@ export default function CorredorAncestralPage() {
       <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden">
         <Image
           src="/corredor-ancestral-musicians-campfire.jpg"
-          alt="Músicos tradicionales alrededor de fogata en Ciudad de la Memoria"
+          alt="Paisaje natural del corredor ancestral" // Updated alt text
           fill
           className="object-cover object-center"
           priority
@@ -94,14 +81,14 @@ export default function CorredorAncestralPage() {
                   className="text-4xl md:text-6xl font-bold text-white text-balance"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
-                  Corredor Ancestral
+                  Corredor Ancestral Cascada La Pirámide
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-white/95 text-pretty mb-2">
-                Un viaje a través del tiempo y la tradición
-              </p>
-              <p className="text-lg text-white/85 text-pretty">
-                Donde la música y la memoria se encuentran bajo las estrellas
+              <p className="text-xl md:text-2xl text-white/95 text-pretty">
+                {" "}
+                {/* Updated subtitle */}
+                ¡Embárcate en una experiencia única que une el patrimonio natural y cultural con la majestuosidad de los
+                paisajes del suroriente sogamoseño!
               </p>
             </div>
           </div>
@@ -119,55 +106,23 @@ export default function CorredorAncestralPage() {
                     className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
-                    Una Experiencia Única
+                    Una Experiencia Ecológica Única {/* Updated title */}
                   </h2>
                 </div>
                 <p className="text-xl leading-relaxed text-stone-700 dark:text-stone-300">
-                  Descubre los caminos ancestrales en la{" "}
-                  <strong className="text-stone-900 dark:text-stone-100">Vereda Monquira</strong>, donde la historia, la
-                  música tradicional y la memoria cultural cobran vida. Esta experiencia única te conecta con las raíces
-                  Muiscas de nuestro territorio.
+                  {" "}
+                  {/* Updated text */}
+                  Una experiencia ecológica que inspira respeto, aprendizaje y conexión profunda con la naturaleza.
                 </p>
                 <div className="h-1 w-24 bg-gradient-to-r from-stone-400 to-stone-500 rounded-full"></div>
                 <p className="text-lg leading-relaxed text-stone-600 dark:text-stone-400">
-                  Visita la <strong className="text-stone-900 dark:text-stone-100">Ciudad de la Memoria</strong>, un
-                  espacio dedicado a preservar y compartir las tradiciones ancestrales de Sogamoso. Disfruta de veladas
-                  culturales con música tradicional alrededor de fogatas, conoce símbolos indígenas y conecta
-                  profundamente con la historia de nuestros antepasados.
+                  {/* Original text for this section is removed as it's replaced by the new introductory text */}
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          <div className="fade-in-section opacity-0 transition-all duration-700">
-            <div className="flex items-center gap-3 mb-8">
-              <Video className="w-8 h-8 text-stone-600 dark:text-stone-400" />
-              <h2
-                className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200"
-                style={{ fontFamily: "var(--font-playfair)" }}
-              >
-                Video de la Experiencia
-              </h2>
-            </div>
-
-            <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 shadow-lg">
-              <CardContent className="p-0">
-                <div className="relative w-full aspect-video bg-stone-100 dark:bg-stone-900">
-                  <video
-                    ref={videoRef}
-                    controls
-                    muted
-                    loop
-                    className="w-full h-full object-cover"
-                    poster="/corredor-ancestral-musicians-campfire.jpg"
-                  >
-                    <source src="/Ciudad_memoria.mp4" type="video/mp4" />
-                    Tu navegador no soporta el elemento de video.
-                  </video>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Video section removed */}
 
           <div className="fade-in-section opacity-0 transition-all duration-700">
             <div className="flex items-center gap-3 mb-8">
@@ -176,135 +131,90 @@ export default function CorredorAncestralPage() {
                 className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                Galería de Experiencias
+                Recorrido de la Experiencia {/* Updated title */}
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-96 overflow-hidden">
                   <Image
-                    src="/corredor-hiking-group.jpg"
-                    alt="Grupo de turistas caminando por senderos rurales con perros"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/anexo%2016.png-F91sWyYm9vTSCdHnbtutZ3QwOhunDT.jpeg"
+                    alt="Ciudad de la Memoria - Punto de partida"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Caminatas Guiadas</h3>
-                  <p className="text-stone-600 dark:text-stone-400">
-                    Recorre los senderos ancestrales con guías locales que comparten historias y tradiciones del
-                    territorio.
+                  <h3 className="font-bold text-2xl mb-3 text-stone-800 dark:text-stone-200">
+                    Punto de partida: Ciudad de la Memoria
+                  </h3>
+                  <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+                    La ruta comienza con una caminata interpretativa guiada por la vereda Monquirá, bordeando el río
+                    Monquirá para descubrir la historia viva del territorio.
                   </p>
                 </CardContent>
               </Card>
-
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-96 overflow-hidden">
                   <Image
-                    src="/corredor-waterfall-tourists.jpg"
-                    alt="Turistas disfrutando de cascada natural"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2017-mALprAZLrwydxshbCpoBb4mEYuVeja.jpg"
+                    alt="Paisaje Cultural Campesino"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Cascadas Naturales</h3>
-                  <p className="text-stone-600 dark:text-stone-400">
-                    Descubre hermosas cascadas escondidas en el paisaje montañoso de la región.
+                  <h3 className="font-bold text-2xl mb-3 text-stone-800 dark:text-stone-200">
+                    Paisaje Cultural Campesino
+                  </h3>
+                  <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Durante el camino se observan antiguas casas campesinas y se aprende, de la mano de guías expertos,
+                    sobre conservación ambiental y patrimonio cultural.
                   </p>
                 </CardContent>
               </Card>
-
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-96 overflow-hidden">
                   <Image
-                    src="/corredor-ciudad-memoria-building.jpg"
-                    alt="Edificio de Ciudad de la Memoria con grupo de visitantes"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2018-Jm1EDJ0FY1BNG2fWQPxsaBm9KjqX5l.jpg"
+                    alt="Formaciones rocosas y toboganes naturales"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Ciudad de la Memoria</h3>
-                  <p className="text-stone-600 dark:text-stone-400">
-                    Visita este espacio cultural dedicado a preservar y compartir las tradiciones ancestrales.
+                  <h3 className="font-bold text-2xl mb-3 text-stone-800 dark:text-stone-200">
+                    Formaciones rocosas y toboganes naturales
+                  </h3>
+                  <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+                    El agua ha moldeado la roca creando toboganes ideales para niños, jóvenes y aventureros, en un
+                    entorno tranquilo y sensorial.
                   </p>
                 </CardContent>
               </Card>
-
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
-                <div className="relative h-80 overflow-hidden">
+                <div className="relative h-96 overflow-hidden">
                   <Image
-                    src="/corredor-rock-formations-water.jpg"
-                    alt="Formaciones rocosas con agua y turistas"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2019-ZJmioQlkvQOrnG2nTDgjaL2hn5aYXS.jpg"
+                    alt="Cascada La Pirámide"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Formaciones Geológicas</h3>
-                  <p className="text-stone-600 dark:text-stone-400">
-                    Explora impresionantes formaciones rocosas y corrientes de agua cristalina.
+                  <h3 className="font-bold text-2xl mb-3 text-stone-800 dark:text-stone-200">
+                    Cascada La Pirámide: el tesoro de la ruta
+                  </h3>
+                  <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+                    El recorrido culmina en esta imponente cascada rodeada de cuevas y pozos naturales, perfecta para
+                    refrescarse y contemplar la naturaleza en su máxima expresión.
                   </p>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          <div className="fade-in-section opacity-0 transition-all duration-700">
-            <Card className="bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900 dark:to-stone-950 border border-stone-200 dark:border-stone-800 shadow-lg overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid md:grid-cols-5 gap-0">
-                  <div className="md:col-span-2 relative h-80 md:h-auto min-h-[400px] bg-white dark:bg-stone-950 flex items-center justify-center p-8">
-                    <div className="relative w-full h-full">
-                      <Image
-                        src="/ciudad-memoria-logo.jpg"
-                        alt="Ciudad de la Memoria"
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
-                  <div className="md:col-span-3 p-8 md:p-10 space-y-6 flex flex-col justify-center">
-                    <div>
-                      <h3
-                        className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200 mb-3"
-                        style={{ fontFamily: "var(--font-playfair)" }}
-                      >
-                        Ciudad de la Memoria
-                      </h3>
-                      <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400 mb-4">
-                        <MapPin className="w-5 h-5" />
-                        <p className="text-lg">Vereda Monquira, Sogamoso - Boyacá</p>
-                      </div>
-                    </div>
-                    <p className="text-lg leading-relaxed text-stone-700 dark:text-stone-300">
-                      Un lugar mágico donde convergen la historia, la cultura y las tradiciones ancestrales. Aquí podrás
-                      experimentar la autenticidad de nuestras raíces Muiscas a través de actividades culturales, música
-                      tradicional y encuentros comunitarios.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                      <Button
-                        size="lg"
-                        className="bg-stone-700 hover:bg-stone-800 text-white shadow-md hover:shadow-lg transition-all duration-300"
-                      >
-                        <Phone className="mr-2 h-5 w-5" />
-                        322 881 4258
-                      </Button>
-                      <Button
-                        size="lg"
-                        variant="outline"
-                        className="border-2 border-stone-700 text-stone-700 hover:bg-stone-700 hover:text-white dark:text-stone-300 dark:border-stone-500 dark:hover:bg-stone-700 transition-all duration-300 bg-transparent"
-                      >
-                        <Mail className="mr-2 h-5 w-5" />
-                        @CiudadDeLaMemoria
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Ciudad de la Memoria section removed */}
 
           <div className="fade-in-section opacity-0 transition-all duration-700">
             <h2
@@ -322,10 +232,8 @@ export default function CorredorAncestralPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Duración</h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Jornada completa o nocturna</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">
-                        Incluye velada cultural con fogata
-                      </p>
+                      <p className="text-stone-700 dark:text-stone-300 font-medium">Jornada 5 horas de actividades</p>{" "}
+                      {/* Updated duration */}
                     </div>
                   </div>
                 </CardContent>
@@ -365,14 +273,17 @@ export default function CorredorAncestralPage() {
                 <CardContent className="p-8 space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="bg-stone-100 dark:bg-stone-900 p-3 rounded-xl">
-                      <Music className="w-7 h-7 text-stone-600 dark:text-stone-400" />
+                      <Droplets className="w-7 h-7 text-stone-600 dark:text-stone-400" />{" "}
+                      {/* Changed icon to Droplets */}
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">
-                        Experiencia Cultural
+                        Experiencia de conexión con la naturaleza {/* Updated title */}
                       </h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Música tradicional en vivo</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Instrumentos autóctonos</p>
+                      <p className="text-stone-700 dark:text-stone-300 font-medium">Cascadas y formaciones naturales</p>{" "}
+                      {/* Updated text */}
+                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Paisajes únicos</p>{" "}
+                      {/* Updated text */}
                     </div>
                   </div>
                 </CardContent>
@@ -394,14 +305,11 @@ export default function CorredorAncestralPage() {
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    "Recorrido guiado por la Ciudad de la Memoria",
-                    "Velada cultural con música tradicional alrededor de fogata",
-                    "Presentación de instrumentos autóctonos y su historia",
-                    "Charla sobre símbolos indígenas y cultura muisca",
-                    "Refrigerios y bebidas tradicionales",
-                    "Encuentro con sabedores ancestrales",
-                    "Experiencia de conexión con la naturaleza y la historia",
-                    "Material educativo sobre patrimonio cultural",
+                    "Recorrido guiado", // Updated item
+                    "Charla sobre la cultura muisca e historia", // Updated item
+                    "Descubre hermosa cascada escondida en el paisaje montañoso", // Updated item
+                    "Corrientes de agua para sumergirse", // Updated item
+                    "Refrigerio y bebida tradicional", // Updated item
                   ].map((item, index) => (
                     <div
                       key={index}

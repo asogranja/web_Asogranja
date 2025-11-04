@@ -86,47 +86,57 @@ export default function AsogranjaPage() {
     },
   ]
 
-  // INSTRUCCIONES PARA AJUSTAR POSICIONES:
-  // - 'top': Controla la posición vertical (0% = arriba, 100% = abajo)
-  // - 'left': Controla la posición horizontal (0% = izquierda, 100% = derecha)
-  // - Aumenta o disminuye los valores en incrementos de 1% para ajustar finamente
-  // - Los botones se posicionarán exactamente donde indiques en el mapa
+  // INSTRUCCIONES PARA AJUSTAR POSICIONES DE LOS BOTONES:
+  // =====================================================
+  // Cada botón se posiciona usando coordenadas en porcentaje sobre el mapa
+  //
+  // - 'top': Posición vertical (0% = parte superior, 100% = parte inferior)
+  // - 'left': Posición horizontal (0% = izquierda, 100% = derecha)
+  //
+  // CÓMO AJUSTAR:
+  // 1. Identifica el botón que quieres mover (A, B, C, o D)
+  // 2. Modifica los valores de 'top' y 'left' en incrementos de 1-5%
+  // 3. Guarda y observa el cambio en la vista previa
+  // 4. Repite hasta que el botón esté en la posición deseada
+  //
+  // EJEMPLO: Para mover el botón A más arriba, reduce el valor de 'top'
+  //          Para mover el botón A más a la derecha, aumenta el valor de 'left'
   const mapLocations = [
     {
       id: "A",
       name: "Postres Las Mariposas",
       location: "Villa del Gurubo",
       description: "Postres artesanales y dulces tradicionales",
-      color: "bg-amber-500",
-      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón A
-      position: { top: "18%", left: "22%" }, // Ajustado para alinearse con el marcador
+      color: "bg-amber-500", // Color naranja/amarillo distintivo
+      // ⬇️ AJUSTAR BOTÓN A AQUÍ ⬇️
+      position: { top: "18%", left: "22%" },
     },
     {
       id: "B",
       name: "Rincón de la Huerta",
       location: "Vereda Monquirá",
       description: "Hortalizas orgánicas y productos frescos",
-      color: "bg-green-600",
-      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón B
-      position: { top: "48%", left: "37%" }, // Ajustado para alinearse con el marcador
+      color: "bg-green-600", // Color verde distintivo
+      // ⬇️ AJUSTAR BOTÓN B AQUÍ ⬇️
+      position: { top: "48%", left: "37%" },
     },
     {
       id: "C",
       name: "Casona las Delicias",
       location: "Centro Poblado de Marca",
       description: "Gastronomía tradicional boyacense",
-      color: "bg-green-700",
-      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón C
-      position: { top: "23%", left: "62%" }, // Ajustado para alinearse con el marcador
+      color: "bg-green-700", // Color verde oscuro distintivo
+      // ⬇️ AJUSTAR BOTÓN C AQUÍ ⬇️
+      position: { top: "23%", left: "62%" },
     },
     {
       id: "D",
       name: "Rincón de las Labores",
       location: "Vereda Mortiñal",
       description: "Artesanías y labores campesinas",
-      color: "bg-slate-800",
-      // AJUSTAR AQUÍ: Modifica estos valores para mover el botón D
-      position: { top: "33%", left: "82%" }, // Ajustado para alinearse con el marcador
+      color: "bg-slate-800", // Color azul oscuro/negro distintivo
+      // ⬇️ AJUSTAR BOTÓN D AQUÍ ⬇️
+      position: { top: "33%", left: "82%" },
     },
   ]
 
@@ -165,7 +175,7 @@ export default function AsogranjaPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20ASOGRANJA-GJSdUlIWrM5W0oXfpnQYcuma9JrJMZ.jpg"
+                src="/images/design-mode/LOGO%20ASOGRANJA.jpg"
                 alt="ASOGRANJA Logo"
                 width={60}
                 height={60}
@@ -423,7 +433,7 @@ export default function AsogranjaPage() {
               </div>
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Turismo Cultural
+                  Ruta experiencial cultural y agroecológica
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Recorre espacios donde la cultura campesina se encuentra con prácticas agroecológicas. Gastronomía,
@@ -461,7 +471,7 @@ export default function AsogranjaPage() {
               </div>
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Corredor Ancestral
+                  Corredor Ancestral Cascada La Pirámide
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Sumérgete en las tradiciones ancestrales de nuestro territorio. Conoce prácticas agrícolas
@@ -499,7 +509,7 @@ export default function AsogranjaPage() {
               </div>
               <CardContent className="p-8 space-y-4">
                 <h3 className="text-2xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Cultura y Memoria
+                  Ruta Pedagógica Cultura y Memoria
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Un viaje por la historia y las tradiciones que han moldeado nuestra identidad campesina. Historias,
@@ -525,7 +535,7 @@ export default function AsogranjaPage() {
             >
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2024-EhU5HkJ6RfxC835aseR0zbaEthBn55.jpg"
+                  src="/images/design-mode/Anexo%2024.jpg"
                   alt="Ruta del Agua - Lago de Tota"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -572,13 +582,26 @@ export default function AsogranjaPage() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               Descubre la autenticidad de nuestros productos elaborados con técnicas tradicionales y amor por la tierra
             </p>
+            <div className="max-w-3xl mx-auto mt-6">
+              <p className="text-base text-foreground leading-relaxed">
+                En esta ruta encontrarán todos nuestros productos hechos por manos campesinas con técnicas
+                tradicionales. Aquí podrás adquirir nuestros productos transformados como:{" "}
+                <span className="font-semibold">Chicha, Masato y galletas de maíz</span>,
+                <span className="font-semibold"> Hayacas, Envueltos y tamales</span>,
+                <span className="font-semibold"> Arepas</span>,<span className="font-semibold"> Maíz Frito</span>,
+                <span className="font-semibold"> Postres</span>,<span className="font-semibold"> Cuajada, Queso</span> y
+                <span className="font-semibold"> Variedad de Artesanías</span>.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {artisanProducts.map((product, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10"
+                className={`group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10 ${
+                  index === 3 ? "lg:col-start-2" : ""
+                }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -653,21 +676,20 @@ export default function AsogranjaPage() {
                           fill
                           className="object-contain p-4"
                         />
-                        {/* Interactive Buttons positioned directly on map markers */}
-                        {/* NOTA: Los botones se posicionan usando los valores de 'position' en mapLocations */}
-                        {/* Para ajustar, modifica los valores top/left en el array mapLocations arriba */}
+                        {/* Interactive Buttons - Cada uno con su propio estilo y posicionamiento ajustable */}
                         {mapLocations.map((location) => (
                           <button
                             key={location.id}
-                            className={`absolute w-12 h-12 rounded-full ${location.color} text-white font-bold text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10 border-2 border-white`}
+                            className={`absolute w-14 h-14 rounded-full ${location.color} text-white font-bold text-xl shadow-xl flex items-center justify-center hover:scale-110 transition-all duration-200 cursor-pointer z-10 border-3 border-white hover:shadow-2xl`}
                             style={{
                               top: location.position.top,
                               left: location.position.left,
-                              transform: "translate(-50%, -50%)", // Centra el botón en las coordenadas exactas
+                              transform: "translate(-50%, -50%)",
                             }}
                             onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
                             onMouseEnter={() => setSelectedLocation(location.id)}
                             onMouseLeave={() => setSelectedLocation(null)}
+                            aria-label={`Ubicación ${location.id}: ${location.name}`}
                           >
                             {location.id}
                           </button>
@@ -685,7 +707,7 @@ export default function AsogranjaPage() {
                         </div>
                         Ubicaciones
                       </h4>
-                      <div className="space-y-3 max-h-[600px] overflow-y-auto pr-2">
+                      <div className="space-h-[600px] overflow-y-auto pr-2">
                         {mapLocations.map((location, index) => (
                           <div
                             key={location.id}
@@ -1001,7 +1023,7 @@ export default function AsogranjaPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20ASOGRANJA-GJSdUlIWrM5W0oXfpnQYcuma9JrJMZ.jpg"
+                  src="/images/design-mode/LOGO%20ASOGRANJA.jpg"
                   alt="ASOGRANJA Logo"
                   width={50}
                   height={50}
@@ -1072,7 +1094,7 @@ export default function AsogranjaPage() {
           onClick={() => window.open("https://wa.me/573114632044?text=Hola,%20quiero%20más%20información", "_blank")}
         >
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/whatsapp-4j7ioOZV5uXoNgkgbGgPPhkTeLSyBz.png"
+            src="/images/design-mode/whatsapp.png"
             alt="WhatsApp"
             width={64}
             height={64}

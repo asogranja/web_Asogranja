@@ -78,14 +78,11 @@ export default function CulturaYMemoriaPage() {
                   className="text-4xl md:text-6xl font-bold text-white text-balance"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
-                  Ruta Cultura y Memoria
+                  Ruta Pedagógica Cultura y Memoria
                 </h1>
               </div>
               <p className="text-xl md:text-2xl text-white/95 text-pretty mb-2">
-                Preservando y compartiendo nuestras tradiciones ancestrales
-              </p>
-              <p className="text-lg text-white/85 text-pretty">
-                Un viaje por la memoria colectiva y los saberes campesinos
+                Aprende, explora y conecta con nuestras raíces
               </p>
             </div>
           </div>
@@ -104,19 +101,18 @@ export default function CulturaYMemoriaPage() {
                     className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
-                    Una Experiencia de Aprendizaje
+                    Una Experiencia Educativa y Turística
                   </h2>
                 </div>
                 <p className="text-xl leading-relaxed text-stone-700 dark:text-stone-300">
-                  Sumérgete en la riqueza cultural de nuestro territorio a través de talleres de{" "}
-                  <strong className="text-stone-900 dark:text-stone-100">símbolos indígenas</strong>, recorridos por
-                  fincas tradicionales y actividades comunitarias que mantienen viva la memoria de nuestros ancestros.
+                  Esta experiencia te invita a descubrir la historia viva de nuestras comunidades rurales a través de un
+                  recorrido lleno de naturaleza, aprendizaje y tradición. Ideal para niños, jóvenes y grupos escolares,
+                  combina caminatas interpretativas, actividades culturales y contacto directo con el territorio.
                 </p>
                 <div className="h-1 w-24 bg-gradient-to-r from-stone-400 to-stone-500 rounded-full"></div>
                 <p className="text-lg leading-relaxed text-stone-600 dark:text-stone-400">
-                  Participa en ejercicios de integración comunitaria, conoce técnicas agrícolas ancestrales, explora
-                  paisajes naturales con arroyos cristalinos y conecta con las tradiciones que han dado forma a nuestra
-                  identidad campesina durante generaciones.
+                  Una experiencia educativa y turística que promueve el respeto por el patrimonio y despierta la
+                  curiosidad de niños y jóvenes.
                 </p>
               </CardContent>
             </Card>
@@ -157,23 +153,24 @@ export default function CulturaYMemoriaPage() {
                 className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                Galería de Experiencias
+                Recorrido de la Ruta
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src="/cultura-memoria-indigenous-symbols.jpg"
-                    alt="Taller de símbolos indígenas con la comunidad"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2020-mxHaI9qdkFM6JMlK7zlvReXVjxNIv6.jpg"
+                    alt="Ciudad de la Memoria - Logo con símbolos indígenas"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Símbolos Ancestrales</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Ciudad de la Memoria</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Aprende sobre los símbolos indígenas y su significado en talleres interactivos con la comunidad.
+                    Un espacio que funciona como alojamiento rural. Aquí conocerás la vida campesina y la sabiduría
+                    transmitida por abuelos y ancestros.
                   </p>
                 </CardContent>
               </Card>
@@ -181,16 +178,17 @@ export default function CulturaYMemoriaPage() {
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src="/cultura-memoria-farm-tour.jpg"
-                    alt="Recorrido por finca con ganado"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2021-ztgQmyv6UjFPX4nHBYepnhepsRnhvC.jpg"
+                    alt="Paso Río Monquirá - Sendero natural con arroyo"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Recorridos Rurales</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Paso Río Monquirá</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Explora fincas tradicionales y conoce las prácticas agropecuarias de la región.
+                    Un sendero que conecta pasado y presente. A través de relatos descubrirás por qué este lugar fue tan
+                    importante para los Muiscas.
                   </p>
                 </CardContent>
               </Card>
@@ -198,16 +196,19 @@ export default function CulturaYMemoriaPage() {
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src="/cultura-memoria-community-activities.jpg"
-                    alt="Actividades comunitarias y ejercicios grupales"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2022-vxKU77iVPuMxRCKhWqjKpHUf6UoRRg.jpg"
+                    alt="Loma El Cerro y Pasillo de Adobe - Grupo con símbolos indígenas"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Integración Comunitaria</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">
+                    Loma El Cerro y Pasillo de Adobe
+                  </h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Participa en actividades grupales que fortalecen los lazos comunitarios y el bienestar.
+                    Dos paradas llenas de historia: aprenderás sobre las labores campesinas, el cuidado del agua y los
+                    caminos tradicionales.
                   </p>
                 </CardContent>
               </Card>
@@ -215,16 +216,17 @@ export default function CulturaYMemoriaPage() {
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden">
                   <Image
-                    src="/cultura-memoria-natural-stream.jpg"
-                    alt="Arroyo natural con árboles"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2023-l2rOpjIxsjDo3PKuWWQACLqx01xOxE.jpg"
+                    alt="Casa Cultura - Logo con guitarra y bailarina"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Naturaleza Viva</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Casa Cultura</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Descubre arroyos cristalinos y ecosistemas naturales que forman parte de nuestro patrimonio.
+                    El recorrido termina con actividades artísticas y pedagógicas, diseñadas para que los participantes
+                    aprendan de forma vivencial y divertida.
                   </p>
                 </CardContent>
               </Card>
@@ -248,8 +250,7 @@ export default function CulturaYMemoriaPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Duración</h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Jornada completa</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">6-8 horas de actividades</p>
+                      <p className="text-stone-700 dark:text-stone-300 font-medium">Jornada 5 horas de actividades</p>
                     </div>
                   </div>
                 </CardContent>
@@ -263,8 +264,7 @@ export default function CulturaYMemoriaPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Grupo</h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Mínimo 8 personas</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Máximo 25 personas por grupo</p>
+                      <p className="text-stone-700 dark:text-stone-300 font-medium">Mínimo 5 máximo 20 personas</p>
                     </div>
                   </div>
                 </CardContent>
@@ -278,8 +278,10 @@ export default function CulturaYMemoriaPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Ubicación</h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Sogamoso, Boyacá</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Veredas rurales</p>
+                      <p className="text-stone-700 dark:text-stone-300 font-medium">
+                        Vereda Monquira - Milagro y Playita
+                      </p>
+                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Sogamoso, Boyacá</p>
                     </div>
                   </div>
                 </CardContent>
@@ -319,14 +321,11 @@ export default function CulturaYMemoriaPage() {
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    "Taller de símbolos indígenas y su significado",
-                    "Recorrido guiado por fincas tradicionales",
-                    "Actividades de integración comunitaria",
-                    "Caminata por senderos naturales y arroyos",
+                    "Recorrido guiado",
+                    "Actividades pedagógicas y símbolos indígenas",
+                    "Caminata por senderos naturales",
                     "Charla sobre memoria histórica y cultural",
-                    "Refrigerios y almuerzo típico",
-                    "Material educativo sobre patrimonio local",
-                    "Certificado de participación",
+                    "Refrigerio y bebida tradicional",
                   ].map((item, index) => (
                     <div
                       key={index}
@@ -419,7 +418,9 @@ export default function CulturaYMemoriaPage() {
                         </div>
                         <div>
                           <p className="text-sm text-stone-600 dark:text-stone-400">Correo</p>
-                          <p className="font-bold text-lg text-stone-800 dark:text-stone-200">asogranjasogamoso@gmail.com</p>
+                          <p className="font-bold text-lg text-stone-800 dark:text-stone-200">
+                            asogranjasogamoso@gmail.com
+                          </p>
                         </div>
                       </a>
 

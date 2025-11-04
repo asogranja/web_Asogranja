@@ -145,7 +145,7 @@ export default function NosotrosPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20ASOGRANJA-GJSdUlIWrM5W0oXfpnQYcuma9JrJMZ.jpg"
+                  src="/images/design-mode/LOGO%20ASOGRANJA.jpg"
                   alt="ASOGRANJA Logo"
                   width={50}
                   height={50}

@@ -101,9 +101,9 @@ export default function ProduccionCosechaVentaPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <Card className="border-2 border-stone-200 shadow-lg animate-in fade-in slide-in-from-bottom-5">
             <CardContent className="p-8 space-y-4">
-              <h2 className="text-3xl font-bold text-stone-800">Ciclo Completo de Producción</h2>
+              <h2 className="text-3xl font-bold text-stone-800">¡Desde la Semilla Hasta Tu Mesa!</h2>
               <p className="text-lg text-stone-600 leading-relaxed">
-                ¡Desde la Semilla Hasta Tu Mesa! En ASOGRANJA desarrollamos un ciclo completo de producción
+                En ASOGRANJA desarrollamos un ciclo completo de producción
                 agroecológica, Cultivamos nuestros propios plantulajes y acompañamos cada etapa del proceso hasta que el
                 alimento llega a tus manos. Nuestras familias campesinas cultivan productos orgánicos de alta calidad
                 utilizando técnicas sostenibles que respetan el medio ambiente y promueven la biodiversidad.
@@ -184,63 +184,63 @@ export default function ProduccionCosechaVentaPage() {
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%201-xbKEhQzPrSz08CFJNCXhmYvRxN93Be.jpg"
+                  src="/images/design-mode/Anexo%201.jpg"
                   alt="Huerta orgánica con cultivos diversificados"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Huerta orgánica con cultivos diversificados (Ver Anexo 1)</p>
+                <p className="text-sm text-stone-600">Huerta orgánica con cultivos diversificados</p>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%202-0lGn1VATnjrUa0rnmaafwkVOmASuKG.jpg"
+                  src="/images/design-mode/Anexo%202.jpg"
                   alt="Preparación de semilleros"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Preparación de semilleros para siembra (Ver Anexo 2)</p>
+                <p className="text-sm text-stone-600">Preparación de semilleros para siembra</p>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%203-yXrZUvdCiGPsfLoo3rzvH0MK5tt0b0.jpg"
+                  src="/images/design-mode/Anexo%203.jpg"
                   alt="Venta directa en mercado campesino"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Venta directa en mercado campesino (Ver Anexo 3)</p>
+                <p className="text-sm text-stone-600">Venta directa en mercado campesino </p>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%204-mIXS9ULsQXUc064UEsN9PwPEBnHsHA.jpg"
+                  src="/images/design-mode/Anexo%204.jpg"
                   alt="Proceso de siembra en bandejas germinadoras"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardContent className="p-4">
-                <p className="text-sm text-stone-600">Proceso de siembra en bandejas germinadoras (Ver Anexo 4)</p>
+                <p className="text-sm text-stone-600">Proceso de siembra en bandejas germinadoras</p>
               </CardContent>
             </Card>
 
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/506720322_1888680858651264_1802579618529416358_n-W7oSkQ29If7AhGenY2pOCQvse1epwk.jpg"
+                  src="/images/design-mode/506720322_1888680858651264_1802579618529416358_n.jpg"
                   alt="Capacitación en compostaje"
                   fill
                   className="object-cover"
@@ -254,7 +254,7 @@ export default function ProduccionCosechaVentaPage() {
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/520397064_1918616435657706_2558274020503601248_n-eIFkZ2biYh2yptguM8BzqnbFuewR5x.jpg"
+                  src="/images/design-mode/520397064_1918616435657706_2558274020503601248_n.jpg"
                   alt="Siembra de semillas"
                   fill
                   className="object-cover"

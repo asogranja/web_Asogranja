@@ -12,7 +12,7 @@ export default function RutaDelAguaPage() {
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Anexo%2024-EhU5HkJ6RfxC835aseR0zbaEthBn55.jpg"
+          src="/images/design-mode/Anexo%2024.jpg"
           alt="Lago de Tota - Vista aérea"
           fill
           className="object-cover brightness-90"

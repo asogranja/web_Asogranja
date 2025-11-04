@@ -147,7 +147,7 @@ export default function InvestigacionesParticipativasPage() {
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/535908028_1944200763099273_7703338316286415868_n-5gew8n3rK6mNwMBny2Zs3Pk9IoKfWp.jpg"
+                  src="/images/design-mode/535908028_1944200763099273_7703338316286415868_n.jpg"
                   alt="Visita a planta piloto AGROSAVIA"
                   fill
                   className="object-cover"
@@ -161,7 +161,7 @@ export default function InvestigacionesParticipativasPage() {
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/536121581_1944200319765984_7021265209008755111_n-JDnzZN4wUtW49QssUtXBbOhUJ9ur3x.jpg"
+                  src="/images/design-mode/536121581_1944200319765984_7021265209008755111_n.jpg"
                   alt="Taller de compostaje"
                   fill
                   className="object-cover"
@@ -175,7 +175,7 @@ export default function InvestigacionesParticipativasPage() {
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/511673123_1893128468206503_8750159797998138304_n-sAQFrLO31ChcrW40l99akzRtURMxAV.jpg"
+                  src="/images/design-mode/511673123_1893128468206503_8750159797998138304_n.jpg"
                   alt="Diálogo de saberes"
                   fill
                   className="object-cover"
@@ -189,7 +189,7 @@ export default function InvestigacionesParticipativasPage() {
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/538642813_1946351632884186_2107854921680908227_n-F5JfsXoZneIDJkms4TBdLE9XxnPVWM.jpg"
+                  src="/images/design-mode/538642813_1946351632884186_2107854921680908227_n.jpg"
                   alt="Visita a invernadero"
                   fill
                   className="object-cover"
@@ -203,7 +203,7 @@ export default function InvestigacionesParticipativasPage() {
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/538299533_1944201226432560_4418728169287401765_n-8gqf1eifBP2jafOUgGoF3UNIS5y7Gd.jpg"
+                  src="/images/design-mode/538299533_1944201226432560_4418728169287401765_n.jpg"
                   alt="Análisis de suelos"
                   fill
                   className="object-cover"
@@ -217,7 +217,7 @@ export default function InvestigacionesParticipativasPage() {
             <Card className="overflow-hidden border-2 border-stone-200 hover:shadow-xl transition-shadow">
               <div className="relative h-64">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/548205148_1966872207498795_8334847794301265330_n-LVzhU6FaxYfrKF9OH1AnoNXmcNimEx.jpg"
+                  src="/images/design-mode/548205148_1966872207498795_8334847794301265330_n.jpg"
                   alt="Infografía proyecto PACA"
                   fill
                   className="object-cover"

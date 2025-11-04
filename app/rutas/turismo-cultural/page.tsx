@@ -86,7 +86,7 @@ export default function TurismoCulturalPage() {
                   className="text-4xl md:text-6xl font-bold text-white text-balance"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
-                  Turismo Cultural
+                  Ruta experiencial cultural y agroecológica
                 </h1>
               </div>
               <p className="text-xl md:text-2xl text-white/95 text-pretty mb-2">
@@ -579,7 +579,7 @@ export default function TurismoCulturalPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO%20ASOGRANJA-GJSdUlIWrM5W0oXfpnQYcuma9JrJMZ.jpg"
+                  src="/images/design-mode/LOGO%20ASOGRANJA.jpg"
                   alt="ASOGRANJA Logo"
                   width={50}
                   height={50}
