@@ -314,7 +314,7 @@ export default function AsogranjaPage() {
       </section>
 
       {/* Producción Agroecológica Section */}
-      <section id="produccion-agroecologica" className="py-24 bg-green-50/30">
+      <section id="produccion-agroecologica" className="py-24 bg-emerald-50/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -353,7 +353,7 @@ export default function AsogranjaPage() {
                   <Link href="/produccion-agroecologica/produccion-cosecha-venta">
                     <Button
                       variant="outline"
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                      className="w-full border-2 group-hover:border-green-500 group-hover:text-green-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
                     >
                       Conocer Más
                     </Button>
@@ -392,7 +392,7 @@ export default function AsogranjaPage() {
                   <Link href="/produccion-agroecologica/investigaciones-participativas">
                     <Button
                       variant="outline"
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                      className="w-full border-2 group-hover:border-green-500 group-hover:text-green-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
                     >
                       Conocer Más
                     </Button>
@@ -405,7 +405,7 @@ export default function AsogranjaPage() {
       </section>
 
       {/* Turismo Rural Comunitario Section */}
-      <section id="rutas" className="py-24 bg-orange-50/40">
+      <section id="rutas" className="py-24 bg-sky-50/40">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-balance" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -443,7 +443,7 @@ export default function AsogranjaPage() {
                   <Link href="/rutas/turismo-cultural">
                     <Button
                       variant="outline"
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                      className="w-full border-2 group-hover:border-orange-500 group-hover:text-orange-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
                     >
                       Explorar Ruta
                     </Button>
@@ -481,7 +481,7 @@ export default function AsogranjaPage() {
                   <Link href="/rutas/corredor-ancestral">
                     <Button
                       variant="outline"
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                      className="w-full border-2 group-hover:border-orange-500 group-hover:text-orange-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
                     >
                       Explorar Ruta
                     </Button>
@@ -519,7 +519,7 @@ export default function AsogranjaPage() {
                   <Link href="/rutas/cultura-y-memoria">
                     <Button
                       variant="outline"
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                      className="w-full border-2 group-hover:border-orange-500 group-hover:text-orange-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
                     >
                       Explorar Ruta
                     </Button>
@@ -557,7 +557,7 @@ export default function AsogranjaPage() {
                   <Link href="/rutas/ruta-del-agua">
                     <Button
                       variant="outline"
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                      className="w-full border-2 group-hover:border-orange-500 group-hover:text-orange-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95"
                     >
                       Explorar Ruta
                     </Button>
@@ -570,7 +570,7 @@ export default function AsogranjaPage() {
       </section>
 
       {/* Productos Artesanales Section */}
-      <section id="productos" className="py-24 bg-yellow-50/30">
+      <section id="productos" className="py-24 bg-amber-50/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
@@ -623,7 +623,7 @@ export default function AsogranjaPage() {
                   <p className="text-muted-foreground leading-relaxed">{product.description}</p>
                   <Button
                     variant="outline"
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors bg-transparent"
+                    className="w-full border-2 group-hover:border-yellow-500 group-hover:text-yellow-600 transition-colors bg-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 active:scale-95"
                     onClick={() =>
                       window.open(
                         "https://wa.me/573114632044?text=Hola,%20quiero%20información%20sobre%20" + product.title,
@@ -678,9 +678,10 @@ export default function AsogranjaPage() {
                         />
                         {/* Interactive Buttons - Cada uno con su propio estilo y posicionamiento ajustable */}
                         {mapLocations.map((location) => (
+                          // Agregado focus personalizado y eliminado outline amarillo en botones del mapa
                           <button
                             key={location.id}
-                            className={`absolute w-14 h-14 rounded-full ${location.color} text-white font-bold text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10 border-2 border-white`}
+                            className={`absolute w-14 h-14 rounded-full ${location.color} text-white font-bold text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10 border-2 border-white focus:outline-none focus:ring-4 focus:ring-white/50 active:scale-95`}
                             style={{
                               top: location.position.top,
                               left: location.position.left,
