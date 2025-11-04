@@ -187,7 +187,7 @@ export default function ProduccionCosechaVentaPage() {
                   src="/images/design-mode/Anexo%201.jpg"
                   alt="Huerta orgánica con cultivos diversificados"
                   fill
-                  className="object-cover"
+                  className="object-cover"  
                 />
               </div>
               <CardContent className="p-4">
@@ -324,58 +324,71 @@ export default function ProduccionCosechaVentaPage() {
         </div>
       </section>
 
-      <footer className="bg-stone-800 dark:bg-stone-950 text-white">
-        <div className="container mx-auto px-4 py-12">
+      {/* Footer */}
+      <footer className="bg-stone-900 text-stone-300 py-12">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Asogranja Sogamoso
-              </h3>
-              <p className="text-stone-300 text-sm leading-relaxed">
-                Producción agroecológica sostenible y comercio justo. Del campo a tu mesa con productos 100% orgánicos.
+            {/* About Section */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/design-mode/logo.jpg"
+                  alt="ASOGRANJA Logo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">ASOGRANJA</h3>
+                  <p className="text-sm text-stone-300">Sogamoso, Boyacá</p>
+                </div>
+              </div>
+              <p className="text-sm leading-relaxed">
+                Asociación de productores agroecológicos comprometidos con la sostenibilidad, la investigación
+                participativa y el turismo rural comunitario en Sogamoso, Boyacá.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Contacto
-              </h3>
-              <div className="space-y-2 text-stone-300 text-sm">
-                <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  310 583 1864
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  asogranjasogamoso@gmail.com
-                </p>
-                <p className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  Sogamoso, Boyacá
-                </p>
-              </div>
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-white">Enlaces Rápidos</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/#produccion-agroecologica" className="hover:text-green-400 transition-colors">
+                    Producción Agroecológica
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#rutas" className="hover:text-green-400 transition-colors">
+                    Turismo Rural
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#productos" className="hover:text-green-400 transition-colors">
+                    Productos Artesanales
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#nosotros" className="hover:text-green-400 transition-colors">
+                    Nosotros
+                  </Link>
+                </li>
+              </ul>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Nuestros Servicios
-              </h3>
-              <div className="space-y-2 text-stone-300 text-sm">
-                <Link href="/#produccion-agroecologica" className="block hover:text-white transition-colors">
-                  Producción Agroecológica
-                </Link>
-                <Link href="/#rutas" className="block hover:text-white transition-colors">
-                  Rutas Turísticas
-                </Link>
-                <Link href="/#nosotros" className="block hover:text-white transition-colors">
-                  Sobre Nosotros
-                </Link>
-              </div>
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-white">Contacto</h3>
+              <ul className="space-y-2 text-sm">
+                <li>📞 311 463 2044 / 313 219 5939</li>
+                <li>📧 asogranjasogamoso@gmail.com</li>
+                <li>📍 Sogamoso, Boyacá, Colombia</li>
+              </ul>
             </div>
           </div>
 
-          <div className="border-t border-stone-700 pt-8 text-center text-stone-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} Asogranja Sogamoso. Todos los derechos reservados.</p>
+          <div className="border-t border-stone-700 pt-8 text-center text-sm">
+            <p>© 2025 ASOGRANJA Sogamoso. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>

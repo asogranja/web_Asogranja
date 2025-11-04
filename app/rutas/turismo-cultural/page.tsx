@@ -662,7 +662,7 @@ export default function TurismoCulturalPage() {
               <h4 className="font-bold text-lg">Contacto</h4>
               <ul className="space-y-2 text-sm opacity-90">
                 <li>Sogamoso, Boyacá, Colombia</li>
-                <li>Teléfono: 310 583 1864</li>
+                <li>Teléfono: 311 463 2044</li>
                 <li>Disponible todo el año</li>
                 <li>asogranjasogamoso@gmail.com</li>
               </ul>

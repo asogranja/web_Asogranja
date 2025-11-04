@@ -145,7 +145,7 @@ export default function NosotrosPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/images/design-mode/LOGO%20ASOGRANJA.jpg"
+                  src="/images/design-mode/logo.jpg"
                   alt="ASOGRANJA Logo"
                   width={50}
                   height={50}

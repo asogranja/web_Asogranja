@@ -127,7 +127,7 @@ export default function AsogranjaPage() {
       description: "Gastronomía tradicional boyacense",
       color: "bg-green-700",
       // AJUSTAR AQUÍ: Modifica estos valores para mover el botón C
-      position: { top: "27%", left: "53.7%" }, // Ajustado para alinearse con el marcador
+      position: { top: "27.5%", left: "53.7%" }, // Ajustado para alinearse con el marcador
     },
     {
       id: "D",
@@ -136,7 +136,7 @@ export default function AsogranjaPage() {
       description: "Artesanías y labores campesinas",
       color: "bg-slate-800",
       // AJUSTAR AQUÍ: Modifica estos valores para mover el botón D
-      position: { top: "33.5%", left: "72.5%" }, // Ajustado para alinearse con el marcador
+      position: { top: "33%", left: "72.5%" }, // Ajustado para alinearse con el marcador
     },
   ]
 
@@ -175,7 +175,7 @@ export default function AsogranjaPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Image
-                src="/images/design-mode/LOGO%20ASOGRANJA.jpg"
+                src="/images/design-mode/logo.jpg"
                 alt="ASOGRANJA Logo"
                 width={60}
                 height={60}
@@ -596,11 +596,13 @@ export default function AsogranjaPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {artisanProducts.map((product, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10 w-full max-w-md"
+                className={`group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10 ${
+                  index === 3 ? "lg:col-start-2" : ""
+                }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -1023,7 +1025,7 @@ export default function AsogranjaPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/images/design-mode/LOGO%20ASOGRANJA.jpg"
+                  src="/images/design-mode/logo.jpg"
                   alt="ASOGRANJA Logo"
                   width={50}
                   height={50}
