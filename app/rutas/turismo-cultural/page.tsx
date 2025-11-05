@@ -675,6 +675,23 @@ export default function TurismoCulturalPage() {
         </div>
       </footer>
 
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button
+          size="lg"
+          className="bg-transparent hover:bg-green-50 rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center p-0 overflow-hidden border-0 animate-pulse hover:animate-bounce"
+          onClick={() => window.open("https://wa.me/573114632044?text=Hola,%20quiero%20más%20información", "_blank")}
+        >
+          <Image
+            src="/images/design-mode/whatsapp.png"
+            alt="WhatsApp"
+            width={64}
+            height={64}
+            className="object-cover rounded-full"
+          />
+        </Button>
+      </div>
+
       <style jsx global>{`
         .fade-in-section {
           opacity: 0;
