@@ -148,7 +148,7 @@ export default function TurismoCulturalPage() {
                     muted
                     loop
                   >
-                    <source src="/casa_cultura.mp4" type="video/mp4" />
+                    <source src="/112.mp4" type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
                   </video>
                 </div>
@@ -415,6 +415,7 @@ export default function TurismoCulturalPage() {
                     "juegos, actividades al aire libre y creatividad",
                     "Descubre una experiencia de sabores, saberes y tradiciones campesinas",
                     "Refrigerio y bebida tradicional",
+
                   ].map((item, index) => (
                     <div
                       key={index}
@@ -606,7 +607,7 @@ export default function TurismoCulturalPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <Image
-                  src="/images/design-mode/LOGO%20ASOGRANJA.jpg"
+                  src="/images/design-mode/logo.jpg"
                   alt="ASOGRANJA Logo"
                   width={50}
                   height={50}

@@ -2,14 +2,14 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Clock, Users, Phone, Mail, Sparkles, Mountain, Heart, Camera, Droplets } from "lucide-react"
+import { ArrowLeft, MapPin, Clock, Users, Phone, Mail, Sparkles, Mountain, Heart, Camera, Droplets, Video } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef } from "react"
 
 export default function CorredorAncestralPage() {
   const heroRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null) // videoRef is no longer used but kept for now
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -46,7 +46,7 @@ export default function CorredorAncestralPage() {
 
     return () => {
       observer.disconnect()
-      videoObserver.disconnect() // videoObserver is no longer used but kept for now
+      videoObserver.disconnect()
     }
   }, [])
 
@@ -122,7 +122,34 @@ export default function CorredorAncestralPage() {
             </Card>
           </div>
 
-          {/* Video section removed */}
+          <div className="fade-in-section opacity-0 transition-all duration-700">
+            <div className="flex items-center gap-3 mb-8">
+              <Video className="w-8 h-8 text-stone-600 dark:text-stone-400" />
+              <h2
+                className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Video de la Experiencia
+              </h2>
+            </div>
+            <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 shadow-lg">
+              <CardContent className="p-0">
+                <div className="relative w-full aspect-video bg-stone-100 dark:bg-stone-900">
+                  <video
+                    ref={videoRef}
+                    controls
+                    className="w-full h-full object-cover"
+                    poster="/corredor-ancestral-musicians-campfire.jpg"
+                    muted
+                    loop
+                  >
+                    <source src="/DJI_0062.mp4" type="video/mp4" />
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
 
           <div className="fade-in-section opacity-0 transition-all duration-700">
             <div className="flex items-center gap-3 mb-8">
@@ -495,58 +522,72 @@ export default function CorredorAncestralPage() {
         </div>
       </div>
 
-      <footer className="bg-stone-800 dark:bg-stone-950 text-white">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Asogranja Sogamoso
-              </h3>
-              <p className="text-stone-300 text-sm leading-relaxed">
-                Promoviendo el turismo rural comunitario y preservando las tradiciones ancestrales de Sogamoso, Boyacá.
+      <footer className="bg-stone-800 text-white py-12 mt-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/design-mode/logo.jpg"
+                  alt="ASOGRANJA Logo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold">ASOGRANJA</h3>
+                  <p className="text-sm opacity-80">Sogamoso, Boyacá</p>
+                </div>
+              </div>
+              <p className="text-sm opacity-90 leading-relaxed">
+                Promoviendo el turismo rural comunitario y el desarrollo sostenible desde 2010
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Contacto
-              </h3>
-              <div className="space-y-2 text-stone-300 text-sm">
-                <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  322 881 4258
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  @CiudadDeLaMemoria
-                </p>
-                <p className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  Vereda Monquira, Sogamoso
-                </p>
-              </div>
+            <div className="space-y-3">
+              <h4 className="font-bold text-lg">Enlaces Rápidos</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li>
+                  <Link href="/#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
+                    Producción Agroecológica
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#rutas" className="hover:opacity-100 transition-opacity">
+                    Rutas Turísticas
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#productos" className="hover:opacity-100 transition-opacity">
+                    Productos Artesanales
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#nosotros" className="hover:opacity-100 transition-opacity">
+                    Quiénes Somos
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#contacto" className="hover:opacity-100 transition-opacity">
+                    Contacto
+                  </Link>
+                </li>
+              </ul>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Nuestras Rutas
-              </h3>
-              <div className="space-y-2 text-stone-300 text-sm">
-                <Link href="/rutas/corredor-ancestral" className="block hover:text-white transition-colors">
-                  Corredor Ancestral
-                </Link>
-                <Link href="/rutas/turismo-cultural" className="block hover:text-white transition-colors">
-                  Turismo Cultural
-                </Link>
-                <Link href="/rutas/cultura-y-memoria" className="block hover:text-white transition-colors">
-                  Ruta Cultura y Memoria
-                </Link>
-              </div>
+            <div className="space-y-3">
+              <h4 className="font-bold text-lg">Contacto</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li>Sogamoso, Boyacá, Colombia</li>
+                <li>Teléfono: 311 463 2044</li>
+                <li>Disponible todo el año</li>
+                <li>asogranjasogamoso@gmail.com</li>
+              </ul>
             </div>
           </div>
 
-          <div className="border-t border-stone-700 pt-8 text-center text-stone-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} Asogranja Sogamoso. Todos los derechos reservados.</p>
+          <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm opacity-80">
+            <p>© 2025 ASOGRANJA Sogamoso. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
@@ -577,6 +618,10 @@ export default function CorredorAncestralPage() {
         .fade-in-section.animate-in {
           opacity: 1;
           transform: translateY(0);
+        }
+
+        .hero-image {
+          filter: brightness(1.1) contrast(1.05) saturate(1.1);
         }
       `}</style>
     </div>

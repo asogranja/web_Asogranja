@@ -513,58 +513,72 @@ export default function CulturaYMemoriaPage() {
         </div>
       </div>
 
-      <footer className="bg-stone-800 dark:bg-stone-950 text-white mt-16">
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Asogranja Sogamoso
-              </h3>
-              <p className="text-stone-300 text-sm leading-relaxed">
-                Promoviendo el turismo rural comunitario y preservando las tradiciones ancestrales de Sogamoso, Boyacá.
+      <footer className="bg-stone-800 text-white py-12 mt-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/design-mode/logo.jpg"
+                  alt="ASOGRANJA Logo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold">ASOGRANJA</h3>
+                  <p className="text-sm opacity-80">Sogamoso, Boyacá</p>
+                </div>
+              </div>
+              <p className="text-sm opacity-90 leading-relaxed">
+                Promoviendo el turismo rural comunitario y el desarrollo sostenible desde 2010
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Contacto
-              </h3>
-              <div className="space-y-2 text-stone-300 text-sm">
-                <p className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  322 881 4258
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  @CiudadDeLaMemoria
-                </p>
-                <p className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4" />
-                  Sogamoso, Boyacá
-                </p>
-              </div>
+            <div className="space-y-3">
+              <h4 className="font-bold text-lg">Enlaces Rápidos</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li>
+                  <Link href="/#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
+                    Producción Agroecológica
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#rutas" className="hover:opacity-100 transition-opacity">
+                    Rutas Turísticas
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#productos" className="hover:opacity-100 transition-opacity">
+                    Productos Artesanales
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#nosotros" className="hover:opacity-100 transition-opacity">
+                    Quiénes Somos
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#contacto" className="hover:opacity-100 transition-opacity">
+                    Contacto
+                  </Link>
+                </li>
+              </ul>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
-                Nuestras Rutas
-              </h3>
-              <div className="space-y-2 text-stone-300 text-sm">
-                <Link href="/rutas/corredor-ancestral" className="block hover:text-white transition-colors">
-                  Corredor Ancestral
-                </Link>
-                <Link href="/rutas/turismo-cultural" className="block hover:text-white transition-colors">
-                  Turismo Cultural
-                </Link>
-                <Link href="/rutas/cultura-y-memoria" className="block hover:text-white transition-colors">
-                  Ruta Cultura y Memoria
-                </Link>
-              </div>
+            <div className="space-y-3">
+              <h4 className="font-bold text-lg">Contacto</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li>Sogamoso, Boyacá, Colombia</li>
+                <li>Teléfono: 311 463 2044</li>
+                <li>Disponible todo el año</li>
+                <li>asogranjasogamoso@gmail.com</li>
+              </ul>
             </div>
           </div>
 
-          <div className="border-t border-stone-700 pt-8 text-center text-stone-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} Asogranja Sogamoso. Todos los derechos reservados.</p>
+          <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm opacity-80">
+            <p>© 2025 ASOGRANJA Sogamoso. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>
@@ -595,6 +609,10 @@ export default function CulturaYMemoriaPage() {
         .fade-in-section.animate-in {
           opacity: 1;
           transform: translateY(0);
+        }
+
+        .hero-image {
+          filter: brightness(1.1) contrast(1.05) saturate(1.1);
         }
       `}</style>
     </div>

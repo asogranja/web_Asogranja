@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Phone, Instagram, ChevronDown, ChevronUp, Users, Clock } from "lucide-react"
+import { ArrowLeft, MapPin, Phone, Instagram, ChevronDown, ChevronUp, Users, Clock, Video } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -197,6 +197,31 @@ export default function CorredorCulturalPage() {
             </CardContent>
           </Card>
         </div>
+      {/* Video Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="fade-in-section opacity-0 transition-all duration-700">
+            <div className="flex items-center gap-3 mb-8">
+              <Video className="w-8 h-8 text-lime-600" />
+              <h2 className="text-3xl md:text-4xl font-bold text-stone-800">
+                Video de la Experiencia
+              </h2>
+            </div>
+            <Card className="overflow-hidden border-2 border-stone-200 shadow-lg">
+              <CardContent className="p-0">
+                <div className="relative w-full aspect-video bg-stone-100">
+                  <video controls className="w-full h-full object-cover" poster="/corredor-cultural-hero.jpg">
+                    <source src="/images/112.mp4" type="video/mp4" />
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Sections */}
       </section>
 
       {/* Sections */}
@@ -345,51 +370,71 @@ export default function CorredorCulturalPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-stone-800 text-white py-12">
+      <footer className="bg-stone-800 text-white py-12 mt-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold">ASOGRANJA</h3>
-              <p className="text-sm text-stone-300 leading-relaxed">
-                Promoviendo el turismo rural comunitario y el desarrollo sostenible en Sogamoso, Boyacá.
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/design-mode/logo.jpg"
+                  alt="ASOGRANJA Logo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold">ASOGRANJA</h3>
+                  <p className="text-sm opacity-80">Sogamoso, Boyacá</p>
+                </div>
+              </div>
+              <p className="text-sm opacity-90 leading-relaxed">
+                Promoviendo el turismo rural comunitario y el desarrollo sostenible desde 2010
               </p>
             </div>
 
             <div className="space-y-3">
-              <h4 className="font-bold">Otras Rutas</h4>
-              <ul className="space-y-2 text-sm text-stone-300">
+              <h4 className="font-bold text-lg">Enlaces Rápidos</h4>
+              <ul className="space-y-2 text-sm opacity-90">
                 <li>
-                  <Link href="/rutas/ruta-del-agua" className="hover:text-lime-400 transition-colors">
-                    Ruta del Agua
+                  <Link href="/#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
+                    Producción Agroecológica
                   </Link>
                 </li>
                 <li>
-                  <Link href="/rutas/corredor-ancestral" className="hover:text-lime-400 transition-colors">
-                    Corredor Ancestral
+                  <Link href="/#rutas" className="hover:opacity-100 transition-opacity">
+                    Rutas Turísticas
                   </Link>
                 </li>
                 <li>
-                  <Link href="/rutas/cultura-y-memoria" className="hover:text-lime-400 transition-colors">
-                    Ruta Cultura y Memoria
+                  <Link href="/#productos" className="hover:opacity-100 transition-opacity">
+                    Productos Artesanales
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#nosotros" className="hover:opacity-100 transition-opacity">
+                    Quiénes Somos
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#contacto" className="hover:opacity-100 transition-opacity">
+                    Contacto
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-3">
-              <h4 className="font-bold">Contacto</h4>
-              <ul className="space-y-2 text-sm text-stone-300">
-                <li className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span>Sogamoso, Boyacá, Colombia</span>
-                </li>
+              <h4 className="font-bold text-lg">Contacto</h4>
+              <ul className="space-y-2 text-sm opacity-90">
+                <li>Sogamoso, Boyacá, Colombia</li>
+                <li>Teléfono: 311 463 2044</li>
                 <li>Disponible todo el año</li>
+                <li>asogranjasogamoso@gmail.com</li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-stone-700 mt-8 pt-8 text-center text-sm text-stone-400">
+          <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm opacity-80">
             <p>© 2025 ASOGRANJA Sogamoso. Todos los derechos reservados.</p>
           </div>
         </div>
@@ -411,6 +456,22 @@ export default function CorredorCulturalPage() {
           />
         </Button>
       </div>
+
+      <style jsx global>{`
+        .fade-in-section {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        .fade-in-section.animate-in {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .hero-image {
+          filter: brightness(1.1) contrast(1.05) saturate(1.1);
+        }
+      `}</style>
     </div>
   )
 }
