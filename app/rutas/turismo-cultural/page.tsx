@@ -90,9 +90,10 @@ export default function TurismoCulturalPage() {
                 </h1>
               </div>
               <p className="text-xl md:text-2xl text-white/95 text-pretty mb-2">
-                Bienvenido al corazón de la cultura boyacense
+                ¡Vive una aventura única que conecta la cultura, la tierra y el emprendimiento local!
+
               </p>
-              <p className="text-lg text-white/85 text-pretty">Descubre las tradiciones que nos unen como comunidad</p>
+
             </div>
           </div>
         </div>
@@ -113,17 +114,14 @@ export default function TurismoCulturalPage() {
                   </h2>
                 </div>
                 <p className="text-xl leading-relaxed text-stone-700 dark:text-stone-300">
-                  Sumérgete en la riqueza cultural de Sogamoso a través de experiencias auténticas que celebran las
-                  tradiciones campesinas. En{" "}
-                  <strong className="text-stone-900 dark:text-stone-100">Casa Cultura</strong> y los puntos de
-                  información turística, descubrirás la música tradicional, la danza folclórica y la gastronomía
-                  ancestral.
+                  Inicia tu recorrido en el encantador Parque de la Villa, continúa por La Pilita de la Unión y {" "}
+                  <strong className="text-stone-900 dark:text-stone-100"></strong>descubre
+                  el fascinante mundo de los abonos orgánicos.
                 </p>
                 <div className="h-1 w-24 bg-gradient-to-r from-stone-400 to-stone-500 rounded-full"></div>
                 <p className="text-lg leading-relaxed text-stone-600 dark:text-stone-400">
-                  Esta ruta te conecta con la esencia de nuestro territorio, donde cada actividad es una ventana a los
-                  saberes transmitidos de generación en generación. Participa en talleres culturales, disfruta de
-                  presentaciones musicales en vivo, y degusta los sabores auténticos de la cocina boyacense.
+                  Aquí comenzará el viaje en el Corredor Experiencial Milagro y Playita, donde lo urbano se
+                  transforma en rural. Una experiencia de sabores, saberes y tradiciones.
                 </p>
               </CardContent>
             </Card>
@@ -372,7 +370,7 @@ export default function TurismoCulturalPage() {
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Ubicación</h3>
                       <p className="text-stone-700 dark:text-stone-300 font-medium">Sogamoso, Boyacá</p>
                       <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">
-                        Casa Cultura y puntos turísticos
+                        Vereda Segunda chorrera sector Playita y sector Azufre
                       </p>
                     </div>
                   </div>
@@ -387,10 +385,10 @@ export default function TurismoCulturalPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">
-                        Experiencia Cultural
+                        Experiencia agroecológica
                       </h3>
-                      <p className="text-stone-700 dark:text-stone-300 font-medium">Música y danza tradicional</p>
-                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">Presentaciones en vivo</p>
+                      
+                      <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">gastronomía típica en vivo</p>
                     </div>
                   </div>
                 </CardContent>
@@ -412,14 +410,11 @@ export default function TurismoCulturalPage() {
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
-                    "Presentaciones de música tradicional en vivo",
-                    "Talleres de danza folclórica boyacense",
-                    "Degustación de gastronomía típica y bebidas ancestrales",
-                    "Visita a Casa Cultura y puntos de información turística",
-                    "Talleres de elaboración de artesanías locales",
-                    "Encuentro con artistas y sabedores locales",
-                    "Material educativo sobre cultura campesina",
-                    "Experiencia de inmersión en tradiciones boyacenses",
+                    "Recorrido guiado",
+                    "Charla sobre abonos orgánicos y taller de germinación",
+                    "juegos, actividades al aire libre y creatividad",
+                    "Descubre una experiencia de sabores, saberes y tradiciones campesinas",
+                    "Refrigerio y bebida tradicional",
                   ].map((item, index) => (
                     <div
                       key={index}
