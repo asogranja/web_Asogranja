@@ -87,8 +87,7 @@ export default function CorredorAncestralPage() {
               <p className="text-xl md:text-2xl text-white/95 text-pretty">
                 {" "}
                 {/* Updated subtitle */}
-                ¡Embárcate en una experiencia única que une el patrimonio natural y cultural con la majestuosidad de los
-                paisajes del suroriente sogamoseño!
+                Una experiencia ecológica que inspira respeto, aprendizaje y conexión profunda con la naturaleza.
               </p>
             </div>
           </div>
@@ -112,7 +111,8 @@ export default function CorredorAncestralPage() {
                 <p className="text-xl leading-relaxed text-stone-700 dark:text-stone-300">
                   {" "}
                   {/* Updated text */}
-                  Una experiencia ecológica que inspira respeto, aprendizaje y conexión profunda con la naturaleza.
+                  ¡Embárcate en una experiencia única que une el patrimonio natural y cultural con la majestuosidad de los
+                  paisajes del suroriente sogamoseño!
                 </p>
                 <div className="h-1 w-24 bg-gradient-to-r from-stone-400 to-stone-500 rounded-full"></div>
                 <p className="text-lg leading-relaxed text-stone-600 dark:text-stone-400">
