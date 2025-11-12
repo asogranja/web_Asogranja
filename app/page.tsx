@@ -167,9 +167,8 @@ export default function AsogranjaPage() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
-        }`}
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
+          }`}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -600,9 +599,11 @@ export default function AsogranjaPage() {
             {artisanProducts.map((product, index) => (
               <Card
                 key={index}
-                className={`group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10 ${
-                  index === 3 ? "lg:col-start-2" : ""
-                }`}
+                className={`group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10 ${(index === artisanProducts.length - 2 && artisanProducts.length % 3 === 2)
+                    ? "lg:col-start-2"
+                    : ""
+
+                  }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-64 overflow-hidden">
@@ -713,11 +714,10 @@ export default function AsogranjaPage() {
                         {mapLocations.map((location, index) => (
                           <div
                             key={location.id}
-                            className={`w-full p-4 rounded-lg transition-all duration-300 cursor-pointer ${
-                              selectedLocation === location.id
+                            className={`w-full p-4 rounded-lg transition-all duration-300 cursor-pointer ${selectedLocation === location.id
                                 ? "bg-primary/10 border-2 border-primary shadow-md"
                                 : "bg-muted/50 hover:bg-muted"
-                            } animate-in fade-in slide-in-from-right-5`}
+                              } animate-in fade-in slide-in-from-right-5`}
                             style={{ animationDelay: `${index * 100}ms` }}
                             onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
                           >
@@ -869,7 +869,7 @@ export default function AsogranjaPage() {
                     <p className="text-sm text-muted-foreground mb-3">Respuesta inmediata</p>
                     <Button
                       size="sm"
-                      className="w-full bg-green-600 hover:bg-green-700"
+                      className="w-full border-2 bg-transparent text-black hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
                       onClick={() =>
                         window.open("https://wa.me/573114632044?text=Hola,%20quiero%20más%20información", "_blank")
                       }
@@ -886,7 +886,7 @@ export default function AsogranjaPage() {
                 style={{ animationDelay: "100ms" }}
               >
                 <CardContent className="p-6 text-center space-y-4">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
+                  <div className="inline-flex items-center justisfy-center w-16 h-16 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                     <Phone className="w-8 h-8 text-primary" />
                   </div>
                   <div>
@@ -894,12 +894,12 @@ export default function AsogranjaPage() {
                     <p className="text-sm text-muted-foreground mb-3">Llámanos directamente</p>
                     <div className="space-y-2">
                       <a href="tel:+573114632044" className="block">
-                        <Button size="sm" variant="outline" className="w-full bg-transparent">
+                        <Button size="sm" variant="outline" className="w-full border-2 bg-transparent hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95">
                           311 463 2044
                         </Button>
                       </a>
                       <a href="tel:+573132195939" className="block">
-                        <Button size="sm" variant="outline" className="w-full bg-transparent">
+                        <Button size="sm" variant="outline" className="w-full border-2 bg-transparent hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95">
                           313 219 5939
                         </Button>
                       </a>
@@ -923,7 +923,7 @@ export default function AsogranjaPage() {
                     <Button
                       size="sm"
                       variant="outline"
-                      className="w-full bg-transparent"
+                      className="w-full border-2 bg-transparent hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95"
                       onClick={() => setIsEmailModalOpen(true)}
                     >
                       Enviar Email
@@ -945,7 +945,7 @@ export default function AsogranjaPage() {
                     <h3 className="font-bold text-lg mb-2">Ubicación</h3>
                     <p className="text-sm text-muted-foreground mb-3">Sogamoso, Boyacá</p>
                     <a href="https://maps.app.goo.gl/zQQ37KowRohcKqc39" target="_blank" rel="noopener noreferrer">
-                      <Button size="sm" variant="outline" className="w-full bg-transparent">
+                      <Button size="sm" variant="outline" className="w-full border-2 bg-transparent hover:bg-green-500 hover:text-white hover:border-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 active:scale-95">
                         Ver Mapa
                       </Button>
                     </a>
