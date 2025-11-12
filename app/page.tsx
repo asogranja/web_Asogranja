@@ -657,9 +657,9 @@ export default function AsogranjaPage() {
 
             <Card className="overflow-hidden border-2 shadow-2xl bg-gradient-to-br from-green-50/50 to-background">
               <CardContent className="p-0">
-                <div className="grid lg:grid-cols-5 gap-0">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
                   {/* Left Side - Interactive Map (takes 3 columns) */}
-                  <div className="lg:col-span-3 p-8 bg-gradient-to-br from-green-50 to-green-100/50">
+                  <div className="lg:col-span-3 p-4 md:p-8 bg-gradient-to-br from-green-50 to-green-100/50">
                     <div className="space-y-6">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
@@ -671,7 +671,7 @@ export default function AsogranjaPage() {
                         </div>
                       </div>
 
-                      <div className="relative aspect-[16/10] bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary/20">
+                      <div className="relative aspect-[4/3] md:aspect-[16/10] bg-white rounded-xl shadow-lg overflow-hidden border-2 border-primary/20">
                         <Image
                           src="/mapa-rutas-3d.png"
                           alt="Mapa interactivo de productos"
@@ -683,7 +683,7 @@ export default function AsogranjaPage() {
                           // Agregado focus personalizado y eliminado outline amarillo en botones del mapa
                           <button
                             key={location.id}
-                            className={`absolute w-14 h-14 rounded-full ${location.color} text-white font-bold text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10 border-2 border-white focus:outline-none focus:ring-4 focus:ring-white/50 active:scale-95`}
+                            className={`absolute w-10 h-10 md:w-14 md:h-14 rounded-full ${location.color} text-white font-bold text-sm md:text-lg shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 cursor-pointer z-10 border-2 border-white focus:outline-none focus:ring-4 focus:ring-white/50 active:scale-95`}
                             style={{
                               top: location.position.top,
                               left: location.position.left,
@@ -702,7 +702,7 @@ export default function AsogranjaPage() {
                   </div>
 
                   {/* Right Side - Location Details (takes 2 columns) */}
-                  <div className="lg:col-span-2 p-8 bg-background space-y-6">
+                  <div className="lg:col-span-2 p-4 md:p-8 bg-background space-y-6">
                     <div>
                       <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
                         <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
@@ -710,7 +710,7 @@ export default function AsogranjaPage() {
                         </div>
                         Ubicaciones
                       </h4>
-                      <div className="space-h-[600px] overflow-y-auto pr-2">
+                      <div className="max-h-[600px] overflow-y-auto pr-2">
                         {mapLocations.map((location, index) => (
                           <div
                             key={location.id}
@@ -743,7 +743,7 @@ export default function AsogranjaPage() {
                   </div>
 
                   {/* Contact Information - Full Width Below Map */}
-                  <div className="lg:col-span-5 p-8 bg-background border-t-2 border-primary/10">
+                  <div className="lg:col-span-5 p-4 md:p-8 bg-background border-t-2 border-primary/10">
                     <div className="max-w-5xl mx-auto">
                       <div className="text-center mb-8">
                         <h4 className="text-2xl font-bold mb-2" style={{ fontFamily: "var(--font-playfair)" }}>
