@@ -59,7 +59,7 @@ export default function TurismoCulturalPage() {
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100 dark:from-background dark:via-background dark:to-stone-950">
       <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden">
         <Image
-          src="/cultural-center-gathering.jpg"
+          src="/anexo7.jpg"
           alt="Centro Cultural Comunitario - Bienvenida al Turismo Cultural"
           fill
           className="object-cover object-center hero-image brightness-110 contrast-105"
@@ -171,15 +171,16 @@ export default function TurismoCulturalPage() {
                 <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
                   <Image
                     src="/tamales-tradicionales.jpg"
-                    alt="Tamales tradicionales"
+                    alt="Casona Las Delicias del Sabor"
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Tamales Tradicionales</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Casona Las Delicias del Sabor</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Descubre el arte ancestral de preparar tamales envueltos en hojas de plátano.
+                    Descubre el arte ancestral de preparar tamales envueltos en hojas de plátano (hallacas, tamales, Papas nativas y más delicias
+                    locales).
                   </p>
                 </CardContent>
               </Card>
@@ -194,7 +195,7 @@ export default function TurismoCulturalPage() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Postres Artesanales</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Postres las Mariposas</h3>
                   <p className="text-stone-600 dark:text-stone-400">
                     Degusta deliciosos postres tradicionales preparados con recetas de generación en generación.
                   </p>
@@ -211,9 +212,9 @@ export default function TurismoCulturalPage() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Chicha Tradicional</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Kiosco del Maíz</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Prueba la bebida ancestral preparada artesanalmente según tradiciones milenarias.
+                    Prueba la bebida ancestral preparada artesanalmente según tradiciones milenarias (Amasijos, productos tradicionales y vivencias en torno al maíz).
                   </p>
                 </CardContent>
               </Card>
@@ -228,9 +229,10 @@ export default function TurismoCulturalPage() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Productos Lácteos</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Rincón de las Labores y las Tradiciones</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Disfruta de quesos y productos lácteos frescos elaborados de forma artesanal.
+                    Disfruta de quesos y productos lácteos frescos elaborados de forma artesanal (Taller de Ordeño, Elaboración de Queso
+                    y Cuajada) .
                   </p>
                 </CardContent>
               </Card>
@@ -238,18 +240,19 @@ export default function TurismoCulturalPage() {
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
                 <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
                   <Image
-                    src="/actividades-recreativas.jpg"
-                    alt="Actividades recreativas"
+                    src="/Anexo 9.jpg"
+                    alt="Música y cultura"
                     fill
                     className="object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Actividades Recreativas</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Rincón de la Huerta</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Participa en juegos tradicionales y actividades culturales llenas de alegría.
+                   (Talleres prácticos, biopreparados y saberes agroecológicos)
                   </p>
                 </CardContent>
+                
               </Card>
 
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
@@ -262,12 +265,30 @@ export default function TurismoCulturalPage() {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Música y Cultura</h3>
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Casa Cultura</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                    Vive la experiencia de la música tradicional y las expresiones culturales campesinas.
+                    Vive la experiencia de la música tradicional y las expresiones culturales campesinas (Arte, historia, tertulias y siembras compartidas).
                   </p>
                 </CardContent>
               </Card>
+              <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
+                <div className="relative h-80 overflow-hidden bg-white dark:bg-stone-900 flex items-center justify-center p-8">
+                  <Image
+                    src="/actividades-recreativas.jpg"
+                    alt="Actividades recreativas"
+                    fill
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Juega y Crece con Nidia</h3>
+                  <p className="text-stone-600 dark:text-stone-400">
+                    Participa en juegos tradicionales y actividades culturales llenas de alegría.
+                  </p>
+                </CardContent>
+              </Card>
+
+              
             </div>
           </div>
 
@@ -277,7 +298,7 @@ export default function TurismoCulturalPage() {
                 <div className="grid md:grid-cols-5 gap-0">
                   <div className="md:col-span-2 relative h-80 md:h-auto min-h-[400px] bg-black flex items-center justify-center p-8">
                     <div className="relative w-full h-full">
-                      <Image src="/casa-cultura-logo.jpg" alt="Casa Cultura" fill className="object-contain" />
+                      <Image src="/Anexo 7.jpg" alt="Casa Cultura" fill className="object-contain" />
                     </div>
                   </div>
                   <div className="md:col-span-3 p-8 md:p-10 space-y-6 flex flex-col justify-center">
@@ -286,7 +307,7 @@ export default function TurismoCulturalPage() {
                         className="text-3xl md:text-4xl font-bold text-stone-800 dark:text-stone-200 mb-3"
                         style={{ fontFamily: "var(--font-playfair)" }}
                       >
-                        Casa Cultura
+                        Corredor experiencial milagro y playita
                       </h3>
                       <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400 mb-4">
                         <MapPin className="w-5 h-5" />
@@ -294,8 +315,8 @@ export default function TurismoCulturalPage() {
                       </div>
                     </div>
                     <p className="text-lg leading-relaxed text-stone-700 dark:text-stone-300">
-                      Nuestro centro cultural es el corazón de las experiencias turísticas en Sogamoso. Aquí se realizan
-                      presentaciones de música tradicional, talleres de danza folclórica y eventos gastronómicos que
+                      Nuestro centro de experiencias turísticas en Sogamoso. Aquí se realizan
+                      presentaciones de música tradicional y eventos gastronómicos que
                       celebran nuestra identidad campesina. Un espacio de encuentro donde visitantes y comunidad local
                       comparten saberes y tradiciones.
                     </p>
@@ -305,7 +326,7 @@ export default function TurismoCulturalPage() {
                         className="bg-stone-700 hover:bg-stone-800 text-white shadow-md hover:shadow-lg transition-all duration-300"
                       >
                         <Phone className="mr-2 h-5 w-5" />
-                        322 881 4258
+                        3114632044
                       </Button>
                       <Button
                         size="lg"
@@ -313,7 +334,7 @@ export default function TurismoCulturalPage() {
                         className="border-2 border-stone-700 text-stone-700 hover:bg-stone-700 hover:text-white dark:text-stone-300 dark:border-stone-500 dark:hover:bg-stone-700 transition-all duration-300 bg-transparent"
                       >
                         <Mail className="mr-2 h-5 w-5" />
-                        @CiudadDeLaMemoria
+                        asogranjasogamoso@gmail.com
                       </Button>
                     </div>
                   </div>
@@ -387,7 +408,7 @@ export default function TurismoCulturalPage() {
                       <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">
                         Experiencia agroecológica
                       </h3>
-                      
+
                       <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">gastronomía típica en vivo</p>
                     </div>
                   </div>
@@ -448,7 +469,7 @@ export default function TurismoCulturalPage() {
                     className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 bg-white text-stone-800 hover:bg-stone-50"
                   >
                     <Phone className="mr-2 h-6 w-6" />
-                    WhatsApp: 322 881 4258
+                    WhatsApp: 3114632044
                   </Button>
                   <Button
                     size="lg"
@@ -456,7 +477,7 @@ export default function TurismoCulturalPage() {
                     className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-stone-800 bg-transparent shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     <Mail className="mr-2 h-6 w-6" />
-                    @CiudadDeLaMemoria
+                    asogranjasogamoso@gmail.com
                   </Button>
                 </div>
               </CardContent>
@@ -493,12 +514,12 @@ export default function TurismoCulturalPage() {
                         </div>
                         <div>
                           <p className="text-sm text-stone-600 dark:text-stone-400">WhatsApp</p>
-                          <p className="font-bold text-lg text-stone-800 dark:text-stone-200">322 881 4258</p>
+                          <p className="font-bold text-lg text-stone-800 dark:text-stone-200">3114632044</p>
                         </div>
                       </a>
 
                       <a
-                        href="https://instagram.com/CiudadDeLaMemoria"
+                        href="https://instagram.com/Asogranja"  
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-4 p-4 rounded-lg border-2 border-stone-200 dark:border-stone-800 hover:border-pink-500 dark:hover:border-pink-500 hover:bg-pink-50 dark:hover:bg-pink-950/20 transition-all duration-300 group"
@@ -508,7 +529,7 @@ export default function TurismoCulturalPage() {
                         </div>
                         <div>
                           <p className="text-sm text-stone-600 dark:text-stone-400">Instagram</p>
-                          <p className="font-bold text-lg text-stone-800 dark:text-stone-200">@CiudadDeLaMemoria</p>
+                          <p className="font-bold text-lg text-stone-800 dark:text-stone-200">@Asogranja</p>
                         </div>
                       </a>
 
@@ -518,7 +539,7 @@ export default function TurismoCulturalPage() {
                         </div>
                         <div>
                           <p className="text-sm text-stone-600 dark:text-stone-400">Ubicación</p>
-                          <p className="font-bold text-stone-800 dark:text-stone-200">Casa Cultura</p>
+                          <p className="font-bold text-stone-800 dark:text-stone-200">Milagro y playita</p>
                           <p className="text-sm text-stone-600 dark:text-stone-400">Sogamoso, Boyacá</p>
                         </div>
                       </div>

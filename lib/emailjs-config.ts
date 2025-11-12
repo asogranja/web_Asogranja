@@ -21,4 +21,4 @@ export const EMAILJS_CONFIG = {
 
 // The email address that will receive contact form submissions.
 // Updated to send all emails to kspulido2005@gmial.com as requested.
-export const RECIPIENT_EMAIL = "kspulido2005@gmial.com";
+export const RECIPIENT_EMAIL = "asogranjasogamoso@gmail.com";

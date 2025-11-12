@@ -56,7 +56,7 @@ export default function InvestigacionesParticipativasPage() {
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/investigaciones-hero.jpg"
+          src="/anexo5.jpg"
           alt="Investigaciones Participativas - Visita AGROSAVIA"
           fill
           className="object-cover brightness-90"
@@ -257,7 +257,7 @@ export default function InvestigacionesParticipativasPage() {
         <Button
           size="lg"
           className="bg-transparent hover:bg-green-50 rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center p-0 overflow-hidden border-0 animate-pulse hover:animate-bounce"
-          onClick={() => window.open("https://wa.me/573114632044?text=Hola,%20quiero%20más%20información", "_blank")}
+          onClick={() => window.open("https://wa.me/573132195939?text=Hola,%20quiero%20más%20información", "_blank")}
         >
           <Image
             src="/images/design-mode/whatsapp.png"

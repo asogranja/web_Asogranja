@@ -81,7 +81,7 @@ export default function AsogranjaPage() {
       description:
         "Productos elaborados a mano por nuestras familias campesinas: tejidos, cestería y artículos decorativos.",
       icon: Scissors,
-      image: "/labores-campesinas-real.jpg",
+      image: "/anexo20.jpg",
       color: "from-purple-500/20 to-indigo-600/20",
     },
   ]
@@ -104,36 +104,32 @@ export default function AsogranjaPage() {
   const mapLocations = [
     {
       id: "A",
-      name: "Postres Las Mariposas",
-      location: "Villa del Gurubo",
-      description: "Postres artesanales y dulces tradicionales",
+      name: "Huerto Agroecológico Urbano",
+      location: "Barrio el sol- vereda ramada",
       color: "bg-amber-500", // Color naranja/amarillo distintivo
       // ⬇️ AJUSTAR BOTÓN A AQUÍ ⬇️
       position: { top: "26.5%", left: "21.5%" },
     },
     {
       id: "B",
-      name: "Rincón de la Huerta",
-      location: "Vereda Monquirá",
-      description: "Hortalizas orgánicas y productos frescos",
+      name: "Vereda I y II Chorrera",
+      location: " crucero, corralejas, azufre, milagro y playita",
       color: "bg-green-600",
       // AJUSTAR AQUÍ: Modifica estos valores para mover el botón B
       position: { top: "44%", left: "34.7%" }, // Ajustado para alinearse con el marcador
     },
     {
       id: "C",
-      name: "Casona las Delicias",
-      location: "Centro Poblado de Marca",
-      description: "Gastronomía tradicional boyacense",
+      name: "Vereda Monquira",
+      location: "sector la reforma",
       color: "bg-green-700",
       // AJUSTAR AQUÍ: Modifica estos valores para mover el botón C
       position: { top: "27.5%", left: "53.7%" }, // Ajustado para alinearse con el marcador
     },
     {
       id: "D",
-      name: "Rincón de las Labores",
+      name: "Centro poblado de Morca",
       location: "Vereda Mortiñal",
-      description: "Artesanías y labores campesinas",
       color: "bg-slate-800",
       // AJUSTAR AQUÍ: Modifica estos valores para mover el botón D
       position: { top: "33%", left: "72.5%" }, // Ajustado para alinearse con el marcador
@@ -196,6 +192,15 @@ export default function AsogranjaPage() {
               <a href="#contacto" className="text-foreground hover:text-primary transition-colors">
                 Contacto
               </a>
+              <a
+                href="/portafoliopdf.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Portafolio
+              </a>
+
             </div>
 
             <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -369,7 +374,7 @@ export default function AsogranjaPage() {
             >
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/investigaciones-participativas-card.jpg"
+                  src="/anexo5.jpg"
                   alt="Investigaciones Participativas"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -421,7 +426,7 @@ export default function AsogranjaPage() {
             <Card className="group overflow-hidden border-2 hover:border-orange-500 hover:border-4 hover:shadow-xl transition-all duration-500 animate-in fade-in zoom-in-95">
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/cultural-center-gathering.jpg"
+                  src="/anexo7.jpg"
                   alt="Turismo Cultural"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -459,7 +464,7 @@ export default function AsogranjaPage() {
             >
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/corredor-ancestral-musicians-campfire.jpg"
+                  src="/anexo15.jpg"
                   alt="Corredor Ancestral"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -600,8 +605,8 @@ export default function AsogranjaPage() {
               <Card
                 key={index}
                 className={`group overflow-hidden border-2 hover:border-yellow-500 hover:border-4 transition-all duration-500 hover:shadow-2xl animate-in fade-in slide-in-from-bottom-10 ${(index === artisanProducts.length - 2 && artisanProducts.length % 3 === 2)
-                    ? "lg:col-start-2"
-                    : ""
+                  ? "lg:col-start-2"
+                  : ""
 
                   }`}
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -715,8 +720,8 @@ export default function AsogranjaPage() {
                           <div
                             key={location.id}
                             className={`w-full p-4 rounded-lg transition-all duration-300 cursor-pointer ${selectedLocation === location.id
-                                ? "bg-primary/10 border-2 border-primary shadow-md"
-                                : "bg-muted/50 hover:bg-muted"
+                              ? "bg-primary/10 border-2 border-primary shadow-md"
+                              : "bg-muted/50 hover:bg-muted"
                               } animate-in fade-in slide-in-from-right-5`}
                             style={{ animationDelay: `${index * 100}ms` }}
                             onClick={() => setSelectedLocation(selectedLocation === location.id ? null : location.id)}
@@ -806,7 +811,7 @@ export default function AsogranjaPage() {
                             className="w-full bg-green-600 hover:bg-green-700 text-lg py-6"
                             onClick={() =>
                               window.open(
-                                "https://wa.me/573114632044?text=Hola,%20quiero%20visitar%20las%20ubicaciones%20de%20productos",
+                                "https://wa.me/573132195939?text=Hola,%20quiero%20visitar%20las%20ubicaciones%20de%20productos",
                                 "_blank",
                               )
                             }
@@ -979,7 +984,7 @@ export default function AsogranjaPage() {
                     className="bg-white text-primary hover:bg-white/90 text-lg px-8 shadow-lg"
                     onClick={() =>
                       window.open(
-                        "https://wa.me/573114632044?text=Hola,%20quiero%20reservar%20una%20experiencia",
+                        "https://wa.me/573132195939?text=Hola,%20quiero%20reservar%20una%20experiencia",
                         "_blank",
                       )
                     }

@@ -54,7 +54,7 @@ export default function CorredorAncestralPage() {
     <div className="min-h-screen bg-gradient-to-b from-stone-50 via-stone-50 to-stone-100 dark:from-background dark:via-background dark:to-stone-950">
       <div ref={heroRef} className="relative h-[500px] md:h-[600px] overflow-hidden">
         <Image
-          src="/corredor-ancestral-musicians-campfire.jpg"
+          src="/anexo15.jpg"
           alt="Paisaje natural del corredor ancestral" // Updated alt text
           fill
           className="object-cover object-center"
@@ -597,7 +597,7 @@ export default function CorredorAncestralPage() {
         <Button
           size="lg"
           className="bg-transparent hover:bg-green-50 rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center p-0 overflow-hidden border-0 animate-pulse hover:animate-bounce"
-          onClick={() => window.open("https://wa.me/573114632044?text=Hola,%20quiero%20más%20información", "_blank")}
+          onClick={() => window.open("https://wa.me/573132195939?text=Hola,%20quiero%20más%20información", "_blank")}
         >
           <Image
             src="/images/design-mode/whatsapp.png"
