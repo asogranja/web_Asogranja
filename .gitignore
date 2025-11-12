@@ -26,7 +26,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Ignorar archivos de video
-public/**/*.mp4
-public/**/*.MP4
+
+
 
