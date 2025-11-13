@@ -193,7 +193,7 @@ export default function AsogranjaPage() {
                 Contacto
               </a>
               <a
-                href="/portafoliopdf.pdf"
+                href="/pdf.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-primary transition-colors"
@@ -738,7 +738,6 @@ export default function AsogranjaPage() {
                                   <MapPin className="w-3 h-3" />
                                   {location.location}
                                 </p>
-                                <p className="text-sm text-muted-foreground">{location.description}</p>
                               </div>
                             </div>
                           </div>
@@ -1115,3 +1114,4 @@ export default function AsogranjaPage() {
     </div>
   )
 }
+
