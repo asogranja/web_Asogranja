@@ -371,7 +371,7 @@ export default function ProduccionCosechaVentaPage() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link href="/#produccion-agroecologica" className="hover:text-green-400 transition-colors">
-                    Producción Agroecológica
+                    Agroecológica
                   </Link>
                 </li>
                 <li>

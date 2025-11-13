@@ -397,7 +397,7 @@ export default function CorredorCulturalPage() {
               <ul className="space-y-2 text-sm opacity-90">
                 <li>
                   <Link href="/#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
-                    Producción Agroecológica
+                    Agroecológia
                   </Link>
                 </li>
                 <li>

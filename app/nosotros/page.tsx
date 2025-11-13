@@ -170,23 +170,13 @@ export default function NosotrosPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/nosotros" className="hover:opacity-100 transition-opacity">
-                    Quiénes Somos
-                  </Link>
-                </li>
-                <li>
                   <Link href="/#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
-                    Producción Agroecológica
+                    Agroecológia
                   </Link>
                 </li>
                 <li>
                   <Link href="/#contacto" className="hover:opacity-100 transition-opacity">
                     Contacto
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#rutas" className="hover:opacity-100 transition-opacity">
-                    Rutas
                   </Link>
                 </li>
               </ul>

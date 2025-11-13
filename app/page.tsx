@@ -218,27 +218,7 @@ export default function AsogranjaPage() {
               >
                 Inicio
               </a>
-              <a
-                href="#produccion-agroecologica"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Producción Agroecológica
-              </a>
-              <a
-                href="#rutas"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Rutas
-              </a>
-              <a
-                href="#productos"
-                className="block text-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Productos
-              </a>
+
               <Link
                 href="/nosotros"
                 className="block text-foreground hover:text-primary transition-colors"
@@ -252,6 +232,14 @@ export default function AsogranjaPage() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contacto
+              </a>
+              <a
+                href="/pdf.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Portafolio
               </a>
             </div>
           )}
@@ -1060,7 +1048,7 @@ export default function AsogranjaPage() {
                 </li>
                 <li>
                   <a href="#produccion-agroecologica" className="hover:opacity-100 transition-opacity">
-                    Producción Agroecológica
+                    Agroecológia
                   </a>
                 </li>
                 <li>
@@ -1070,7 +1058,7 @@ export default function AsogranjaPage() {
                 </li>
                 <li>
                   <a href="#rutas" className="hover:opacity-100 transition-opacity">
-                    Rutas
+                    Turismo Rural
                   </a>
                 </li>
               </ul>
