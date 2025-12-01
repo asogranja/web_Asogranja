@@ -249,10 +249,10 @@ export default function TurismoCulturalPage() {
                 <CardContent className="p-6">
                   <h3 className="font-bold text-xl mb-2 text-stone-800 dark:text-stone-200">Rincón de la Huerta</h3>
                   <p className="text-stone-600 dark:text-stone-400">
-                   (Talleres prácticos, biopreparados y saberes agroecológicos)
+                    (Talleres prácticos, biopreparados y saberes agroecológicos)
                   </p>
                 </CardContent>
-                
+
               </Card>
 
               <Card className="overflow-hidden border-2 border-stone-200 dark:border-stone-800 hover:border-stone-400 dark:hover:border-stone-600 transition-all duration-300 hover:shadow-xl group">
@@ -288,7 +288,7 @@ export default function TurismoCulturalPage() {
                 </CardContent>
               </Card>
 
-              
+
             </div>
           </div>
 
@@ -519,7 +519,7 @@ export default function TurismoCulturalPage() {
                       </a>
 
                       <a
-                        href="https://instagram.com/Asogranja"  
+                        href="https://instagram.com/Asogranja"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-4 p-4 rounded-lg border-2 border-stone-200 dark:border-stone-800 hover:border-pink-500 dark:hover:border-pink-500 hover:bg-pink-50 dark:hover:bg-pink-950/20 transition-all duration-300 group"
@@ -697,7 +697,7 @@ export default function TurismoCulturalPage() {
         <Button
           size="lg"
           className="bg-transparent hover:bg-green-50 rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center p-0 overflow-hidden border-0 animate-pulse hover:animate-bounce"
-          onClick={() => window.open("https://wa.me/573132195939?text=Hola,%20quiero%20más%20información", "_blank")}
+          onClick={() => window.open("https://wa.me/573222374379?text=Hola,%20quiero%20más%20información", "_blank")}
         >
           <Image
             src="/images/design-mode/whatsapp.png"

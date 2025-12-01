@@ -187,7 +187,7 @@ export default function ProduccionCosechaVentaPage() {
                   src="/images/design-mode/Anexo%201.jpg"
                   alt="Huerta orgánica con cultivos diversificados"
                   fill
-                  className="object-cover"  
+                  className="object-cover"
                 />
               </div>
               <CardContent className="p-4">
@@ -305,7 +305,7 @@ export default function ProduccionCosechaVentaPage() {
         <Button
           size="lg"
           className="bg-transparent hover:bg-green-50 rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center p-0 overflow-hidden border-0 animate-pulse hover:animate-bounce"
-          onClick={() => window.open("https://wa.me/573114632044?text=Hola,%20quiero%20más%20información", "_blank")}
+          onClick={() => window.open("https://wa.me/573222374379?text=Hola,%20quiero%20más%20información", "_blank")}
         >
           <Image
             src="/images/design-mode/whatsapp.png"

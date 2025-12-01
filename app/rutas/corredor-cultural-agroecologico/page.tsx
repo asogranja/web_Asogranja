@@ -197,31 +197,31 @@ export default function CorredorCulturalPage() {
             </CardContent>
           </Card>
         </div>
-      {/* Video Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="fade-in-section opacity-0 transition-all duration-700">
-            <div className="flex items-center gap-3 mb-8">
-              <Video className="w-8 h-8 text-lime-600" />
-              <h2 className="text-3xl md:text-4xl font-bold text-stone-800">
-                Video de la Experiencia
-              </h2>
+        {/* Video Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="fade-in-section opacity-0 transition-all duration-700">
+              <div className="flex items-center gap-3 mb-8">
+                <Video className="w-8 h-8 text-lime-600" />
+                <h2 className="text-3xl md:text-4xl font-bold text-stone-800">
+                  Video de la Experiencia
+                </h2>
+              </div>
+              <Card className="overflow-hidden border-2 border-stone-200 shadow-lg">
+                <CardContent className="p-0">
+                  <div className="relative w-full aspect-video bg-stone-100">
+                    <video controls className="w-full h-full object-cover" poster="/corredor-cultural-hero.jpg">
+                      <source src="/images/112.mp4" type="video/mp4" />
+                      Tu navegador no soporta el elemento de video.
+                    </video>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-            <Card className="overflow-hidden border-2 border-stone-200 shadow-lg">
-              <CardContent className="p-0">
-                <div className="relative w-full aspect-video bg-stone-100">
-                  <video controls className="w-full h-full object-cover" poster="/corredor-cultural-hero.jpg">
-                    <source src="/images/112.mp4" type="video/mp4" />
-                    Tu navegador no soporta el elemento de video.
-                  </video>
-                </div>
-              </CardContent>
-            </Card>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Sections */}
+        {/* Sections */}
       </section>
 
       {/* Sections */}
@@ -445,7 +445,7 @@ export default function CorredorCulturalPage() {
         <Button
           size="lg"
           className="bg-transparent hover:bg-green-50 rounded-full w-16 h-16 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center p-0 overflow-hidden border-0 animate-pulse hover:animate-bounce"
-          onClick={() => window.open("https://wa.me/573132195939?text=Hola,%20quiero%20más%20información", "_blank")}
+          onClick={() => window.open("https://wa.me/573222374379?text=Hola,%20quiero%20más%20información", "_blank")}
         >
           <Image
             src="/images/design-mode/whatsapp.png"
