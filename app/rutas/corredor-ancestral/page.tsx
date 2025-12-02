@@ -9,7 +9,6 @@ import { useEffect, useRef } from "react"
 
 export default function CorredorAncestralPage() {
   const heroRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -27,27 +26,7 @@ export default function CorredorAncestralPage() {
 
     document.querySelectorAll(".fade-in-section").forEach((el) => observer.observe(el))
 
-    const videoObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            videoRef.current?.play().catch(console.error)
-          } else {
-            videoRef.current?.pause()
-          }
-        })
-      },
-      { threshold: 0.5 },
-    )
-
-    if (videoRef.current) {
-      videoObserver.observe(videoRef.current)
-    }
-
-    return () => {
-      observer.disconnect()
-      videoObserver.disconnect()
-    }
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -136,12 +115,9 @@ export default function CorredorAncestralPage() {
               <CardContent className="p-0">
                 <div className="relative w-full aspect-video bg-stone-100 dark:bg-stone-900">
                   <video
-                    ref={videoRef}
                     controls
                     className="w-full h-full object-cover"
                     poster="/corredor-ancestral-musicians-campfire.jpg"
-                    muted
-                    loop
                   >
                     <source src="/DJI_0062.mp4" type="video/mp4" />
                     Tu navegador no soporta el elemento de video.
