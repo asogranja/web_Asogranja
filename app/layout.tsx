@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   generator: "v0.app",
   // Configuración del favicon
   icons: {
-    icon: "/images/design-mode/logo.jpg",  // Asegúrate de que el logo esté en public/images/
+    icon: "/images/logo.jpg",  // Asegúrate de que el logo esté en public/images/
   },
 }
 
