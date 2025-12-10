@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   description:
     "Descubre las rutas turísticas y productos artesanales de ASOGRANJA Sogamoso. Turismo rural comunitario en Boyacá, Colombia.",
   generator: "v0.app",
+  // Configuración del favicon
+  icons: {
+    icon: "/images/design-mode/logo.jpg",  // Asegúrate de que el logo esté en public/images/
+  },
 }
 
 export default function RootLayout({
